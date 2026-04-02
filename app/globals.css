@@ -1,0 +1,84 @@
+/* Scansione da root progetto: in dev evita CSS incompleto quando i file non entrano nel grafo */
+@import 'tailwindcss' source('..');
+
+/* Palette + tipografia (variabili font da next/font su <html>) */
+@theme {
+  --color-green-dark: #2d4a3e;
+  --color-green-mid: #4a7c5f;
+  --color-green-light: #8fb5a0;
+  --color-cream: #f5f0e8;
+  --color-warm-white: #fafaf7;
+  --color-gold: #c9a84c;
+  --color-text-dark: #1a1a1a;
+  --color-text-mid: #4a4a4a;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-cormorant), ui-serif, Georgia, 'Times New Roman', serif;
+}
+
+:root {
+  --green-dark: #2d4a3e;
+  --green-mid: #4a7c5f;
+  --green-light: #8fb5a0;
+  --cream: #f5f0e8;
+  --warm-white: #fafaf7;
+  --gold: #c9a84c;
+  --text-dark: #1a1a1a;
+  --text-mid: #4a4a4a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(1000px 480px at 10% 0%, rgba(45, 74, 62, 0.12), transparent 55%),
+    radial-gradient(820px 420px at 95% 10%, rgba(143, 181, 160, 0.18), transparent 52%),
+    var(--cream);
+  color: var(--text-dark);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(45, 74, 62, 0.22);
+}
+
+/* Accessibilità: focus visibile coerente con il brand */
+:focus-visible {
+  outline: 2px solid rgba(45, 74, 62, 0.55);
+  outline-offset: 2px;
+}
+
+/* Gallery image hover zoom */
+.gallery-img {
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.gallery-img:hover {
+  transform: scale(1.06);
+}
+
+/* Card lift on hover */
+.card-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px -8px rgba(45, 74, 62, 0.18);
+}
+
+/* Thin gold divider */
+.divider-gold {
+  display: block;
+  width: 48px;
+  height: 2px;
+  background: var(--gold);
+  border-radius: 9999px;
+}
