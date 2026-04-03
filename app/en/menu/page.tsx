@@ -19,6 +19,66 @@ export const metadata = {
   },
 };
 
+const menuSections: { title: string; items: { name: string; description: string; price: string; allergens?: string }[] }[] = [
+  {
+    title: 'Pasta & Soups',
+    items: [
+      { name: 'Pappardelle al Nero di Seppia', description: 'Squid ink pappardelle with baby squid and breadcrumbs', price: '18€', allergens: '1,2,3,4,9,14' },
+      { name: 'Handmade Tortellini', description: 'Cream and Parmigiano Reggiano 24 months', price: '16€', allergens: '1,3,7' },
+      { name: 'Maccheroncino alla Carbonara', description: 'Carbonara sauce foam, Amatrice guanciale and black pepper', price: '15€', allergens: '1,3,7,12' },
+      { name: 'Pasta', description: 'Three tomatoes sauce / Bolognese ragù', price: '12€', allergens: '1,3,7,9' },
+      { name: 'Pasta e Fasoi (warm)', description: 'Traditional Venetian bean and pasta soup', price: '12€', allergens: '1,6,9' },
+    ],
+  },
+  {
+    title: 'From the Grill',
+    items: [
+      { name: 'Octopus', description: 'Chickpea hummus, CBT octopus tentacle, pimiento de padron, black sesame', price: '18€', allergens: '4,11' },
+      { name: 'Beef Burger 200g', description: 'Cheddar, bacon, salad, sliced tomato, caramelised onion, BBQ sauce and fries', price: '16€', allergens: '1,6,7,10,12' },
+      { name: 'Veggy Burger', description: 'Artisan pumpkin buns, veggy burger, caprese and basil mayo', price: '14€', allergens: '1,3,6,7,10' },
+      { name: 'Beef Fillet 250g', description: 'Roasted potatoes and crème fraîche', price: '30€', allergens: '7' },
+    ],
+  },
+  {
+    title: 'Salads',
+    items: [
+      { name: 'Caesar Salad', description: 'Chicken breast, Iceberg, Grana, Croutons, Caesar dressing', price: '12€', allergens: '1,3,7,8,10,12' },
+      { name: 'La Proteica', description: 'Mixed greens, feta, curry shrimp, strawberries and sliced almonds', price: '15€', allergens: '2,7,4,8' },
+      { name: 'Seasonal Raw & Cooked', description: 'Mixed greens, cucumbers, fennel, radishes, corn and puffed quinoa', price: '13€' },
+    ],
+  },
+  {
+    title: 'World Flavours',
+    items: [
+      { name: 'Avocado Toast', description: 'Multigrain bread, Guacamole, Salmon, Egg, Sesame seeds', price: '12€', allergens: '1,3,4,11' },
+      { name: 'Guinea Fowl Milanese', description: 'Coleslaw and french fries', price: '15€', allergens: '1,3' },
+      { name: 'Lobster Roll', description: 'Artisan brioche, Lobster, flavoured mayo', price: '16€', allergens: '1,2,3,6,7,10' },
+      { name: 'Basmati Rice', description: 'Stir-fried vegetables, Teriyaki chicken', price: '16€', allergens: '6,11' },
+      { name: 'Black Rice Poké', description: 'Salmon tartare, mango, edamame, cherry tomatoes, purple cabbage and Ponzu sauce', price: '18€', allergens: '4,6' },
+      { name: 'Radicchio from our Garden', description: 'Radicchio in saor, pine nuts and raisins', price: '10€', allergens: '6,8' },
+    ],
+  },
+  {
+    title: 'To Share',
+    items: [
+      { name: 'Patatas Bravas', description: 'Traditional Spanish sauce with homemade mayo and sweet paprika', price: '6€', allergens: '1,3' },
+      { name: 'Bao', description: 'Bao, pulled turkey, ponzu sauce, chimichurri mayo', price: '12€', allergens: '1,3,7,6' },
+      { name: 'Tacos', description: 'Tacos, beef, sweet sauce, pico de gallo, caramelised onion', price: '13€', allergens: '1,6' },
+      { name: 'Jamon Croquettes', description: 'Iberian Jamon and Asiago black crust croquettes', price: '8€', allergens: '1,3,7' },
+      { name: 'Patanegra Board', description: 'Patanegra and savoury churros', price: '20/30€', allergens: '1,3,7' },
+    ],
+  },
+  {
+    title: 'Desserts',
+    items: [
+      { name: 'Tiramisù', description: 'Classic recipe', price: '6€', allergens: '1,3,7' },
+      { name: 'Salted Chocolate Crumble', description: 'White chocolate mousse and mango coulis', price: '6€', allergens: '1,7,8' },
+      { name: 'Cheesecake in a Glass', description: 'Fresh strawberries from Basilicata', price: '8€', allergens: '1,7,8' },
+      { name: 'Fresh Fruit Cup', description: 'With artisan vanilla ice cream', price: '8€', allergens: '7' },
+    ],
+  },
+];
+
 export default function EnMenuPage() {
   return (
     <div>
@@ -54,122 +114,53 @@ export default function EnMenuPage() {
               </p>
             </Reveal>
 
-            <div className="grid gap-4 md:grid-cols-2">
-              <Reveal>
+            {menuSections.map((section, sIdx) => (
+              <Reveal key={section.title} delayMs={sIdx * 60}>
                 <Card className="bg-warm-white/70">
                   <CardContent className="p-6">
-                    <div className="text-sm uppercase tracking-wider text-text-mid font-semibold">Starters</div>
-                    <ul className="mt-3 space-y-2 text-sm text-text-mid/95">
-                      <li className="flex gap-2">
-                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-green-mid" aria-hidden="true" />
-                        <span>Tartare</span>
-                      </li>
-                      <li className="flex gap-2">
-                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-green-mid" aria-hidden="true" />
-                        <span>Bruschetta</span>
-                      </li>
+                    <div className="text-sm uppercase tracking-wider text-text-mid font-semibold mb-4">{section.title}</div>
+                    <ul className="space-y-4">
+                      {section.items.map((item) => (
+                        <li key={item.name} className="flex justify-between gap-4">
+                          <div className="flex-1">
+                            <div className="flex items-baseline gap-2">
+                              <span className="font-semibold text-sm text-green-dark">{item.name}</span>
+                            </div>
+                            <p className="text-sm text-text-mid/80 mt-0.5">{item.description}</p>
+                            {item.allergens && (
+                              <p className="text-xs text-text-mid/60 mt-0.5">Allergens: ({item.allergens})</p>
+                            )}
+                          </div>
+                          <span className="text-sm font-semibold text-green-dark whitespace-nowrap">{item.price}</span>
+                        </li>
+                      ))}
                     </ul>
                   </CardContent>
                 </Card>
               </Reveal>
-              <Reveal delayMs={80}>
-                <Card className="bg-warm-white/70">
-                  <CardContent className="p-6">
-                    <div className="text-sm uppercase tracking-wider text-text-mid font-semibold">First courses</div>
-                    <ul className="mt-3 space-y-2 text-sm text-text-mid/95">
-                      <li className="flex gap-2">
-                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-green-mid" aria-hidden="true" />
-                        <span>Homemade pasta (e.g. pappardelle with black cabbage)</span>
-                      </li>
-                      <li className="flex gap-2">
-                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-green-mid" aria-hidden="true" />
-                        <span>Seasonal risotto</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </Reveal>
-              <Reveal delayMs={120}>
-                <Card className="bg-warm-white/70">
-                  <CardContent className="p-6">
-                    <div className="text-sm uppercase tracking-wider text-text-mid font-semibold">Main courses</div>
-                    <ul className="mt-3 space-y-2 text-sm text-text-mid/95">
-                      <li className="flex gap-2">
-                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-green-mid" aria-hidden="true" />
-                        <span>Selected meats</span>
-                      </li>
-                      <li className="flex gap-2">
-                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-green-mid" aria-hidden="true" />
-                        <span>Fresh fish of the day</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </Reveal>
-              <Reveal delayMs={160}>
-                <Card className="bg-warm-white/70">
-                  <CardContent className="p-6">
-                    <div className="text-sm uppercase tracking-wider text-text-mid font-semibold">Pizzas</div>
-                    <ul className="mt-3 space-y-2 text-sm text-text-mid/95">
-                      <li className="flex gap-2">
-                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-green-mid" aria-hidden="true" />
-                        <span>Summer season</span>
-                      </li>
-                      <li className="flex gap-2">
-                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-green-mid" aria-hidden="true" />
-                        <span>High-leavening dough</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </Reveal>
-            </div>
+            ))}
 
-            <div className="grid gap-4 md:grid-cols-2">
-              <Reveal>
-                <Card className="bg-warm-white/70">
-                  <CardContent className="p-6">
-                    <div className="text-sm uppercase tracking-wider text-text-mid font-semibold">Desserts</div>
-                    <ul className="mt-3 space-y-2 text-sm text-text-mid/95">
-                      <li className="flex gap-2">
-                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-green-mid" aria-hidden="true" />
-                        <span>“Millefoglie”</span>
-                      </li>
-                      <li className="flex gap-2">
-                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-green-mid" aria-hidden="true" />
-                        <span>Handmade desserts</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </Reveal>
-              <Reveal delayMs={80}>
-                <Card className="bg-warm-white/70">
-                  <CardContent className="p-6">
-                    <div className="text-sm uppercase tracking-wider text-text-mid font-semibold">Wines</div>
-                    <ul className="mt-3 space-y-2 text-sm text-text-mid/95">
-                      <li className="flex gap-2">
-                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-green-mid" aria-hidden="true" />
-                        <span>Emo Capodilista selection</span>
-                      </li>
-                      <li className="flex gap-2">
-                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-green-mid" aria-hidden="true" />
-                        <span>Sommelier wine list</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </Reveal>
-            </div>
+            <Reveal delayMs={100}>
+              <div className="rounded-2xl border border-green-mid/30 bg-green-mid/10 p-5">
+                <div className="text-sm font-semibold text-green-dark uppercase tracking-wider">
+                  Cover charge & information
+                </div>
+                <p className="mt-2 text-sm leading-relaxed text-text-mid">
+                  Cover charge: 2€ per person. Vegan options available upon request. Gluten-free pasta available.
+                </p>
+                <p className="mt-1 text-xs leading-relaxed text-text-mid/70">
+                  Allergen guide: (1) Gluten, (2) Crustaceans, (3) Eggs, (4) Fish, (5) Peanuts, (6) Soy, (7) Milk, (8) Tree nuts, (9) Celery, (10) Mustard, (11) Sesame, (12) Sulphites, (13) Lupin, (14) Molluscs.
+                </p>
+              </div>
+            </Reveal>
 
             <Reveal delayMs={120}>
               <div className="rounded-2xl border border-green-mid/30 bg-green-mid/10 p-5">
                 <div className="text-sm font-semibold text-green-dark uppercase tracking-wider">
-                  Important note
+                  Book your table
                 </div>
                 <p className="mt-2 text-sm leading-relaxed text-text-mid">
-                  The menu changes every season. Contact us for the updated menu and for dietary requirements /
-                  allergies.
+                  The menu may vary based on seasonal ingredient availability. Please inform us of any allergies or dietary requirements when booking.
                 </p>
                 <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center">
                   <Button asChild size="lg" className="bg-green-dark text-warm-white hover:bg-green-mid">

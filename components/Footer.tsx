@@ -24,6 +24,7 @@ const organizationSchema = {
   sameAs: [
     'https://www.instagram.com/lamontecchiagreen/',
     'https://www.facebook.com/p/La-Montecchia-Green-100064785711603/',
+    'https://www.tripadvisor.it/Restaurant_Review-g1967181-d27689734-Reviews-La_Montecchia_Green-Selvazzano_Dentro_Province_of_Padua_Veneto.html',
   ],
 };
 
@@ -39,6 +40,14 @@ function FacebookIcon({ className }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+    </svg>
+  );
+}
+
+function TripAdvisorIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 2C6.48 2 2 4.48 2 7.5c0 1.67 1.12 3.16 2.88 4.22C4.33 13.17 4 14.55 4 16c0 .34.03.67.07 1H2l2 3 2-3h-.07c.55 2.36 2.7 4 5.07 4s4.52-1.64 5.07-4H16l2 3 2-3h-2.07c.04-.33.07-.66.07-1 0-1.45-.33-2.83-.88-4.28C18.88 10.66 20 9.17 20 7.5 20 4.48 16.42 2 12 2zm-4 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm8 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" />
     </svg>
   );
 }
@@ -101,6 +110,15 @@ export default function Footer() {
                 className="flex h-9 w-9 items-center justify-center rounded-full border border-green-dark/15 bg-cream text-text-mid transition-colors hover:border-green-dark/30 hover:text-green-dark"
               >
                 <FacebookIcon className="h-4 w-4" />
+              </a>
+              <a
+                href="https://www.tripadvisor.it/Restaurant_Review-g1967181-d27689734-Reviews-La_Montecchia_Green-Selvazzano_Dentro_Province_of_Padua_Veneto.html"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="TripAdvisor"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-green-dark/15 bg-cream text-text-mid transition-colors hover:border-green-dark/30 hover:text-[#00AF87]"
+              >
+                <TripAdvisorIcon className="h-4 w-4" />
               </a>
               <a
                 href="https://wa.me/393346774483"
