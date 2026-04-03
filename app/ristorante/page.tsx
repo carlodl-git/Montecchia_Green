@@ -16,7 +16,23 @@ export const metadata = {
     canonical: 'https://www.lamontecchiagreen.it/ristorante',
     languages: { 'it': 'https://www.lamontecchiagreen.it/ristorante', 'en': 'https://www.lamontecchiagreen.it/en/ristorante' },
   },
+  openGraph: {
+    images: [{ url: '/images/chef-preparing-a-dish.jpg', width: 1200, height: 630 }],
+  },
 };
+
+const ristoranteFaq = [
+  { question: 'Serve prenotare per pranzo a La Montecchia Green?', answer: 'La prenotazione non è obbligatoria per il pranzo, ma è fortemente consigliata soprattutto nei weekend e nei giorni festivi. Il modo più rapido per prenotare è WhatsApp al +39 334 677 4483.' },
+  { question: 'Avete un menu per celiaci o intolleranze alimentari?', answer: 'Sì, La Montecchia Green può preparare piatti per celiaci, intolleranti al lattosio e altre esigenze alimentari. Lo chef Enrico Ruggin adatta il menu su richiesta. Basta comunicarlo al momento della prenotazione.' },
+  { question: 'Posso portare il cane al ristorante La Montecchia Green?', answer: 'I cani di piccola taglia sono ammessi nella zona terrazza esterna. Per cani di taglia media o grande, consigliamo di contattarci in anticipo per verificare la disponibilità.' },
+  { question: 'La Montecchia Green è aperta solo ai soci del golf?', answer: 'No, il ristorante è aperto a tutti: famiglie, turisti, aziende e privati. Non è necessario essere soci del Golf della Montecchia.' },
+  { question: 'Quali sono gli orari del ristorante?', answer: 'Pranzo tutti i giorni dalle 12:00 alle 15:00. Cena venerdì e sabato sera su prenotazione dalle 19:30 alle 23:00. Lo snack bar e l\'aperitivo sono disponibili durante il giorno.' },
+  { question: 'Qual è il prezzo medio di un pranzo?', answer: 'Il pranzo completo è nella fascia €€, indicativamente tra 25 e 40 euro a persona, con cucina italiana stagionale, pasta fatta in casa e vini selezionati dal sommelier.' },
+  { question: 'Avete un menu degustazione?', answer: 'Sì, su prenotazione lo chef Enrico Ruggin prepara un percorso degustazione con piatti stagionali e abbinamento vini della Tenuta Emo Capodilista. Il menu degustazione è disponibile soprattutto per le cene del venerdì e sabato.' },
+  { question: 'Da dove provengono gli ingredienti del ristorante?', answer: 'La Montecchia Green utilizza ingredienti locali e stagionali. Verdure ed erbe aromatiche provengono dall\'orto proprio, coltivato nel terreno del Golf. La pasta è fatta in casa, i dessert artigianali. I vini sono della Tenuta Emo Capodilista e di cantine selezionate.' },
+  { question: 'Come si raggiunge il ristorante?', answer: 'La Montecchia Green si trova in Via Montecchia 12, Selvazzano Dentro (PD), a 10 minuti da Padova centro e 5 da Abano Terme. Ampio parcheggio gratuito all\'interno del Golf della Montecchia.' },
+  { question: 'Il ristorante ha la terrazza esterna?', answer: 'Sì, la terrazza panoramica affacciata sul campo da golf è uno dei punti di forza de La Montecchia Green. È disponibile per pranzi, aperitivi e cene estive, con vista aperta sui Colli Euganei.' },
+];
 
 export default function RistorantePage() {
   return (
@@ -107,7 +123,53 @@ Prenotazioni: +39 049 805 8464`}
               </ul>
             </Reveal>
 
-            <Reveal delayMs={380}>
+            <Reveal delayMs={370}>
+              <h3 className="text-2xl font-serif font-semibold tracking-tight text-green-dark">
+                L&apos;orto e la filosofia km 0
+              </h3>
+            </Reveal>
+            <Reveal delayMs={410}>
+              <p className="text-base leading-relaxed text-text-mid">
+                La Montecchia Green coltiva un orto proprio all&apos;interno del Golf della Montecchia. Verdure, erbe
+                aromatiche e ortaggi di stagione arrivano freschi ogni giorno nella cucina dello chef Enrico Ruggin.
+                Questa filosofia km 0 non è solo un&apos;etichetta, ma una scelta concreta: ogni piatto riflette il
+                territorio dei Colli Euganei e la stagionalità degli ingredienti. Pomodori, zucchine, basilico, salvia e
+                rosmarino crescono a pochi passi dal ristorante, garantendo freschezza e sapore autentici.
+              </p>
+            </Reveal>
+
+            <Reveal delayMs={450}>
+              <h3 className="text-2xl font-serif font-semibold tracking-tight text-green-dark">
+                I piatti signature
+              </h3>
+            </Reveal>
+            <Reveal delayMs={490}>
+              <p className="text-base leading-relaxed text-text-mid">
+                La cucina de La Montecchia Green si distingue per piatti che cambiano con le stagioni ma mantengono
+                un&apos;identità riconoscibile. Tra i piatti più apprezzati: le pappardelle fatte in casa con ragù di
+                selvaggina, il risotto ai carciofi con fonduta di Asiago, la tartare di manzo con maionese al lime e
+                capperi. I secondi spaziano dalle carni selezionate ai pesci del giorno, sempre accompagnati da verdure
+                dell&apos;orto. I dessert artigianali — come il tiramisù alla grappa euganea e la millefoglie con crema
+                alla vaniglia — chiudono il pasto con dolcezza.
+              </p>
+            </Reveal>
+
+            <Reveal delayMs={530}>
+              <h3 className="text-2xl font-serif font-semibold tracking-tight text-green-dark">
+                I vini della Tenuta Emo Capodilista
+              </h3>
+            </Reveal>
+            <Reveal delayMs={570}>
+              <p className="text-base leading-relaxed text-text-mid">
+                Il servizio sommelier è uno dei tratti distintivi de La Montecchia Green. La carta vini è costruita
+                attorno alle etichette della Tenuta Emo Capodilista, una delle cantine più prestigiose dei Colli Euganei
+                DOC. Il Fior d&apos;Arancio, il Rosso della Montecchia e il Moscato Passito sono tra i vini più
+                richiesti. La selezione include anche etichette venete, nazionali e internazionali. Il sommelier guida
+                ogni ospite nella scelta, proponendo abbinamenti pensati per il menu del giorno.
+              </p>
+            </Reveal>
+
+            <Reveal delayMs={610}>
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
                 <Button asChild size="lg">
                   <Link href="/menu">Scopri il menu stagionale</Link>
@@ -202,7 +264,32 @@ Prenotazioni: +39 049 805 8464`}
           </Reveal>
         </div>
 
+        {/* ── FAQ ──────────────────────────────────────── */}
+        <div className="mt-16 border-t border-green-dark/8 pt-14">
+          <Reveal>
+            <h2 className="text-2xl font-serif font-semibold tracking-tight text-green-dark">
+              Domande frequenti sul ristorante
+            </h2>
+          </Reveal>
+          <Reveal delayMs={80}>
+            <div className="mt-6 grid gap-4 rounded-2xl border border-black/10 bg-warm-white/70 p-5">
+              {ristoranteFaq.map((item, idx) => (
+                <div key={item.question}>
+                  <div className="text-sm font-semibold text-text-dark">{item.question}</div>
+                  <p className="mt-1 text-sm leading-relaxed text-text-mid/95">{item.answer}</p>
+                  {idx !== ristoranteFaq.length - 1 ? <div className="mt-4 border-t border-black/5" /> : null}
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+
         <SchemaOrg variant="aperitivo" />
+        <SchemaOrg variant="breadcrumb" breadcrumbItems={[
+          { name: 'Home', url: 'https://www.lamontecchiagreen.it' },
+          { name: 'Ristorante', url: 'https://www.lamontecchiagreen.it/ristorante' },
+        ]} />
+        <SchemaOrg variant="customFaq" faqItems={ristoranteFaq} />
       </section>
     </div>
   );

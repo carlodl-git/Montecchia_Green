@@ -5,7 +5,7 @@ import SchemaOrg from '@/components/SchemaOrg';
 import { Card, CardContent } from '@/components/ui/Card';
 
 export const metadata = {
-  title: 'Blog | La Montecchia Green',
+  title: 'Blog — Matrimoni, eventi e gastronomia',
   description:
     'Articoli e approfondimenti su matrimoni, eventi, gastronomia e aperitivi vicino a Padova. Scopri i Colli Euganei, le location per eventi e i consigli dello staff de La Montecchia Green.',
   alternates: {
@@ -16,11 +16,35 @@ export const metadata = {
 
 const articles = [
   {
-    slug: 'location-matrimonio-padova',
-    title: 'Come scegliere la location per un matrimonio a Padova',
+    slug: 'guida-vini-emo-capodilista',
+    title: 'Guida ai vini della Tenuta Emo Capodilista',
     excerpt:
-      'Atmosfera, capienza, cucina, logistica e budget: i cinque criteri fondamentali per trovare la location perfetta per il vostro matrimonio nella provincia di Padova.',
-    date: '15 marzo 2026',
+      'Alla scoperta dei vini dei Colli Euganei DOC: Fior d\'Arancio, Rosso della Montecchia, Moscato Passito e gli abbinamenti consigliati dal sommelier.',
+    date: '8 aprile 2026',
+    image: '/images/aperl-spritz.jpg',
+  },
+  {
+    slug: 'cosa-mangiare-selvazzano-dentro',
+    title: 'Cosa mangiare a Selvazzano Dentro: guida gastronomica',
+    excerpt:
+      'Tradizione veneta, ingredienti km 0 e cucina contemporanea: dove mangiare bene a Selvazzano Dentro, tra i Colli Euganei e Padova.',
+    date: '5 aprile 2026',
+    image: '/images/tagliatelle-funghi.jpg',
+  },
+  {
+    slug: 'cena-romantica-colli-euganei',
+    title: 'Cena romantica ai Colli Euganei: dove e come scegliere',
+    excerpt:
+      'Vista panoramica, cucina d\'autore e atmosfera intima: i criteri per trovare il ristorante perfetto per una cena romantica ai piedi dei Colli Euganei.',
+    date: '2 aprile 2026',
+    image: '/images/chef-preparing-a-dish.jpg',
+  },
+  {
+    slug: 'team-building-padova',
+    title: 'Team building a Padova: idee e location per aziende',
+    excerpt:
+      'Perché scegliere un team building all\'aperto, le attività più efficaci e le location migliori nella provincia di Padova per eventi aziendali.',
+    date: '28 marzo 2026',
     image: '/images/Sala-Ristorante-eventi.jpg',
   },
   {
@@ -29,7 +53,15 @@ const articles = [
     excerpt:
       'Dove fare aperitivo tra le colline euganee: terrazze panoramiche, vini locali e tramonti indimenticabili a pochi minuti da Padova.',
     date: '20 marzo 2026',
-    image: '/images/chef-preparing-a-dish.jpg',
+    image: '/images/terrazza-from-outside.jpg',
+  },
+  {
+    slug: 'location-matrimonio-padova',
+    title: 'Come scegliere la location per un matrimonio a Padova',
+    excerpt:
+      'Atmosfera, capienza, cucina, logistica e budget: i cinque criteri fondamentali per trovare la location perfetta per il vostro matrimonio nella provincia di Padova.',
+    date: '15 marzo 2026',
+    image: '/images/Sala-Ristorante-eventi.jpg',
   },
 ];
 
@@ -42,6 +74,13 @@ export default function BlogPage() {
           { name: 'Home', url: 'https://www.lamontecchiagreen.it' },
           { name: 'Blog', url: 'https://www.lamontecchiagreen.it/blog' },
         ]}
+      />
+      <SchemaOrg
+        variant="itemList"
+        listItems={articles.map((a) => ({
+          name: a.title,
+          url: `https://www.lamontecchiagreen.it/blog/${a.slug}`,
+        }))}
       />
 
       <section className="mx-auto max-w-6xl px-4 py-14">

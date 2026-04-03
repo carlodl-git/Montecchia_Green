@@ -15,6 +15,9 @@ export const metadata = {
     canonical: 'https://www.lamontecchiagreen.it/chi-siamo',
     languages: { 'it': 'https://www.lamontecchiagreen.it/chi-siamo', 'en': 'https://www.lamontecchiagreen.it/en/chi-siamo' },
   },
+  openGraph: {
+    images: [{ url: '/images/chef-preparing-a-dish.jpg', width: 1200, height: 630 }],
+  },
 };
 
 export default function EnChiSiamoPage() {
@@ -286,6 +289,7 @@ export default function EnChiSiamoPage() {
 
         <SchemaOrg
           variant="breadcrumb"
+          lang="en"
           breadcrumbItems={[
             { name: 'Home', url: 'https://www.lamontecchiagreen.it' },
             { name: 'Chi Siamo', url: 'https://www.lamontecchiagreen.it/chi-siamo' },

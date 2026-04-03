@@ -1,7 +1,10 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
-import { BRAND_LOGO_ALT_IT, BRAND_LOGO_SRC } from '@/lib/site-images';
+import { BRAND_LOGO_ALT_IT, BRAND_LOGO_ALT_EN, BRAND_LOGO_SRC } from '@/lib/site-images';
 
 const organizationSchema = {
   '@context': 'https://schema.org',
@@ -49,6 +52,10 @@ function WhatsAppIcon({ className }: { className?: string }) {
 }
 
 export default function Footer() {
+  const pathname = usePathname();
+  const isEn = pathname?.startsWith('/en');
+  const prefix = isEn ? '/en' : '';
+
   return (
     <footer className="border-t border-black/5 bg-warm-white">
       <div className="mx-auto max-w-6xl px-4 py-12">
@@ -56,12 +63,12 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <Link
-              href="/"
+              href={isEn ? '/en' : '/'}
               className="inline-block rounded-lg p-1 no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-mid/45"
             >
               <Image
                 src={BRAND_LOGO_SRC}
-                alt={BRAND_LOGO_ALT_IT}
+                alt={isEn ? BRAND_LOGO_ALT_EN : BRAND_LOGO_ALT_IT}
                 width={280}
                 height={100}
                 sizes="(max-width: 768px) 220px, 260px"
@@ -69,9 +76,10 @@ export default function Footer() {
               />
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-text-mid">
-              Bistrot &amp; Eventi nel verde del Golf della Montecchia.
-              <br />
-              Aperto a tutti.
+              {isEn
+                ? <>Bistrot &amp; Events in the green of Golf della Montecchia.<br />Open to everyone.</>
+                : <>Bistrot &amp; Eventi nel verde del Golf della Montecchia.<br />Aperto a tutti.</>
+              }
             </p>
 
             {/* Social icons */}
@@ -109,16 +117,29 @@ export default function Footer() {
           {/* Link rapidi */}
           <div>
             <div className="mb-4 text-xs font-semibold uppercase tracking-widest text-green-dark/60">
-              Link rapidi
+              {isEn ? 'Quick links' : 'Link rapidi'}
             </div>
             <div className="flex flex-col gap-2.5">
-              {[
-                { href: '/ristorante', label: 'Ristorante' },
-                { href: '/menu', label: 'Menu' },
-                { href: '/eventi', label: 'Eventi' },
-                { href: '/prenota', label: 'Prenota' },
-                { href: '/contatti', label: 'Contatti' },
-              ].map((link) => (
+              {(isEn
+                ? [
+                    { href: '/en/chi-siamo', label: 'About us' },
+                    { href: '/en/ristorante', label: 'Restaurant' },
+                    { href: '/en/menu', label: 'Menu' },
+                    { href: '/en/matrimoni', label: 'Weddings' },
+                    { href: '/en/eventi-aziendali', label: 'Corporate events' },
+                    { href: '/en/prenota', label: 'Book a table' },
+                    { href: '/en/contatti', label: 'Contacts' },
+                  ]
+                : [
+                    { href: '/chi-siamo', label: 'Chi siamo' },
+                    { href: '/ristorante', label: 'Ristorante' },
+                    { href: '/menu', label: 'Menu' },
+                    { href: '/matrimoni', label: 'Matrimoni' },
+                    { href: '/eventi-aziendali', label: 'Eventi aziendali' },
+                    { href: '/prenota', label: 'Prenota' },
+                    { href: '/contatti', label: 'Contatti' },
+                  ]
+              ).map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
@@ -134,7 +155,7 @@ export default function Footer() {
           {/* Contatti */}
           <div>
             <div className="mb-4 text-xs font-semibold uppercase tracking-widest text-green-dark/60">
-              Contatti
+              {isEn ? 'Contact' : 'Contatti'}
             </div>
             <div className="space-y-3 text-sm text-text-mid">
               <div className="leading-relaxed">
@@ -161,13 +182,16 @@ export default function Footer() {
 
               {/* CTA WhatsApp nel footer */}
               <a
-                href="https://wa.me/393346774483?text=Ciao%20La%20Montecchia%20Green%2C%20vorrei%20prenotare%20o%20chiedere%20info."
+                href={isEn
+                  ? 'https://wa.me/393346774483?text=Hello%20La%20Montecchia%20Green%2C%20I%20would%20like%20to%20book%20or%20ask%20for%20info.'
+                  : 'https://wa.me/393346774483?text=Ciao%20La%20Montecchia%20Green%2C%20vorrei%20prenotare%20o%20chiedere%20info.'
+                }
                 target="_blank"
                 rel="noreferrer"
                 className="mt-3 inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90"
               >
                 <WhatsAppIcon className="h-4 w-4" />
-                Scrivici su WhatsApp
+                {isEn ? 'Message us on WhatsApp' : 'Scrivici su WhatsApp'}
               </a>
             </div>
           </div>
@@ -176,11 +200,11 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-10 flex flex-col gap-2 border-t border-green-dark/8 pt-6 md:flex-row md:items-center md:justify-between">
           <div className="text-xs text-text-mid/70">
-            © {new Date().getFullYear()} La Montecchia Green. Tutti i diritti riservati.
+            © {new Date().getFullYear()} La Montecchia Green. {isEn ? 'All rights reserved.' : 'Tutti i diritti riservati.'}
           </div>
           <div className="text-xs text-text-mid/70">
-            <Link className="hover:text-green-dark transition-colors" href="/contatti">
-              Come arrivare
+            <Link className="hover:text-green-dark transition-colors" href={`${prefix}/contatti`}>
+              {isEn ? 'How to get here' : 'Come arrivare'}
             </Link>
           </div>
         </div>

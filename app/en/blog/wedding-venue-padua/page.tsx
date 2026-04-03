@@ -23,6 +23,7 @@ export default function WeddingVenuePaduaPage() {
     <div>
       <SchemaOrg
         variant="blogPosting"
+        lang="en"
         blogPost={{
           title: 'How to Choose a Wedding Venue in Padua',
           description:
@@ -35,6 +36,7 @@ export default function WeddingVenuePaduaPage() {
       />
       <SchemaOrg
         variant="breadcrumb"
+        lang="en"
         breadcrumbItems={[
           { name: 'Home', url: 'https://www.lamontecchiagreen.it/en' },
           { name: 'Blog', url: 'https://www.lamontecchiagreen.it/en/blog' },

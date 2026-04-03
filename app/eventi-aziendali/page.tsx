@@ -20,7 +20,25 @@ export const metadata = {
       'en': 'https://www.lamontecchiagreen.it/en/eventi-aziendali',
     },
   },
+  openGraph: {
+    images: [{ url: '/images/Sala-Ristorante-eventi.jpg', width: 1200, height: 630 }],
+  },
 };
+
+const eventiAziendaliFaq = [
+  { question: 'Quanto costa organizzare un pranzo aziendale a La Montecchia Green?', answer: 'Il costo dipende dal numero di partecipanti, dal tipo di menu e dai servizi richiesti. Indicativamente, un pranzo aziendale parte da circa 35-50€ a persona per un menu completo con vini inclusi. Contattaci per un preventivo personalizzato.' },
+  { question: 'Avete proiettore e impianto audio per presentazioni?', answer: 'Sì, le sale possono essere attrezzate con proiettore, schermo, impianto audio e microfoni. Il nostro staff coordina l\'allestimento tecnico in base alle esigenze dell\'evento.' },
+  { question: 'Quante persone possono partecipare a un team building sul green?', answer: 'Il team building sul green è flessibile e può coinvolgere gruppi da 10 a 100+ persone. Le attività si svolgono all\'aperto nel contesto del Golf della Montecchia e possono essere personalizzate in base alla dimensione del gruppo.' },
+  { question: 'Le sale sono adatte per convention e assemblee?', answer: 'Sì, la Sala Petrarca ospita da 100 a 300 persone ed è configurabile con disposizione a teatro, tavolo imperiale o tavoli rotondi. La Sala Foscolo (30-80 persone) e la Sala Ruzante (20-40 persone) sono ideali per meeting più ristretti.' },
+  { question: 'È possibile organizzare una cena di fine anno per l\'azienda?', answer: 'Sì, le cene di fine anno sono tra gli eventi più richiesti. La Sala Petrarca è perfetta per grandi gruppi, con menu personalizzato, servizio sommelier e possibilità di musica e intrattenimento.' },
+  { question: 'Offrite opzioni per diete speciali e intolleranze?', answer: 'Sì, lo chef prepara menu per celiaci, intolleranti al lattosio, vegetariani e vegani. È possibile anche una consulenza nutrizionale tramite il Montecchia Performance Center per eventi particolari.' },
+  { question: 'C\'è il parcheggio per tutti i partecipanti?', answer: 'Sì, l\'ampio parcheggio gratuito all\'interno del Golf della Montecchia è sufficiente per eventi anche con molti partecipanti. Non c\'è problema di parcheggio in zona.' },
+  { question: 'Quanto dista La Montecchia Green da Padova?', answer: 'La Montecchia Green è a soli 10 minuti da Padova centro, 5 minuti da Abano Terme e meno di 10 minuti dall\'uscita autostradale Padova Ovest (A4/A13). Facilmente raggiungibile da tutto il Nord-Est.' },
+  { question: 'Si possono fare riunioni di lavoro durante la mattina?', answer: 'Sì, le sale sono disponibili anche in mattinata per meeting, workshop e sessioni di lavoro. Il servizio include coffee break, colazione di lavoro o light lunch a seconda delle esigenze.' },
+  { question: 'Come si prenota un evento aziendale?', answer: 'Contattare via WhatsApp al +39 334 677 4483 (risposta rapida), email a eventimontecchia@golfmontecchia.it, oppure telefonare al +39 334 677 4483. Lo staff risponde entro 24-48 ore lavorative con una proposta personalizzata.' },
+  { question: 'È possibile organizzare un retreat aziendale di più giorni?', answer: 'Sì, La Montecchia Green è ideale per retreat aziendali. La vicinanza a strutture ricettive come gli hotel termali di Abano e Montegrotto Terme consente soggiorni di più giorni, combinando sessioni di lavoro, attività sul green e momenti di relax.' },
+  { question: 'La location è accessibile per persone con disabilità?', answer: 'Sì, la struttura si trova al piano terra della Club House del Golf della Montecchia ed è dotata di accessi facilitati per persone in sedia a rotelle.' },
+];
 
 export default function EventiAziendaliPage() {
   return (
@@ -343,6 +361,26 @@ export default function EventiAziendaliPage() {
           </Reveal>
         </div>
 
+        {/* ── FAQ ── */}
+        <div className="mt-14">
+          <Reveal>
+            <h2 className="text-2xl font-serif font-semibold tracking-tight text-green-dark">
+              FAQ — Domande frequenti sugli eventi aziendali
+            </h2>
+          </Reveal>
+          <Reveal delayMs={80}>
+            <div className="mt-6 grid gap-4 rounded-2xl border border-black/10 bg-warm-white/70 p-5">
+              {eventiAziendaliFaq.map((item, idx) => (
+                <div key={item.question}>
+                  <div className="text-sm font-semibold text-text-dark">{item.question}</div>
+                  <p className="mt-1 text-sm leading-relaxed text-text-mid/95">{item.answer}</p>
+                  {idx !== eventiAziendaliFaq.length - 1 ? <div className="mt-4 border-t border-black/5" /> : null}
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+
         {/* ── Schema.org ── */}
         <SchemaOrg variant="eventVenue" />
         <SchemaOrg
@@ -352,6 +390,7 @@ export default function EventiAziendaliPage() {
             { name: 'Eventi Aziendali', url: 'https://www.lamontecchiagreen.it/eventi-aziendali' },
           ]}
         />
+        <SchemaOrg variant="customFaq" faqItems={eventiAziendaliFaq} />
 
         {/* ── CTA contatti ── */}
         <div className="mt-14 grid gap-6 lg:grid-cols-[1fr_420px] lg:items-start">

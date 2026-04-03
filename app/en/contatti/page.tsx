@@ -14,6 +14,9 @@ export const metadata = {
     canonical: 'https://www.lamontecchiagreen.it/en/contatti',
     languages: { 'it': 'https://www.lamontecchiagreen.it/contatti', 'en': 'https://www.lamontecchiagreen.it/en/contatti' },
   },
+  openGraph: {
+    images: [{ url: '/images/terrazza-from-outside.jpg', width: 1200, height: 630 }],
+  },
 };
 
 export default function EnContattiPage() {

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Reveal from '@/components/Reveal';
+import SchemaOrg from '@/components/SchemaOrg';
 import { PAGE_HERO_IMAGES } from '@/lib/site-images';
 import InfoBox from '@/components/InfoBox';
 import { Button } from '@/components/ui/Button';
@@ -95,6 +96,14 @@ export default function PrenotaPage() {
           </aside>
         </div>
       </section>
+
+      <SchemaOrg
+        variant="breadcrumb"
+        breadcrumbItems={[
+          { name: 'Home', url: 'https://www.lamontecchiagreen.it' },
+          { name: 'Prenota', url: 'https://www.lamontecchiagreen.it/prenota' },
+        ]}
+      />
     </div>
   );
 }

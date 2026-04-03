@@ -19,6 +19,9 @@ export const metadata = {
     canonical: 'https://www.lamontecchiagreen.it/en/matrimoni',
     languages: { 'it': 'https://www.lamontecchiagreen.it/matrimoni', 'en': 'https://www.lamontecchiagreen.it/en/matrimoni' },
   },
+  openGraph: {
+    images: [{ url: '/images/Sala-Ristorante-eventi.jpg', width: 1200, height: 630 }],
+  },
 };
 
 export default function EnMatrimoniPage() {
@@ -337,10 +340,11 @@ export default function EnMatrimoniPage() {
         </div>
 
         {/* ── SCHEMA ────────────────────────────────────── */}
-        <SchemaOrg variant="eventVenue" />
-        <SchemaOrg variant="faq" />
+        <SchemaOrg variant="eventVenue" lang="en" />
+        <SchemaOrg variant="faq" lang="en" />
         <SchemaOrg
           variant="breadcrumb"
+          lang="en"
           breadcrumbItems={[
             { name: 'Home', url: 'https://www.lamontecchiagreen.it' },
             { name: 'Weddings', url: 'https://www.lamontecchiagreen.it/en/matrimoni' },

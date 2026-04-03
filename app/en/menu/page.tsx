@@ -14,6 +14,9 @@ export const metadata = {
     canonical: 'https://www.lamontecchiagreen.it/en/menu',
     languages: { 'it': 'https://www.lamontecchiagreen.it/menu', 'en': 'https://www.lamontecchiagreen.it/en/menu' },
   },
+  openGraph: {
+    images: [{ url: '/images/tagliatelle-funghi.jpg', width: 1200, height: 630 }],
+  },
 };
 
 export default function EnMenuPage() {

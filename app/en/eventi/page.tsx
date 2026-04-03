@@ -20,6 +20,9 @@ export const metadata = {
     canonical: 'https://www.lamontecchiagreen.it/en/eventi',
     languages: { 'it': 'https://www.lamontecchiagreen.it/eventi', 'en': 'https://www.lamontecchiagreen.it/en/eventi' },
   },
+  openGraph: {
+    images: [{ url: '/images/Sala-Ristorante-eventi.jpg', width: 1200, height: 630 }],
+  },
 };
 
 export default function EnEventiPage() {
@@ -199,8 +202,8 @@ export default function EnEventiPage() {
           </div>
         </div>
 
-        <SchemaOrg variant="eventVenue" />
-        <SchemaOrg variant="faq" />
+        <SchemaOrg variant="eventVenue" lang="en" />
+        <SchemaOrg variant="faq" lang="en" />
 
         <div className="mt-14 grid gap-6 lg:grid-cols-[1fr_420px] lg:items-start">
           <Reveal>

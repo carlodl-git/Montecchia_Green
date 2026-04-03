@@ -20,7 +20,25 @@ export const metadata = {
       'en': 'https://www.lamontecchiagreen.it/en/eventi-aziendali',
     },
   },
+  openGraph: {
+    images: [{ url: '/images/Sala-Ristorante-eventi.jpg', width: 1200, height: 630 }],
+  },
 };
+
+const corporateEventsFaq = [
+  { question: 'How much does a corporate lunch cost at La Montecchia Green?', answer: 'The cost depends on the number of participants, menu type and services requested. A corporate lunch starts from approximately €35-50 per person for a full menu with wines included. Contact us for a tailored quote.' },
+  { question: 'Do you have projector and audio equipment for presentations?', answer: 'Yes, the rooms can be equipped with projector, screen, audio system and microphones. Our staff coordinates the technical setup based on your event requirements.' },
+  { question: 'How many people can participate in team building on the green?', answer: 'Team building on the green is flexible and can involve groups from 10 to 100+ people. Activities take place outdoors in the Golf della Montecchia setting and can be customised for your group size.' },
+  { question: 'Are the rooms suitable for conventions and assemblies?', answer: 'Yes, Sala Petrarca hosts 100 to 300 people and can be configured theatre-style, with an imperial table or round tables. Sala Foscolo (30-80 people) and Sala Ruzante (20-40 people) are ideal for smaller meetings.' },
+  { question: 'Can we organize a year-end dinner for our company?', answer: 'Yes, year-end dinners are among our most requested events. Sala Petrarca is perfect for large groups, with a custom menu, sommelier service and the option of music and entertainment.' },
+  { question: 'Do you offer options for special diets and intolerances?', answer: 'Yes, the chef prepares menus for coeliac, lactose intolerant, vegetarian and vegan guests. Nutritional consultancy through the Montecchia Performance Center is also available for special events.' },
+  { question: 'Is there parking for all participants?', answer: 'Yes, the ample free parking inside Golf della Montecchia is sufficient even for large events. There are no parking issues in the area.' },
+  { question: 'How far is La Montecchia Green from Padua?', answer: 'La Montecchia Green is just 10 minutes from Padua centre, 5 minutes from Abano Terme and less than 10 minutes from the Padova Ovest motorway exit (A4/A13). Easily reachable from the entire North-East.' },
+  { question: 'Can we hold morning meetings?', answer: 'Yes, the rooms are available in the morning for meetings, workshops and work sessions. Service includes coffee breaks, working breakfast or light lunch depending on your needs.' },
+  { question: 'How do we book a corporate event?', answer: 'Contact us via WhatsApp at +39 334 677 4483 (fast response), email eventimontecchia@golfmontecchia.it, or call +39 334 677 4483. Staff responds within 24-48 business hours with a tailored proposal.' },
+  { question: 'Can we organize a multi-day corporate retreat?', answer: 'Yes, La Montecchia Green is ideal for corporate retreats. The proximity to hotels such as the thermal spas of Abano and Montegrotto Terme allows multi-day stays, combining work sessions, activities on the green and relaxation.' },
+  { question: 'Is the venue accessible for people with disabilities?', answer: 'Yes, the venue is on the ground floor of the Club House of Golf della Montecchia with facilitated wheelchair access.' },
+];
 
 export default function EnEventiAziendaliPage() {
   return (
@@ -345,15 +363,37 @@ export default function EnEventiAziendaliPage() {
           </Reveal>
         </div>
 
+        {/* ── FAQ ── */}
+        <div className="mt-14">
+          <Reveal>
+            <h2 className="text-2xl font-serif font-semibold tracking-tight text-green-dark">
+              FAQ — Frequently asked questions about corporate events
+            </h2>
+          </Reveal>
+          <Reveal delayMs={80}>
+            <div className="mt-6 grid gap-4 rounded-2xl border border-black/10 bg-warm-white/70 p-5">
+              {corporateEventsFaq.map((item, idx) => (
+                <div key={item.question}>
+                  <div className="text-sm font-semibold text-text-dark">{item.question}</div>
+                  <p className="mt-1 text-sm leading-relaxed text-text-mid/95">{item.answer}</p>
+                  {idx !== corporateEventsFaq.length - 1 ? <div className="mt-4 border-t border-black/5" /> : null}
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+
         {/* ── Schema.org ── */}
-        <SchemaOrg variant="eventVenue" />
+        <SchemaOrg variant="eventVenue" lang="en" />
         <SchemaOrg
           variant="breadcrumb"
+          lang="en"
           breadcrumbItems={[
             { name: 'Home', url: 'https://www.lamontecchiagreen.it' },
             { name: 'Corporate Events', url: 'https://www.lamontecchiagreen.it/en/eventi-aziendali' },
           ]}
         />
+        <SchemaOrg variant="customFaq" lang="en" faqItems={corporateEventsFaq} />
 
         {/* ── CTA ── */}
         <div className="mt-14 grid gap-6 lg:grid-cols-[1fr_420px] lg:items-start">

@@ -14,6 +14,9 @@ export const metadata = {
     canonical: 'https://www.lamontecchiagreen.it/en/ristorante',
     languages: { 'it': 'https://www.lamontecchiagreen.it/ristorante', 'en': 'https://www.lamontecchiagreen.it/en/ristorante' },
   },
+  openGraph: {
+    images: [{ url: '/images/chef-preparing-a-dish.jpg', width: 1200, height: 630 }],
+  },
 };
 
 export default function EnRistorantePage() {

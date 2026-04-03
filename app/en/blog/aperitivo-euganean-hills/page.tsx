@@ -23,6 +23,7 @@ export default function AperitivoEuganeanHillsPage() {
     <div>
       <SchemaOrg
         variant="blogPosting"
+        lang="en"
         blogPost={{
           title: 'The Best Aperitivos with a View of the Euganean Hills',
           description:
@@ -35,6 +36,7 @@ export default function AperitivoEuganeanHillsPage() {
       />
       <SchemaOrg
         variant="breadcrumb"
+        lang="en"
         breadcrumbItems={[
           { name: 'Home', url: 'https://www.lamontecchiagreen.it/en' },
           { name: 'Blog', url: 'https://www.lamontecchiagreen.it/en/blog' },

@@ -100,8 +100,8 @@ const breadcrumbItems = [
 export default function EnFaqPage() {
   return (
     <div>
-      <SchemaOrg variant="faq" />
-      <SchemaOrg variant="breadcrumb" breadcrumbItems={breadcrumbItems} />
+      <SchemaOrg variant="faq" lang="en" />
+      <SchemaOrg variant="breadcrumb" lang="en" breadcrumbItems={breadcrumbItems} />
 
       <section className="bg-cream">
         <div className="mx-auto max-w-6xl px-4 py-14">

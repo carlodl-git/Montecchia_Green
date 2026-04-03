@@ -6,6 +6,7 @@ import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import SchemaOrg from '@/components/SchemaOrg';
+import HtmlLang from '@/components/HtmlLang';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -85,6 +86,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         ) : null}
       </head>
       <body className="min-h-dvh bg-cream font-sans text-text-dark antialiased">
+        <HtmlLang />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:bg-warm-white focus:text-text-dark focus:px-3 focus:py-2 focus:rounded-md"

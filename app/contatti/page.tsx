@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Reveal from '@/components/Reveal';
+import SchemaOrg from '@/components/SchemaOrg';
 import { PAGE_HERO_IMAGES } from '@/lib/site-images';
 import InfoBox from '@/components/InfoBox';
 import { Card, CardContent } from '@/components/ui/Card';
@@ -13,6 +14,9 @@ export const metadata = {
   alternates: {
     canonical: 'https://www.lamontecchiagreen.it/contatti',
     languages: { 'it': 'https://www.lamontecchiagreen.it/contatti', 'en': 'https://www.lamontecchiagreen.it/en/contatti' },
+  },
+  openGraph: {
+    images: [{ url: '/images/terrazza-from-outside.jpg', width: 1200, height: 630 }],
   },
 };
 
@@ -153,6 +157,14 @@ export default function ContattiPage() {
           </Card>
         </Reveal>
       </section>
+
+      <SchemaOrg
+        variant="breadcrumb"
+        breadcrumbItems={[
+          { name: 'Home', url: 'https://www.lamontecchiagreen.it' },
+          { name: 'Contatti', url: 'https://www.lamontecchiagreen.it/contatti' },
+        ]}
+      />
     </div>
   );
 }

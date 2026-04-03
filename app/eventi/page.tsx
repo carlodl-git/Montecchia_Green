@@ -20,6 +20,9 @@ export const metadata = {
     canonical: 'https://www.lamontecchiagreen.it/eventi',
     languages: { 'it': 'https://www.lamontecchiagreen.it/eventi', 'en': 'https://www.lamontecchiagreen.it/en/eventi' },
   },
+  openGraph: {
+    images: [{ url: '/images/Sala-Ristorante-eventi.jpg', width: 1200, height: 630 }],
+  },
 };
 
 export default function EventiPage() {
