@@ -4,6 +4,11 @@ module.exports = {
   generateRobotsTxt: true,
   robotsTxtOptions: {
     policies: [{ userAgent: '*', allow: '/' }],
+    additionalSitemaps: [],
   },
+  alternateRefs: [
+    { href: 'https://www.lamontecchiagreen.it', hreflang: 'it' },
+    { href: 'https://www.lamontecchiagreen.it/en', hreflang: 'en' },
+  ],
 };
 

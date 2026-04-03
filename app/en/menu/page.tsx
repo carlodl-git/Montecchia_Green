@@ -10,6 +10,10 @@ export const metadata = {
   title: 'Menu La Montecchia Green — Seasonal cuisine in Selvazzano Dentro',
   description:
     'La Montecchia Green seasonal menu: appetizers, homemade pasta, selected main courses, summer pizzas and handmade desserts. Inside Golf della Montecchia, Selvazzano Dentro (PD).',
+  alternates: {
+    canonical: 'https://www.lamontecchiagreen.it/en/menu',
+    languages: { 'it': 'https://www.lamontecchiagreen.it/menu', 'en': 'https://www.lamontecchiagreen.it/en/menu' },
+  },
 };
 
 export default function EnMenuPage() {

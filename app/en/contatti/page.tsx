@@ -10,6 +10,10 @@ export const metadata = {
   title: 'Contacts & directions — La Montecchia Green',
   description:
     'How to reach La Montecchia Green at Via Montecchia 12, Selvazzano Dentro (PD). Google Maps pin, directions from Padua and Abano Terme, free parking and contact details.',
+  alternates: {
+    canonical: 'https://www.lamontecchiagreen.it/en/contatti',
+    languages: { 'it': 'https://www.lamontecchiagreen.it/contatti', 'en': 'https://www.lamontecchiagreen.it/en/contatti' },
+  },
 };
 
 export default function EnContattiPage() {

@@ -17,9 +17,11 @@ export default function Navbar() {
   const prefix = isEn ? '/en' : '';
 
   const navItems = [
+    { href: `${prefix}/chi-siamo`, label: isEn ? 'About' : 'Chi siamo' },
     { href: `${prefix}/ristorante`, label: isEn ? 'Restaurant' : 'Ristorante' },
     { href: `${prefix}/menu`, label: 'Menu' },
-    { href: `${prefix}/eventi`, label: isEn ? 'Events' : 'Eventi' },
+    { href: `${prefix}/matrimoni`, label: isEn ? 'Weddings' : 'Matrimoni' },
+    { href: `${prefix}/eventi-aziendali`, label: isEn ? 'Corporate' : 'Aziende' },
     { href: `${prefix}/prenota`, label: isEn ? 'Book a table' : 'Prenota' },
   ];
 
@@ -50,12 +52,12 @@ export default function Navbar() {
             />
           </Link>
 
-          <nav className="hidden items-center gap-7 lg:gap-8 md:flex" aria-label="Navigazione principale">
-            {navItems.slice(0, 3).map((item) => (
+          <nav className="hidden items-center gap-5 lg:gap-6 md:flex" aria-label="Navigazione principale">
+            {navItems.slice(0, -1).map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`text-base font-semibold transition-colors ${
+                className={`text-sm lg:text-base font-semibold transition-colors ${
                   isActive(item.href)
                     ? 'text-green-dark'
                     : 'text-text-dark/85 hover:text-green-dark'
@@ -67,17 +69,17 @@ export default function Navbar() {
 
             <Link
               href={`${prefix}/prenota`}
-              className="rounded-full bg-green-dark px-6 py-2.5 text-base font-semibold text-warm-white shadow-sm transition-colors hover:bg-green-mid"
+              className="rounded-full bg-green-dark px-5 py-2.5 text-sm lg:text-base font-semibold text-warm-white shadow-sm transition-colors hover:bg-green-mid"
             >
               {isEn ? 'Book' : 'Prenota'}
             </Link>
 
             <Link
               href={isEn ? '/' : '/en'}
-              className="text-base font-semibold text-text-dark/85 hover:text-green-dark transition-colors"
-              aria-label="English version"
+              className="text-sm lg:text-base font-semibold text-text-dark/85 hover:text-green-dark transition-colors"
+              aria-label={isEn ? 'Versione italiana' : 'English version'}
             >
-              EN
+              {isEn ? 'IT' : 'EN'}
             </Link>
           </nav>
 
@@ -97,7 +99,7 @@ export default function Navbar() {
           <div className="md:hidden border-t border-green-dark/10 bg-warm-white">
             <div className="mx-auto max-w-6xl px-4 py-5">
               <div className="flex flex-col gap-4">
-                {navItems.slice(0, 3).map((item) => (
+                {navItems.slice(0, -1).map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}

@@ -16,6 +16,10 @@ export const metadata = {
   title: 'Organize your event — Weddings & corporate events near Padua',
   description:
     'Wedding venue, private celebrations and corporate events at Golf della Montecchia. Spaces up to 300 guests, panoramic terrace, tailored catering. Selvazzano Dentro, Padua.',
+  alternates: {
+    canonical: 'https://www.lamontecchiagreen.it/en/eventi',
+    languages: { 'it': 'https://www.lamontecchiagreen.it/eventi', 'en': 'https://www.lamontecchiagreen.it/en/eventi' },
+  },
 };
 
 export default function EnEventiPage() {

@@ -12,6 +12,10 @@ export const metadata = {
   title: 'Bistrot, Cucina & Aperitivo — La Montecchia Green, Padova',
   description:
     "Ristorante, bistrot e aperitivo sul green al Golf della Montecchia, Selvazzano Dentro (PD). Cucina italiana stagionale, pasta fatta in casa, vini selezionati. Terrazza panoramica sui Colli Euganei. A 10 minuti da Padova.",
+  alternates: {
+    canonical: 'https://www.lamontecchiagreen.it/ristorante',
+    languages: { 'it': 'https://www.lamontecchiagreen.it/ristorante', 'en': 'https://www.lamontecchiagreen.it/en/ristorante' },
+  },
 };
 
 export default function RistorantePage() {

@@ -51,7 +51,14 @@ export const metadata: Metadata = {
     images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
   },
   robots: { index: true, follow: true },
-  alternates: { canonical: 'https://www.lamontecchiagreen.it' },
+  alternates: {
+    canonical: 'https://www.lamontecchiagreen.it',
+    languages: {
+      'it': 'https://www.lamontecchiagreen.it',
+      'en': 'https://www.lamontecchiagreen.it/en',
+      'x-default': 'https://www.lamontecchiagreen.it',
+    },
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

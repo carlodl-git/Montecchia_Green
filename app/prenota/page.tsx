@@ -9,6 +9,10 @@ export const metadata = {
   title: 'Prenota un tavolo — La Montecchia Green',
   description:
     "Prenota un tavolo a La Montecchia Green. Aperto a tutti nel Golf della Montecchia a Selvazzano Dentro (PD). Prenotazioni per pranzo e cena ven-sab su prenotazione.",
+  alternates: {
+    canonical: 'https://www.lamontecchiagreen.it/prenota',
+    languages: { 'it': 'https://www.lamontecchiagreen.it/prenota', 'en': 'https://www.lamontecchiagreen.it/en/prenota' },
+  },
 };
 
 export default function PrenotaPage() {

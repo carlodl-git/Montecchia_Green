@@ -16,6 +16,10 @@ export const metadata = {
   title: 'Organizza il tuo evento — Matrimoni e eventi aziendali vicino a Padova',
   description:
     'Location esclusiva per matrimoni, feste private e eventi aziendali al Golf della Montecchia. Spazi fino a 300 persone, terrazza panoramica, catering personalizzato. Selvazzano Dentro, Padova.',
+  alternates: {
+    canonical: 'https://www.lamontecchiagreen.it/eventi',
+    languages: { 'it': 'https://www.lamontecchiagreen.it/eventi', 'en': 'https://www.lamontecchiagreen.it/en/eventi' },
+  },
 };
 
 export default function EventiPage() {

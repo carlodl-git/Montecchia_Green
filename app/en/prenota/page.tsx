@@ -9,6 +9,10 @@ export const metadata = {
   title: 'Book a table — La Montecchia Green',
   description:
     'Book a table at La Montecchia Green. Open to everyone inside the Golf della Montecchia in Selvazzano Dentro (PD). Lunch daily and dinner Friday & Saturday on reservation.',
+  alternates: {
+    canonical: 'https://www.lamontecchiagreen.it/en/prenota',
+    languages: { 'it': 'https://www.lamontecchiagreen.it/prenota', 'en': 'https://www.lamontecchiagreen.it/en/prenota' },
+  },
 };
 
 export default function EnPrenotaPage() {

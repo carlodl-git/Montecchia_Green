@@ -11,6 +11,10 @@ export const metadata = {
   title: 'La Montecchia Green — Bistrot & Eventi a Selvazzano Dentro, Padova',
   description:
     "Ristorante e bistrot al Golf della Montecchia, Selvazzano Dentro (PD). Cucina italiana con ingredienti locali, aperto a tutti. Ideale per eventi privati, matrimoni e cene aziendali vicino a Padova.",
+  alternates: {
+    canonical: 'https://www.lamontecchiagreen.it',
+    languages: { 'it': 'https://www.lamontecchiagreen.it', 'en': 'https://www.lamontecchiagreen.it/en', 'x-default': 'https://www.lamontecchiagreen.it' },
+  },
 };
 
 const pillars = [

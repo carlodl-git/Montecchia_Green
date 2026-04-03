@@ -13,6 +13,10 @@ export const metadata = {
   title: 'La Montecchia Green — Bistrot & Events in Selvazzano Dentro',
   description:
     'La Montecchia Green is a bistrot & restaurant inside the Golf della Montecchia in Selvazzano Dentro (PD). Italian cuisine with local seasonal ingredients and spaces for private and corporate events near Padua.',
+  alternates: {
+    canonical: 'https://www.lamontecchiagreen.it/en',
+    languages: { 'it': 'https://www.lamontecchiagreen.it', 'en': 'https://www.lamontecchiagreen.it/en', 'x-default': 'https://www.lamontecchiagreen.it' },
+  },
 };
 
 export default function EnHomePage() {

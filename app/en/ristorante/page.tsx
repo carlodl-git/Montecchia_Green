@@ -10,6 +10,10 @@ export const metadata = {
   title: 'Bistrot & Kitchen — La Montecchia Green',
   description:
     'La Montecchia Green is an Italian contemporary restaurant inside the Golf della Montecchia in Selvazzano Dentro (PD). Seasonal ingredients, homemade pasta, handmade desserts and curated wines.',
+  alternates: {
+    canonical: 'https://www.lamontecchiagreen.it/en/ristorante',
+    languages: { 'it': 'https://www.lamontecchiagreen.it/ristorante', 'en': 'https://www.lamontecchiagreen.it/en/ristorante' },
+  },
 };
 
 export default function EnRistorantePage() {
