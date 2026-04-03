@@ -1,6 +1,6 @@
 import React from 'react';
 
-type SchemaVariant = 'restaurant' | 'eventVenue' | 'faq' | 'aperitivo' | 'breadcrumb' | 'blogPosting' | 'customFaq' | 'itemList';
+type SchemaVariant = 'restaurant' | 'eventVenue' | 'faq' | 'aperitivo' | 'breadcrumb' | 'blogPosting' | 'customFaq' | 'itemList' | 'webSite';
 
 interface FaqItem {
   question: string;
@@ -65,11 +65,13 @@ const restaurantSchema = {
   servesCuisine: ['Italiana', 'Stagionale', 'Locale', 'Veneta', 'Italiana Contemporanea'],
   priceRange: '€€',
   hasMap: 'https://maps.google.com/?q=Via+Montecchia+12+Selvazzano+Dentro',
+  // TODO: aggiornare manualmente ratingValue e reviewCount ogni mese da Google Business Profile
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: '4.6',
-    reviewCount: '50',
+    reviewCount: '367',
     bestRating: '5',
+    worstRating: '1',
   },
   amenityFeature: [
     { '@type': 'LocationFeatureSpecification', name: 'Parcheggio gratuito', value: true },
@@ -85,8 +87,12 @@ const restaurantSchema = {
     { '@type': 'LocationFeatureSpecification', name: 'Menu personalizzato per eventi', value: true },
   ],
   sameAs: [
-    'https://www.instagram.com/lamontecchiagreen/',
+    'https://www.golfmontecchia.it/en/golf-club/restaurant-la-montecchia',
     'https://www.facebook.com/p/La-Montecchia-Green-100064785711603/',
+    'https://www.instagram.com/lamontecchiagreen/',
+    'https://restaurantguru.it/La-Montecchia-Selvazzano-Dentro',
+    'https://www.tripadvisor.com/Restaurant_Review-g1967181-d27689734-Reviews-La_Montecchia_Green-Selvazzano_Dentro_Province_of_Padua_Veneto.html',
+    'https://www.matrimonio.com/ristoranti-ricevimenti/la-montecchia--e37909',
   ],
   containedInPlace: {
     '@type': 'SportsClub',
@@ -491,7 +497,7 @@ export default function SchemaOrg({ variant, lang = 'it', breadcrumbItems, blogP
         if (!blogPost) return null;
         return {
           '@context': 'https://schema.org',
-          '@type': 'BlogPosting',
+          '@type': 'Article',
           headline: blogPost.title,
           description: blogPost.description,
           url: blogPost.url,
@@ -508,12 +514,24 @@ export default function SchemaOrg({ variant, lang = 'it', breadcrumbItems, blogP
             name: 'La Montecchia Green',
             logo: {
               '@type': 'ImageObject',
-              url: 'https://www.lamontecchiagreen.it/images/logo-montecchia-green.png',
+              url: 'https://www.lamontecchiagreen.it/logo.png',
             },
           },
-          mainEntityOfPage: {
-            '@type': 'WebPage',
-            '@id': blogPost.url,
+          mainEntityOfPage: blogPost.url,
+        };
+      case 'webSite':
+        return {
+          '@context': 'https://schema.org',
+          '@type': 'WebSite',
+          name: 'La Montecchia Green',
+          url: 'https://www.lamontecchiagreen.it',
+          potentialAction: {
+            '@type': 'SearchAction',
+            target: {
+              '@type': 'EntryPoint',
+              urlTemplate: 'https://www.lamontecchiagreen.it/?s={search_term_string}',
+            },
+            'query-input': 'required name=search_term_string',
           },
         };
     }

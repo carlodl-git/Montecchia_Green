@@ -102,6 +102,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* Schema principale per AI SEO */}
         <SchemaOrg variant="restaurant" />
+        <SchemaOrg variant="webSite" />
       </body>
     </html>
   );

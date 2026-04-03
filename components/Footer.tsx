@@ -22,9 +22,12 @@ const organizationSchema = {
     addressCountry: 'IT',
   },
   sameAs: [
-    'https://www.instagram.com/lamontecchiagreen/',
+    'https://www.golfmontecchia.it/en/golf-club/restaurant-la-montecchia',
     'https://www.facebook.com/p/La-Montecchia-Green-100064785711603/',
-    'https://www.tripadvisor.it/Restaurant_Review-g1967181-d27689734-Reviews-La_Montecchia_Green-Selvazzano_Dentro_Province_of_Padua_Veneto.html',
+    'https://www.instagram.com/lamontecchiagreen/',
+    'https://restaurantguru.it/La-Montecchia-Selvazzano-Dentro',
+    'https://www.tripadvisor.com/Restaurant_Review-g1967181-d27689734-Reviews-La_Montecchia_Green-Selvazzano_Dentro_Province_of_Padua_Veneto.html',
+    'https://www.matrimonio.com/ristoranti-ricevimenti/la-montecchia--e37909',
   ],
 };
 
