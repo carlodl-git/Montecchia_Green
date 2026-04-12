@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Phone, MapPin, CalendarClock } from 'lucide-react';
 import { hreflangForEn } from '@/lib/hreflang';
-import { mailtoUrl, whatsappUrl } from '@/lib/contact';
+import { telUrl, mailtoUrl, whatsappUrl } from '@/lib/contact';
 
 import Reveal from '@/components/Reveal';
 import InfoBox from '@/components/InfoBox';
@@ -77,7 +77,10 @@ export default function EnHomePage() {
               <Reveal delayMs={220}>
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
                   <Button asChild size="lg" className="bg-green-dark text-warm-white shadow-md hover:bg-green-mid">
-                    <Link href="/en/prenota">Book a table</Link>
+                    <a href={telUrl('landline')} data-cta="call-hero" className="flex items-center gap-2">
+                      <Phone className="h-4 w-4" />
+                      Call us
+                    </a>
                   </Button>
                   <Button variant="secondary" asChild size="lg" className="border-white/25 bg-warm-white/95 text-text-dark hover:bg-warm-white">
                     <Link href="/en/eventi">Explore events</Link>

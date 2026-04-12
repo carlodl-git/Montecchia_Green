@@ -115,12 +115,14 @@ export default function HomePage() {
           {/* CTA */}
           <Reveal delayMs={240}>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center">
-              <Link
-                href="/prenota"
-                className="rounded-full bg-green-dark px-8 py-3.5 text-sm font-semibold text-warm-white shadow-lg transition-colors hover:bg-green-mid"
+              <a
+                href={telUrl('landline')}
+                className="flex items-center justify-center gap-2 rounded-full bg-green-dark px-8 py-3.5 text-sm font-semibold text-warm-white shadow-lg transition-colors hover:bg-green-mid"
+                data-cta="call-hero"
               >
-                Prenota un tavolo
-              </Link>
+                <Phone className="h-4 w-4" />
+                Chiama
+              </a>
               <Link
                 href={whatsappUrl('booking', 'it')}
                 target="_blank"
