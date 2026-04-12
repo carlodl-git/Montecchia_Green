@@ -5,28 +5,29 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 import { BRAND_LOGO_ALT_IT, BRAND_LOGO_ALT_EN, BRAND_LOGO_SRC } from '@/lib/site-images';
+import { CONTACT, whatsappUrl } from '@/lib/contact';
 
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'La Montecchia Green – Bistrot & Eventi',
-  url: 'https://www.lamontecchiagreen.it',
-  email: 'lamontecchiagreen@gmail.com',
-  telephone: ['+390498058464', '+393346774483'],
+  url: CONTACT.site,
+  email: CONTACT.emails.booking,
+  telephone: [CONTACT.phones.landline.tel, CONTACT.phones.mobile.tel],
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Via Montecchia, 12',
-    addressLocality: 'Selvazzano Dentro',
-    addressRegion: 'PD',
-    postalCode: '35030',
-    addressCountry: 'IT',
+    streetAddress: CONTACT.address.street,
+    addressLocality: CONTACT.address.city,
+    addressRegion: CONTACT.address.region,
+    postalCode: CONTACT.address.postalCode,
+    addressCountry: CONTACT.address.country,
   },
   sameAs: [
     'https://www.golfmontecchia.it/en/golf-club/restaurant-la-montecchia',
-    'https://www.facebook.com/p/La-Montecchia-Green-100064785711603/',
-    'https://www.instagram.com/lamontecchiagreen/',
+    CONTACT.social.facebook,
+    CONTACT.social.instagram,
     'https://restaurantguru.it/La-Montecchia-Selvazzano-Dentro',
-    'https://www.tripadvisor.com/Restaurant_Review-g1967181-d27689734-Reviews-La_Montecchia_Green-Selvazzano_Dentro_Province_of_Padua_Veneto.html',
+    CONTACT.social.tripadvisor,
     'https://www.matrimonio.com/ristoranti-ricevimenti/la-montecchia--e37909',
   ],
 };
@@ -66,7 +67,7 @@ function WhatsAppIcon({ className }: { className?: string }) {
 export default function Footer() {
   const pathname = usePathname();
   const isEn = pathname?.startsWith('/en');
-  const prefix = isEn ? '/en' : '';
+  const contactHref = isEn ? '/en/contact' : '/contatti';
 
   return (
     <footer className="border-t border-black/5 bg-warm-white">
@@ -124,7 +125,7 @@ export default function Footer() {
                 <TripAdvisorIcon className="h-4 w-4" />
               </a>
               <a
-                href="https://wa.me/393346774483"
+                href={`https://wa.me/${CONTACT.phones.mobile.whatsapp}`}
                 target="_blank"
                 rel="noreferrer"
                 aria-label="WhatsApp"
@@ -143,13 +144,13 @@ export default function Footer() {
             <div className="flex flex-col gap-2.5">
               {(isEn
                 ? [
-                    { href: '/en/chi-siamo', label: 'About us' },
-                    { href: '/en/ristorante', label: 'Restaurant' },
+                    { href: '/en/about', label: 'About us' },
+                    { href: '/en/restaurant', label: 'Restaurant' },
                     { href: '/en/menu', label: 'Menu' },
-                    { href: '/en/matrimoni', label: 'Weddings' },
-                    { href: '/en/eventi-aziendali', label: 'Corporate events' },
-                    { href: '/en/prenota', label: 'Book a table' },
-                    { href: '/en/contatti', label: 'Contacts' },
+                    { href: '/en/weddings', label: 'Weddings' },
+                    { href: '/en/corporate-events', label: 'Corporate events' },
+                    { href: '/en/book', label: 'Book a table' },
+                    { href: '/en/contact', label: 'Contacts' },
                   ]
                 : [
                     { href: '/chi-siamo', label: 'Chi siamo' },
@@ -184,31 +185,38 @@ export default function Footer() {
                 35030 Selvazzano Dentro (PD)
               </div>
               <div>
-                <a className="hover:text-green-dark transition-colors" href="tel:+390498058464">
-                  +39 049 805 8464
+                <a
+                  className="hover:text-green-dark transition-colors"
+                  href={`tel:${CONTACT.phones.landline.tel}`}
+                  data-cta="phone-landline"
+                >
+                  {CONTACT.phones.landline.display}
                 </a>
                 {' / '}
-                <a className="hover:text-green-dark transition-colors" href="tel:+393346774483">
-                  +39 334 677 4483
+                <a
+                  className="hover:text-green-dark transition-colors"
+                  href={`tel:${CONTACT.phones.mobile.tel}`}
+                  data-cta="phone-mobile"
+                >
+                  {CONTACT.phones.mobile.display}
                 </a>
               </div>
               <div>
                 <a
                   className="hover:text-green-dark transition-colors"
-                  href="mailto:lamontecchiagreen@gmail.com"
+                  href={`mailto:${CONTACT.emails.booking}`}
+                  data-cta="email"
                 >
-                  lamontecchiagreen@gmail.com
+                  {CONTACT.emails.booking}
                 </a>
               </div>
 
               {/* CTA WhatsApp nel footer */}
               <a
-                href={isEn
-                  ? 'https://wa.me/393346774483?text=Hello%20La%20Montecchia%20Green%2C%20I%20would%20like%20to%20book%20or%20ask%20for%20info.'
-                  : 'https://wa.me/393346774483?text=Ciao%20La%20Montecchia%20Green%2C%20vorrei%20prenotare%20o%20chiedere%20info.'
-                }
+                href={whatsappUrl('generic', isEn ? 'en' : 'it')}
                 target="_blank"
                 rel="noreferrer"
+                data-cta="whatsapp-footer"
                 className="mt-3 inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90"
               >
                 <WhatsAppIcon className="h-4 w-4" />
@@ -224,7 +232,7 @@ export default function Footer() {
             © {new Date().getFullYear()} La Montecchia Green. {isEn ? 'All rights reserved.' : 'Tutti i diritti riservati.'}
           </div>
           <div className="text-xs text-text-mid/70">
-            <Link className="hover:text-green-dark transition-colors" href={`${prefix}/contatti`}>
+            <Link className="hover:text-green-dark transition-colors" href={contactHref}>
               {isEn ? 'How to get here' : 'Come arrivare'}
             </Link>
           </div>

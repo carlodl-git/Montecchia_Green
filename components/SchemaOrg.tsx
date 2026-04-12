@@ -1,10 +1,23 @@
 import React from 'react';
 
-type SchemaVariant = 'restaurant' | 'eventVenue' | 'faq' | 'aperitivo' | 'breadcrumb' | 'blogPosting' | 'customFaq' | 'itemList' | 'webSite';
+import { CONTACT } from '@/lib/contact';
+
+type SchemaVariant = 'restaurant' | 'eventVenue' | 'faq' | 'aperitivo' | 'breadcrumb' | 'blogPosting' | 'customFaq' | 'itemList' | 'webSite' | 'menu';
 
 interface FaqItem {
   question: string;
   answer: string;
+}
+
+interface MenuItemData {
+  name: string;
+  description?: string;
+  price?: number | string;
+}
+
+interface MenuSectionData {
+  name: string;
+  items: MenuItemData[];
 }
 
 interface SchemaOrgProps {
@@ -21,6 +34,7 @@ interface SchemaOrgProps {
   };
   faqItems?: FaqItem[];
   listItems?: { name: string; url: string }[];
+  menuSections?: MenuSectionData[];
 }
 
 const sharedAddress = {
@@ -41,9 +55,10 @@ const restaurantSchema = {
   alternateName: ['La Montecchia Green – Bistrot & Eventi', 'Montecchia Green', 'Green Bistrot Golf Montecchia'],
   description:
     'Bistrot, ristorante e location per eventi privati e aziendali al Golf della Montecchia, in un ex tabacchificio restaurato ai piedi dei Colli Euganei. Cucina italiana con ingredienti locali e stagionali, aperitivo sul green, matrimoni, team building e cene aziendali. A 10 minuti da Padova, aperto a tutti.',
-  url: 'https://www.lamontecchiagreen.it',
-  telephone: '+390498058464',
-  email: 'lamontecchiagreen@gmail.com',
+  url: CONTACT.site,
+  telephone: CONTACT.phones.landline.tel,
+  email: CONTACT.emails.booking,
+  hasMenu: `${CONTACT.site}/menu`,
   address: sharedAddress,
   geo: sharedGeo,
   openingHoursSpecification: [
@@ -65,14 +80,9 @@ const restaurantSchema = {
   servesCuisine: ['Italiana', 'Stagionale', 'Locale', 'Veneta', 'Italiana Contemporanea'],
   priceRange: '€€',
   hasMap: 'https://maps.google.com/?q=Via+Montecchia+12+Selvazzano+Dentro',
-  // TODO: aggiornare manualmente ratingValue e reviewCount ogni mese da Google Business Profile
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.6',
-    reviewCount: '367',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  // aggregateRating rimosso volontariamente: i dati on-page (testimonial)
+  // non sono verificabili e servirebbero review reali con autore+data.
+  // Lasciare un rating non referenziato nella pagina è policy violation Google.
   amenityFeature: [
     { '@type': 'LocationFeatureSpecification', name: 'Parcheggio gratuito', value: true },
     { '@type': 'LocationFeatureSpecification', name: "Terrazza panoramica all'aperto", value: true },
@@ -443,7 +453,7 @@ const faqSchemaEn = {
   }),
 };
 
-export default function SchemaOrg({ variant, lang = 'it', breadcrumbItems, blogPost, faqItems, listItems }: SchemaOrgProps) {
+export default function SchemaOrg({ variant, lang = 'it', breadcrumbItems, blogPost, faqItems, listItems, menuSections }: SchemaOrgProps) {
   const json = (() => {
     switch (variant) {
       case 'restaurant':
@@ -524,15 +534,42 @@ export default function SchemaOrg({ variant, lang = 'it', breadcrumbItems, blogP
           '@context': 'https://schema.org',
           '@type': 'WebSite',
           name: 'La Montecchia Green',
-          url: 'https://www.lamontecchiagreen.it',
-          potentialAction: {
-            '@type': 'SearchAction',
-            target: {
-              '@type': 'EntryPoint',
-              urlTemplate: 'https://www.lamontecchiagreen.it/?s={search_term_string}',
-            },
-            'query-input': 'required name=search_term_string',
+          alternateName: 'La Montecchia Green – Bistrot & Eventi',
+          url: CONTACT.site,
+          inLanguage: ['it', 'en'],
+          publisher: {
+            '@type': 'Organization',
+            name: 'La Montecchia Green',
+            url: CONTACT.site,
           },
+          // potentialAction/SearchAction rimosso: il sito non ha search.
+        };
+      case 'menu':
+        if (!menuSections || menuSections.length === 0) return null;
+        return {
+          '@context': 'https://schema.org',
+          '@type': 'Menu',
+          name: 'La Montecchia Green — Menu',
+          url: `${CONTACT.site}${lang === 'en' ? '/en/menu' : '/menu'}`,
+          inLanguage: lang === 'en' ? 'en' : 'it',
+          hasMenuSection: menuSections.map((section) => ({
+            '@type': 'MenuSection',
+            name: section.name,
+            hasMenuItem: section.items.map((it) => ({
+              '@type': 'MenuItem',
+              name: it.name,
+              ...(it.description ? { description: it.description } : {}),
+              ...(it.price
+                ? {
+                    offers: {
+                      '@type': 'Offer',
+                      price: String(it.price),
+                      priceCurrency: 'EUR',
+                    },
+                  }
+                : {}),
+            })),
+          })),
         };
     }
   })();

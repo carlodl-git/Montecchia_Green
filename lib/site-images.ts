@@ -9,7 +9,8 @@ export const BRAND_LOGO_ALT_IT = 'La Montecchia Green — lounge bar e ristorant
 export const BRAND_LOGO_ALT_EN = 'La Montecchia Green — lounge bar and restaurant in Selvazzano Dentro, near Padua, Euganean Hills';
 
 export const PAGE_HERO_IMAGES = {
-  home: '/images/terrace-outside.jpeg',
+  // Hero homepage: facciata storica della Club House con terrazza e dehors.
+  home: '/images/facciata-montecchia-green.jpg',
   ristorante: '/images/chef-preparing-a-dish.jpg',
   eventi: '/images/Sala-Ristorante-eventi.jpg',
   menu: '/images/tagliatelle-funghi.jpg',

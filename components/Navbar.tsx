@@ -14,16 +14,25 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   const year = useMemo(() => new Date().getFullYear(), []);
-  const prefix = isEn ? '/en' : '';
+  const navItems = isEn
+    ? [
+        { href: '/en/about', label: 'About' },
+        { href: '/en/restaurant', label: 'Restaurant' },
+        { href: '/en/menu', label: 'Menu' },
+        { href: '/en/weddings', label: 'Weddings' },
+        { href: '/en/corporate-events', label: 'Corporate' },
+        { href: '/en/book', label: 'Book a table' },
+      ]
+    : [
+        { href: '/chi-siamo', label: 'Chi siamo' },
+        { href: '/ristorante', label: 'Ristorante' },
+        { href: '/menu', label: 'Menu' },
+        { href: '/matrimoni', label: 'Matrimoni' },
+        { href: '/eventi-aziendali', label: 'Aziende' },
+        { href: '/prenota', label: 'Prenota' },
+      ];
 
-  const navItems = [
-    { href: `${prefix}/chi-siamo`, label: isEn ? 'About' : 'Chi siamo' },
-    { href: `${prefix}/ristorante`, label: isEn ? 'Restaurant' : 'Ristorante' },
-    { href: `${prefix}/menu`, label: 'Menu' },
-    { href: `${prefix}/matrimoni`, label: isEn ? 'Weddings' : 'Matrimoni' },
-    { href: `${prefix}/eventi-aziendali`, label: isEn ? 'Corporate' : 'Aziende' },
-    { href: `${prefix}/prenota`, label: isEn ? 'Book a table' : 'Prenota' },
-  ];
+  const bookHref = isEn ? '/en/book' : '/prenota';
 
   function isActive(href: string) {
     if (!pathname) return false;
@@ -68,7 +77,7 @@ export default function Navbar() {
             ))}
 
             <Link
-              href={`${prefix}/prenota`}
+              href={bookHref}
               className="rounded-full bg-green-dark px-5 py-2.5 text-sm lg:text-base font-semibold text-warm-white shadow-sm transition-colors hover:bg-green-mid"
             >
               {isEn ? 'Book' : 'Prenota'}
@@ -112,7 +121,7 @@ export default function Navbar() {
                   </Link>
                 ))}
                 <Link
-                  href={`${prefix}/prenota`}
+                  href={bookHref}
                   className="rounded-full bg-green-dark px-5 py-3 text-center text-lg font-semibold text-warm-white shadow-sm transition-colors hover:bg-green-mid"
                   onClick={() => setOpen(false)}
                 >
