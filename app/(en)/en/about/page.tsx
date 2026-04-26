@@ -10,9 +10,9 @@ import { hreflangForEn } from '@/lib/hreflang';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata = {
-  title: 'About Us — La Montecchia Green, Bistrot & Events near Padua',
+  title: 'About Us | La Montecchia Green, Lounge Bar Restaurant near Padua',
   description:
-    'Discover the story behind La Montecchia Green: a restored 20th-century tobacco factory turned contemporary bistrot inside the Golf della Montecchia club house in Selvazzano Dentro (PD). Farm-to-table cuisine, chef Enrico Ruggin, wines from Tenuta Emo Capodilista. 10 minutes from Padua.',
+    'Discover the story behind La Montecchia Green: a restored 20th-century tobacco factory turned contemporary lounge bar and restaurant inside the Golf della Montecchia club house in Selvazzano Dentro (PD). Farm-to-table cuisine, chef Enrico Ruggin, wines from Tenuta Emo Capodilista. 10 minutes from Padua.',
   alternates: hreflangForEn('/en/about'),
   openGraph: {
     images: [{ url: '/images/chef-preparing-a-dish.jpg', width: 1200, height: 630 }],
@@ -46,7 +46,7 @@ export default function EnChiSiamoPage() {
         <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-20">
           <Reveal>
             <h1 className="text-4xl md:text-6xl font-serif font-semibold tracking-tight text-warm-white">
-              About Us — Our story, our cuisine
+              About Us: our story, our cuisine
             </h1>
           </Reveal>
         </div>
@@ -58,7 +58,7 @@ export default function EnChiSiamoPage() {
           <div className="grid gap-8">
             <Reveal>
               <h2 className="text-2xl md:text-3xl font-serif font-semibold tracking-tight text-green-dark">
-                From historic tobacco factory to contemporary bistrot
+                From historic tobacco factory to contemporary lounge bar
               </h2>
             </Reveal>
             <Reveal delayMs={70}>
@@ -66,7 +66,7 @@ export default function EnChiSiamoPage() {
                 La Montecchia Green is housed inside a beautifully restored 20th-century tobacco factory that has
                 been transformed into the club house of Golf della Montecchia, in Selvazzano Dentro, just outside
                 Padua. What was once an industrial building dedicated to tobacco processing now hosts an elegant yet
-                informal bistrot where architectural heritage meets a modern, welcoming atmosphere.
+                informal lounge bar and restaurant where architectural heritage meets a modern, welcoming atmosphere.
               </p>
             </Reveal>
             <Reveal delayMs={110}>
@@ -190,10 +190,10 @@ export default function EnChiSiamoPage() {
             <Reveal delayMs={720}>
               <ul className="grid gap-2 sm:grid-cols-2">
                 {[
-                  'Pasta Monograno Felicetti — semolina from heritage Italian grains',
-                  'Miele Millebuche — honey from bees living on the golf course',
-                  'Wines from Tenuta Emo Capodilista — Colli Euganei DOC',
-                  'Cipriani specialities — Venetian culinary heritage',
+                  'Pasta Monograno Felicetti: semolina from heritage Italian grains',
+                  'Miele Millebuche: honey from bees living on the golf course',
+                  'Wines from Tenuta Emo Capodilista, Colli Euganei DOC',
+                  'Cipriani specialities: Venetian culinary heritage',
                   'Vegetables and aromatic herbs from our own garden',
                   'Cheeses and charcuterie from selected local producers',
                 ].map((item) => (

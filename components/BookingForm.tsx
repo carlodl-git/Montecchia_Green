@@ -94,7 +94,7 @@ export default function BookingForm() {
           </h2>
           <p className="mt-1.5 text-sm leading-relaxed text-text-mid">
             {isEn
-              ? 'Fill in the form — we will get back to you to confirm availability and time.'
+              ? 'Fill in the form: we will get back to you to confirm availability and time.'
               : 'Compila il modulo: ti ricontattiamo per confermare disponibilità e orario.'}
           </p>
         </div>

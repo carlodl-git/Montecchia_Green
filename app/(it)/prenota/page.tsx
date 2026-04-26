@@ -10,7 +10,7 @@ import { telUrl, mailtoUrl, whatsappUrl } from '@/lib/contact';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata = {
-  title: 'Prenota un tavolo — La Montecchia Green',
+  title: 'Prenota un tavolo | La Montecchia Green',
   description:
     "Prenota un tavolo a La Montecchia Green. Aperto a tutti nel Golf della Montecchia a Selvazzano Dentro (PD). Prenotazioni per pranzo e cena ven-sab su prenotazione.",
   alternates: hreflangForIt('/prenota'),
@@ -31,7 +31,7 @@ export default function PrenotaPage() {
         <div className="absolute inset-0">
           <Image
             src={PAGE_HERO_IMAGES.prenota}
-            alt="Tavolo apparecchiato nel salone del bistrot"
+            alt="Tavolo apparecchiato nel salone del ristorante"
             fill
             priority
             sizes="100vw"
@@ -47,7 +47,7 @@ export default function PrenotaPage() {
                 Prenota un tavolo
               </h1>
               <p className="mt-2 text-sm text-warm-white/90 md:text-base">
-                La Montecchia Green — Golf della Montecchia, Selvazzano Dentro
+                La Montecchia Green: Golf della Montecchia, Selvazzano Dentro
               </p>
             </div>
           </Reveal>
@@ -96,7 +96,10 @@ export default function PrenotaPage() {
                     <span className="font-semibold">Cena:</span> venerdì e sabato (su prenotazione)
                   </div>
                   <div className="text-xs text-text-mid/80">
-                    Tel: +39 049 805 8464 / +39 334 677 4483
+                    Tel: +39 049 805 8464
+                  </div>
+                  <div className="text-xs text-text-mid/80">
+                    WhatsApp: +39 334 677 4483
                   </div>
                 </div>
               </InfoBox>

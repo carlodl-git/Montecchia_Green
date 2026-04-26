@@ -16,9 +16,9 @@ import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
 
 export const metadata = {
-  title: 'Organize your event — Weddings & corporate events near Padua',
+  title: 'Organize your event: Weddings & corporate events near Padua',
   description:
-    'Wedding venue, private celebrations and corporate events at Golf della Montecchia. Spaces up to 300 guests, panoramic terrace, tailored catering. Selvazzano Dentro, Padua.',
+    'Wedding venue, private celebrations and corporate events at Golf della Montecchia. Spaces up to 400 guests, panoramic terrace, tailored catering. Selvazzano Dentro, Padua.',
   alternates: hreflangForEn('/en/events'),
   openGraph: {
     images: [{ url: '/images/Sala-Ristorante-eventi.jpg', width: 1200, height: 630 }],
@@ -51,7 +51,7 @@ export default function EnEventiPage() {
         <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-20">
           <Reveal>
             <h1 className="text-4xl md:text-6xl font-serif font-semibold tracking-tight text-warm-white">
-              Organize your event at Golf della Montecchia — Padua
+              Organize your event at Golf della Montecchia: Padua
             </h1>
           </Reveal>
         </div>
@@ -196,7 +196,7 @@ export default function EnEventiPage() {
                   },
                   {
                     q: 'How do I book a private event?',
-                    a: 'Contact via email eventimontecchia@golfmontecchia.it, call +39 334 677 4483 or send a WhatsApp message to +39 334 677 4483.',
+                    a: 'Contact via email eventimontecchia@golfmontecchia.it, call +39 049 805 8464 or send a WhatsApp message to +39 334 677 4483.',
                   },
                 ].map((item, idx) => (
                   <div key={item.q}>
@@ -218,7 +218,7 @@ export default function EnEventiPage() {
             { question: 'How many guests can the restaurant host for an event?', answer: 'Sala Petrarca hosts 100 to 300 guests. Sala Foscolo, Sala Ruzante, the terrace and outdoor pool areas are also available for mid-sized and intimate events.' },
             { question: 'Do you host weddings at Golf della Montecchia?', answer: 'Yes, La Montecchia Green is one of the most popular wedding venues in the province of Padua. We offer dedicated staff, custom menus, sommelier service and curated decor.' },
             { question: 'Is the restaurant open only to golf club members?', answer: 'No. La Montecchia Green is open to everyone: golfers, families, tourists and companies. Membership is not required.' },
-            { question: 'How do I book a private event?', answer: 'Contact us via WhatsApp at +39 334 677 4483 for a fast response, email eventimontecchia@golfmontecchia.it, or call +39 334 677 4483. We reply within 24-48 business hours.' },
+            { question: 'How do I book a private event?', answer: 'Contact us via WhatsApp at +39 334 677 4483 for a fast response, email eventimontecchia@golfmontecchia.it, or call +39 049 805 8464. We reply within 24-48 business hours.' },
           ]}
         />
 
@@ -228,7 +228,7 @@ export default function EnEventiPage() {
               Contact us for your event
             </h2>
             <p className="mt-2 max-w-2xl text-base leading-relaxed text-text-mid">
-              Have a private or corporate event? Get a tailored proposal — contact us via WhatsApp, email or phone.
+              Have a private or corporate event? Get a tailored proposal: contact us via WhatsApp, email or phone.
             </p>
           </Reveal>
 
@@ -248,7 +248,7 @@ export default function EnEventiPage() {
                   <Link href={mailtoUrl('events', 'en')}>Email</Link>
                 </Button>
                 <Button asChild variant="secondary" size="lg">
-                  <a href={telUrl('mobile')}>Call</a>
+                  <a href={telUrl('landline')}>Call</a>
                 </Button>
               </div>
             </Reveal>
@@ -257,12 +257,12 @@ export default function EnEventiPage() {
               <InfoBox title="Quick info">
                 <div className="space-y-2">
                   <div>
-                    Capacity: <span className="font-semibold">up to 300 guests</span>
+                    Capacity: <span className="font-semibold">up to 400 guests</span>
                   </div>
                   <div>
-                    Area: <span className="font-semibold">Selvazzano Dentro (PD)</span> near Padua
+                    Area: <span className="font-semibold">Selvazzano Dentro (PD)</span>, near Padua
                   </div>
-                  <div className="text-xs text-text-mid/80">Open to everyone — no golf membership required.</div>
+                  <div className="text-xs text-text-mid/80">Open to everyone, no golf membership required.</div>
                 </div>
               </InfoBox>
             </Reveal>

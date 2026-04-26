@@ -2,7 +2,7 @@
 import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
-export const alt = 'La Montecchia Green — Bistrot & Eventi al Golf della Montecchia';
+export const alt = 'La Montecchia Green | Lounge Bar Restaurant al Golf della Montecchia';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -54,7 +54,7 @@ export default function Image() {
               letterSpacing: -2,
             }}
           >
-            Bistrot &amp; Eventi
+            Lounge Bar Restaurant
           </div>
           <div
             style={{

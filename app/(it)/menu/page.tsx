@@ -82,7 +82,7 @@ const menuSections: { title: string; items: MenuItem[] }[] = [
 ];
 
 export const metadata = {
-  title: 'Menu La Montecchia Green — Cucina stagionale a Selvazzano Dentro',
+  title: 'Menu La Montecchia Green: cucina stagionale a Selvazzano Dentro',
   description:
     "Menu stagionale de La Montecchia Green: antipasti, primi e pasta fatta in casa, secondi selezionati, pizze estive e dessert artigianali. Al Golf della Montecchia, Selvazzano Dentro (PD).",
   alternates: hreflangForIt('/menu'),
@@ -98,7 +98,7 @@ export default function MenuPage() {
         <div className="absolute inset-0">
           <Image
             src={PAGE_HERO_IMAGES.menu}
-            alt="Tagliatelle ai funghi — cucina de La Montecchia Green"
+            alt="Tagliatelle ai funghi, cucina de La Montecchia Green"
             fill
             priority
             sizes="100vw"
@@ -109,7 +109,7 @@ export default function MenuPage() {
         <div className="relative mx-auto max-w-6xl px-4 py-14 md:py-18">
           <Reveal>
             <h1 className="text-4xl md:text-5xl font-serif font-semibold tracking-tight text-warm-white">
-              Menu La Montecchia Green — Cucina stagionale a Selvazzano Dentro
+              Menu La Montecchia Green: cucina stagionale a Selvazzano Dentro
             </h1>
           </Reveal>
         </div>

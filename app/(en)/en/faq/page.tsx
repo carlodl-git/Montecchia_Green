@@ -4,7 +4,7 @@ import { hreflangForEn } from '@/lib/hreflang';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata = {
-  title: 'Frequently asked questions (FAQ) — La Montecchia Green',
+  title: 'Frequently asked questions (FAQ) | La Montecchia Green',
   description:
     'Answers to frequently asked questions about La Montecchia Green: opening hours, prices, reservations, events, weddings, venue, parking, accessibility and directions to Selvazzano Dentro (PD).',
   alternates: hreflangForEn('/en/faq'),
@@ -29,7 +29,7 @@ const faqRestaurant = [
   },
   {
     q: 'How can I book a table at the restaurant?',
-    a: 'The quickest way is via WhatsApp at +39 334 677 4483. Alternatively you can call +39 049 805 8464, send an email to lamontecchiagreen@gmail.com or fill in the booking form at lamontecchiagreen.it/prenota.',
+    a: 'The quickest way is via WhatsApp at +39 334 677 4483. Alternatively you can call +39 049 805 8464 or fill in the booking form at lamontecchiagreen.it/prenota.',
   },
   {
     q: 'What wines does La Montecchia Green serve?',
@@ -44,19 +44,19 @@ const faqRestaurant = [
 const faqEvents = [
   {
     q: 'How many guests can La Montecchia Green host for an event?',
-    a: 'La Montecchia Green can host 100 to 300 guests in the Sala Petrarca. Additional spaces include Sala Foscolo (30\u201380 guests), Sala Ruzante (20\u201340 guests), the panoramic terrace on the green and outdoor areas with a swimming pool.',
+    a: 'La Montecchia Green can host up to 400 guests, with the Sala Petrarca seating 100 to 300. Additional spaces include Sala Foscolo (30\u201380 guests), Sala Ruzante (20\u201340 guests), the panoramic terrace on the green and outdoor areas with a swimming pool.',
   },
   {
     q: 'Do you organise weddings and receptions near Padua?',
-    a: 'Yes, La Montecchia Green is one of the most popular wedding venues in the province of Padua. Our staff organises bespoke events with a personalised menu by chef Enrico Ruggin, sommelier service with wines from Tenuta Emo Capodilista and tailored decorations. Spaces for up to 300 guests, panoramic terrace and outdoor areas with a swimming pool.',
+    a: 'Yes, La Montecchia Green is one of the most popular wedding venues in the province of Padua. Our staff organises bespoke events with a personalised menu by chef Enrico Ruggin, sommelier service with wines from Tenuta Emo Capodilista and tailored decorations. Spaces for up to 400 guests, panoramic terrace and outdoor areas with a swimming pool.',
   },
   {
     q: 'Do you organise corporate events near Padua?',
-    a: 'Yes, La Montecchia Green offers corporate lunches and dinners, team building on the green, conventions, meetings and end-of-year dinners for companies in the Padua province and north-east Italy. Free parking, modular spaces for up to 300 guests and dedicated staff.',
+    a: 'Yes, La Montecchia Green offers corporate lunches and dinners, team building on the green, conventions, meetings and end-of-year dinners for companies in the Padua province and north-east Italy. Free parking, modular spaces for up to 400 guests and dedicated staff.',
   },
   {
     q: 'Can I organise birthday parties and private celebrations at La Montecchia Green?',
-    a: 'Yes, La Montecchia Green is perfect for birthdays, anniversaries, confirmations, christenings and any private celebration. Our rooms are modular from 20 to 300 guests, with a personalised menu and dedicated staff.',
+    a: 'Yes, La Montecchia Green is perfect for birthdays, anniversaries, confirmations, christenings and any private celebration. Our rooms are modular from 20 to 400 guests, with a personalised menu and dedicated staff.',
   },
   {
     q: 'What rooms are available for events at La Montecchia Green?',
@@ -64,7 +64,7 @@ const faqEvents = [
   },
   {
     q: 'How do I book a private event at La Montecchia Green?',
-    a: 'Contact us via WhatsApp at +39 334 677 4483 (quick response), email eventimontecchia@golfmontecchia.it, or call +39 334 677 4483. Our staff responds within 24\u201348 business hours.',
+    a: 'Contact us via WhatsApp at +39 334 677 4483 (quick response), email eventimontecchia@golfmontecchia.it, or call +39 049 805 8464. Our staff responds within 24\u201348 business hours.',
   },
   {
     q: 'What is team building on the green at La Montecchia Green?',

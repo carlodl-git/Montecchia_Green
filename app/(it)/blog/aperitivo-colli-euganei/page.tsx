@@ -139,7 +139,7 @@ export default function AperitivoColliEuganeiPage() {
               panoramica de La Montecchia Green, all&apos;interno del Golf della Montecchia a Selvazzano
               Dentro. Qui il panorama si apre sul campo da golf e sui Colli Euganei, creando
               un&apos;atmosfera che unisce relax e bellezza naturale. Non e necessario essere soci del
-              golf: la terrazza e il bistrot sono aperti a tutti.
+              golf: la terrazza e il ristorante sono aperti a tutti.
             </p>
           </Reveal>
           <Reveal>

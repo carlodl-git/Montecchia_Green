@@ -31,7 +31,7 @@ export const CONTACT = {
   // Email
   emails: {
     // Email ristorante / prenotazioni tavoli
-    booking: 'lamontecchiagreen@gmail.com',
+    booking: 'eventimontecchia@golfmontecchia.it',
     // Email eventi privati e aziendali
     events: 'eventimontecchia@golfmontecchia.it',
   },

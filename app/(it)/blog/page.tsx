@@ -7,7 +7,7 @@ import { hreflangForIt } from '@/lib/hreflang';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata = {
-  title: 'Blog — Matrimoni, eventi e gastronomia',
+  title: 'Blog: matrimoni, eventi e gastronomia',
   description:
     'Articoli e approfondimenti su matrimoni, eventi, gastronomia e aperitivi vicino a Padova. Scopri i Colli Euganei, le location per eventi e i consigli dello staff de La Montecchia Green.',
   alternates: hreflangForIt('/blog'),

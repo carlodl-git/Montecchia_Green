@@ -16,9 +16,9 @@ import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
 
 export const metadata = {
-  title: 'Organizza il tuo evento — Matrimoni e eventi aziendali vicino a Padova',
+  title: 'Organizza il tuo evento: matrimoni e eventi aziendali vicino a Padova',
   description:
-    'Location esclusiva per matrimoni, feste private e eventi aziendali al Golf della Montecchia. Spazi fino a 300 persone, terrazza panoramica, catering personalizzato. Selvazzano Dentro, Padova.',
+    'Location esclusiva per matrimoni, feste private e eventi aziendali al Golf della Montecchia. Spazi fino a 400 persone, terrazza panoramica, catering personalizzato. Selvazzano Dentro, Padova.',
   alternates: hreflangForIt('/eventi'),
   openGraph: {
     images: [{ url: '/images/Sala-Ristorante-eventi.jpg', width: 1200, height: 630 }],
@@ -51,7 +51,7 @@ export default function EventiPage() {
         <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-20">
           <Reveal>
             <h1 className="text-4xl md:text-6xl font-serif font-semibold tracking-tight text-warm-white">
-              Organizza il tuo evento al Golf della Montecchia — Padova
+              Organizza il tuo evento al Golf della Montecchia: Padova
             </h1>
           </Reveal>
         </div>
@@ -199,7 +199,7 @@ export default function EventiPage() {
                   },
                   {
                     q: 'Come si prenota un evento privato?',
-                    a: 'Contattare via email eventimontecchia@golfmontecchia.it, chiamare il +39 334 677 4483 o mandare un messaggio su whatsapp al +39 334 677 4483',
+                    a: 'Contattare via email eventimontecchia@golfmontecchia.it, chiamare il +39 049 805 8464 o mandare un messaggio su WhatsApp al +39 334 677 4483.',
                   },
                 ].map((item, idx) => (
                   <div key={item.q}>
@@ -221,7 +221,7 @@ export default function EventiPage() {
             { question: 'Quante persone può ospitare il ristorante per un evento?', answer: 'La Sala Petrarca può ospitare da 100 a 300 persone. Sono disponibili anche Sala Foscolo, Sala Ruzante, la terrazza e gli spazi outdoor con piscina.' },
             { question: 'Organizzate matrimoni al Golf della Montecchia?', answer: 'Sì, La Montecchia Green è una delle location preferite per matrimoni nella provincia di Padova. Staff dedicato, menu personalizzato, servizio sommelier e allestimenti curati.' },
             { question: 'Il ristorante è aperto solo ai soci del golf?', answer: 'No, La Montecchia Green è aperto a tutti: golfisti, famiglie, turisti e aziende. Non è necessario essere soci del Golf della Montecchia.' },
-            { question: 'Come si prenota un evento privato?', answer: 'Contatta via WhatsApp al +39 334 677 4483 (risposta rapida), email a eventimontecchia@golfmontecchia.it o telefono. Risposta entro 24-48 ore lavorative.' },
+            { question: 'Come si prenota un evento privato?', answer: 'Contatta via WhatsApp al +39 334 677 4483 (risposta rapida), email a eventimontecchia@golfmontecchia.it o telefonando al +39 049 805 8464. Risposta entro 24-48 ore lavorative.' },
           ]}
         />
 
@@ -256,7 +256,7 @@ export default function EventiPage() {
                   <Link href={mailtoUrl('events', 'it')}>Email</Link>
                 </Button>
                 <Button asChild variant="secondary" size="lg">
-                  <a href={telUrl('mobile')}>Chiama</a>
+                  <a href={telUrl('landline')}>Chiama</a>
                 </Button>
               </div>
             </Reveal>
@@ -265,10 +265,10 @@ export default function EventiPage() {
               <InfoBox title="Informazioni essenziali">
                 <div className="space-y-2">
                   <div>
-                    Capacità: <span className="font-semibold">fino a 300 persone</span>
+                    Capacità: <span className="font-semibold">fino a 400 persone</span>
                   </div>
                   <div>
-                    Area: <span className="font-semibold">Selvazzano Dentro (PD)</span> vicino a Padova
+                    Area: <span className="font-semibold">Selvazzano Dentro (PD)</span>, vicino a Padova
                   </div>
                   <div className="text-xs text-text-mid/80">Aperto a tutti: non serve essere soci del golf.</div>
                 </div>

@@ -9,7 +9,7 @@ import { hreflangForEn } from '@/lib/hreflang';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata = {
-  title: 'Bistrot & Kitchen — La Montecchia Green',
+  title: 'Lounge Bar & Kitchen | La Montecchia Green',
   description:
     'La Montecchia Green is an Italian contemporary restaurant inside the Golf della Montecchia in Selvazzano Dentro (PD). Seasonal ingredients, homemade pasta, handmade desserts and curated wines.',
   alternates: hreflangForEn('/en/restaurant'),
@@ -44,7 +44,7 @@ export default function EnRistorantePage() {
         <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-20">
           <Reveal>
             <h1 className="text-4xl md:text-6xl font-serif font-semibold tracking-tight text-warm-white">
-              Bistrot La Montecchia Green — Italian cuisine in the green of Selvazzano
+              La Montecchia Green: lounge bar and restaurant in the green of Selvazzano
             </h1>
           </Reveal>
         </div>

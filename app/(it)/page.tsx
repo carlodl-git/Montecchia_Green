@@ -10,11 +10,11 @@ import { Button } from '@/components/ui/Button';
 import TestimonialCard from '@/components/TestimonialCard';
 
 // Title lasciato al default del layout (la home mostra il title completo
-// "La Montecchia Green — Bistrot & Eventi a Selvazzano Dentro, Padova").
+// "La Montecchia Green — Lounge Bar Restaurant a Selvazzano Dentro, Padova").
 // La description sotto è < 155 char con CTA WhatsApp esplicita.
 export const metadata = {
   description:
-    'Bistrot & eventi nel verde del Golf della Montecchia, 10 min da Padova. Cucina italiana, matrimoni, aperitivo. Prenota su WhatsApp.',
+    'Lounge bar, ristorante & eventi nel verde del Golf della Montecchia, 10 min da Padova. Cucina italiana, matrimoni, aperitivo. Prenota su WhatsApp.',
   alternates: hreflangForIt('/'),
 };
 
@@ -32,17 +32,17 @@ const pillars = [
   {
     icon: Star,
     title: 'Eventi',
-    text: 'Matrimoni, feste private e team building con spazi modulabili fino a 300 persone.',
+    text: 'Matrimoni, feste private e team building con spazi modulabili fino a 400 persone.',
   },
 ];
 
 const features = [
   { label: 'Verde e natura', sub: 'Vista sul golf e atmosfera rilassata' },
   { label: 'Ingredienti locali', sub: "Stagionali, con prodotti dell'orto" },
-  { label: 'Chef stellato', sub: 'Esperienze di alto livello in cucina' },
+  { label: 'Cucina di qualità', sub: 'Pasta fatta in casa e dessert artigianali' },
   { label: 'Spazi modulabili', sub: 'Per eventi privati e aziendali' },
   { label: 'A 10 minuti da Padova', sub: 'Facile da raggiungere, lontano dal caos' },
-  { label: 'Vini della Tenuta', sub: 'Selezione Emo Capodilista' },
+  { label: 'Vini Emo Capodilista', sub: 'Etichette della Tenuta sui Colli Euganei' },
 ];
 
 export default function HomePage() {
@@ -60,7 +60,7 @@ export default function HomePage() {
     {
       name: 'Sara & Luca',
       title: 'Accoglienza e vista sul green',
-      text: 'Abbiamo cenato sul green: silenzio, natura e un vino selezionato dal sommelier. Un posto elegante ma informale, davvero "a misura di persone".',
+      text: 'Abbiamo cenato sul green: silenzio, natura e un vino selezionato dal sommelier. Un posto elegante ma informale.',
     },
   ];
 
@@ -75,7 +75,7 @@ export default function HomePage() {
         {/* Immagine di sfondo */}
         <Image
           src={PAGE_HERO_IMAGES.home}
-          alt="Facciata storica della Club House del Golf della Montecchia con terrazza e dehors al tramonto — La Montecchia Green, Selvazzano Dentro (PD)"
+          alt="Facciata storica della Club House del Golf della Montecchia con terrazza e dehors al tramonto. La Montecchia Green, Selvazzano Dentro (PD)"
           fill
           priority
           sizes="100vw"
@@ -93,7 +93,7 @@ export default function HomePage() {
           <Reveal>
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-5 py-2 text-xs font-semibold uppercase tracking-widest text-warm-white backdrop-blur-sm">
               <span className="h-1.5 w-1.5 rounded-full bg-green-light" />
-              Aperto a tutti — non serve essere soci
+              Aperto a tutti, non serve essere soci
             </div>
           </Reveal>
 
@@ -107,7 +107,7 @@ export default function HomePage() {
           {/* Sottotitolo */}
           <Reveal delayMs={160}>
             <p className="mt-4 max-w-xl text-base text-warm-white/85 drop-shadow-[0_2px_12px_rgba(0,0,0,0.4)] sm:text-lg md:text-xl">
-              Bistrot &amp; Eventi immersi nel verde del Golf,<br className="hidden sm:block" />
+              Lounge Bar Restaurant immerso nel verde del Golf,<br className="hidden sm:block" />
               ai piedi dei Colli Euganei
             </p>
           </Reveal>
@@ -184,11 +184,11 @@ export default function HomePage() {
               </div>
               <div>
                 <div className="text-xs font-semibold uppercase tracking-wider text-green-light/70">Contatti</div>
-                <a href={telUrl('mobile')} className="mt-1 block text-sm font-medium text-warm-white hover:text-green-light transition-colors">
-                  +39 334 677 4483
+                <a href={telUrl('landline')} className="mt-1 block text-sm font-medium text-warm-white hover:text-green-light transition-colors">
+                  +39 049 805 8464
                 </a>
-                <a href={mailtoUrl('booking', 'it')} className="text-xs text-warm-white/60 hover:text-green-light transition-colors">
-                  lamontecchiagreen@gmail.com
+                <a href={whatsappUrl('booking', 'it')} target="_blank" rel="noreferrer" className="text-xs text-warm-white/60 hover:text-green-light transition-colors">
+                  WhatsApp: +39 334 677 4483
                 </a>
               </div>
             </div>
@@ -204,15 +204,15 @@ export default function HomePage() {
         <Reveal>
           <span className="divider-gold mb-5" />
           <h2 className="font-serif text-3xl font-semibold tracking-tight text-green-dark md:text-4xl">
-            Bistrot informale nel verde del Golf
+            Lounge bar e ristorante nel verde del Golf
           </h2>
         </Reveal>
         <Reveal delayMs={70}>
           <p className="mt-4 max-w-3xl text-base leading-relaxed text-text-mid">
-            La Montecchia Green è un bistrot e ristorante aperto a tutti: golfisti, famiglie, amici, turisti e aziende.
+            La Montecchia Green è un lounge bar e ristorante aperto a tutti: golfisti, famiglie, amici, turisti e aziende.
             È una cucina italiana contemporanea, con ingredienti locali e stagionali, prodotti dell&apos;orto e pasta
-            fatta in casa. La sera venerdì e sabato (su prenotazione) diventa ancora più speciale, con selezione vini e
-            dessert artigianali.
+            fatta in casa. Venerdì e sabato sera, su prenotazione, proponiamo un&apos;esperienza più curata, con selezione
+            di vini e dessert artigianali.
           </p>
         </Reveal>
 
@@ -345,7 +345,7 @@ export default function HomePage() {
                 </h2>
                 <p className="mt-3 max-w-xl text-base leading-relaxed text-warm-white/85">
                   Matrimonio, festa privata o evento aziendale: proposte su misura
-                  con spazi modulabili fino a 300 persone.
+                  con spazi modulabili fino a 400 persone.
                 </p>
               </div>
 
@@ -360,7 +360,7 @@ export default function HomePage() {
                   WhatsApp
                 </Link>
                 <a
-                  href={telUrl('mobile')}
+                  href={telUrl('landline')}
                   className="flex items-center justify-center gap-2 rounded-xl border border-warm-white/25 bg-warm-white/10 px-6 py-3.5 text-sm font-semibold text-warm-white backdrop-blur-sm transition-colors hover:bg-warm-white/20"
                 >
                   <Phone className="h-4 w-4" />

@@ -140,7 +140,7 @@ export default function AperitivoEuganeanHillsPage() {
               terrace at La Montecchia Green, inside Golf della Montecchia in Selvazzano Dentro. Here
               the view opens out over the golf course and the Euganean Hills, creating an atmosphere
               that blends relaxation with natural beauty. You do not need to be a golf club member:
-              the terrace and bistrot are open to everyone.
+              the terrace and restaurant are open to everyone.
             </p>
           </Reveal>
           <Reveal>

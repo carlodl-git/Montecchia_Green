@@ -24,11 +24,11 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   metadataBase: new URL(CONTACT.site),
   title: {
-    default: 'La Montecchia Green — Bistrot & Eventi a Selvazzano Dentro, Padova',
+    default: 'La Montecchia Green | Lounge Bar Restaurant a Selvazzano Dentro, Padova',
     template: '%s | La Montecchia Green',
   },
   description:
-    'Bistrot & eventi nel verde del Golf della Montecchia, 10 min da Padova. Cucina italiana, matrimoni, aperitivo. Prenota su WhatsApp.',
+    'Lounge bar, ristorante & eventi nel verde del Golf della Montecchia, 10 min da Padova. Cucina italiana, matrimoni, aperitivo. Prenota su WhatsApp.',
   openGraph: {
     type: 'website',
     locale: 'it_IT',

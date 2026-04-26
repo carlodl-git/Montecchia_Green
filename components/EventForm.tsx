@@ -170,7 +170,7 @@ export default function EventForm() {
         <InfoBox title="Informazioni essenziali">
           <div className="space-y-2">
             <div>
-              <span className="font-semibold">Capienza:</span> Sala Petrarca 100–300 persone.
+              <span className="font-semibold">Capienza:</span> fino a 400 persone, con la Sala Petrarca per 100-300 invitati.
             </div>
             <div>
               <span className="font-semibold">Contatti eventi:</span> eventimontecchia@golfmontecchia.it

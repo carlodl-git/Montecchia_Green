@@ -195,7 +195,7 @@ export default function WhereToEatSelvazzanoPage() {
               The setting adds value to the gastronomic experience: the panoramic terrace overlooking the
               Euganean Hills and the golf course, the manicured greenery of the estate, the silence of
               the countryside create an environment where food is enjoyed with all the senses. At lunch
-              the restaurant offers an accessible and informal bistrot format, while Friday and Saturday
+              the restaurant offers an accessible and informal lounge bar format, while Friday and Saturday
               evening dinners provide a more structured and refined experience.
             </p>
           </Reveal>

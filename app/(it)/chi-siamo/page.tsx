@@ -10,7 +10,7 @@ import { hreflangForIt } from '@/lib/hreflang';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata = {
-  title: 'Chi Siamo — La Montecchia Green, Bistrot & Eventi a Padova',
+  title: 'Chi Siamo | La Montecchia Green, Lounge Bar Restaurant a Padova',
   description:
     'Scopri la storia de La Montecchia Green: un ex tabacchificio restaurato nella Club House del Golf della Montecchia a Selvazzano Dentro (PD). Cucina km 0, chef Enrico Ruggin, vini della Tenuta Emo Capodilista, eventi privati e aziendali. A 10 minuti da Padova.',
   alternates: hreflangForIt('/chi-siamo'),
@@ -46,7 +46,7 @@ export default function ChiSiamoPage() {
         <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-20">
           <Reveal>
             <h1 className="text-4xl md:text-6xl font-serif font-semibold tracking-tight text-warm-white">
-              Chi Siamo — La nostra storia, la nostra cucina
+              Chi Siamo: la nostra storia, la nostra cucina
             </h1>
           </Reveal>
         </div>
@@ -58,7 +58,7 @@ export default function ChiSiamoPage() {
           <div className="grid gap-8">
             <Reveal>
               <h2 className="text-2xl md:text-3xl font-serif font-semibold tracking-tight text-green-dark">
-                Da tabacchificio storico a bistrot contemporaneo
+                Da tabacchificio storico a lounge bar contemporaneo
               </h2>
             </Reveal>
             <Reveal delayMs={70}>
@@ -66,7 +66,7 @@ export default function ChiSiamoPage() {
                 La Montecchia Green nasce all&apos;interno di un ex tabacchificio del Novecento, sapientemente
                 restaurato e trasformato nella Club House del Golf della Montecchia, a Selvazzano Dentro, alle porte
                 di Padova. Quello che un tempo era un edificio dedicato alla lavorazione del tabacco oggi ospita un
-                bistrot elegante ma informale, dove la tradizione architettonica si fonde con un&apos;atmosfera moderna
+                lounge bar e ristorante elegante ma informale, dove la tradizione architettonica si fonde con un&apos;atmosfera moderna
                 e accogliente.
               </p>
             </Reveal>
@@ -191,10 +191,10 @@ export default function ChiSiamoPage() {
             <Reveal delayMs={720}>
               <ul className="grid gap-2 sm:grid-cols-2">
                 {[
-                  'Pasta Monograno Felicetti — semole di grani antichi italiani',
-                  'Miele Millebuche — prodotto dalle api che vivono nel campo da golf',
-                  'Vini della Tenuta Emo Capodilista — Colli Euganei DOC',
-                  'Specialita Cipriani — eccellenze della tradizione veneta',
+                  'Pasta Monograno Felicetti: semole di grani antichi italiani',
+                  'Miele Millebuche: prodotto dalle api che vivono nel campo da golf',
+                  'Vini della Tenuta Emo Capodilista, Colli Euganei DOC',
+                  'Specialita Cipriani: eccellenze della tradizione veneta',
                   'Ortaggi e erbe aromatiche dal nostro orto',
                   'Formaggi e salumi di produttori locali selezionati',
                 ].map((item) => (

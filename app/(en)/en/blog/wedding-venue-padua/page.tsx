@@ -216,7 +216,7 @@ export default function WeddingVenuePaduaPage() {
               choice that meets each of the five criteria described above. Located inside the Club
               House of Golf della Montecchia, in a restored former tobacco-drying building at the foot
               of the Euganean Hills, it offers a unique atmosphere that blends historic elegance with
-              unspoilt nature. Modular event spaces accommodate from 20 to 300 guests, with the
+              unspoilt nature. Modular event spaces accommodate from 20 to 400 guests, with the
               option to use the panoramic terrace overlooking the green, outdoor areas and the
               swimming pool.
             </p>

@@ -47,7 +47,7 @@ export default function Navbar() {
           <Link
             href={isEn ? '/en' : '/'}
             className="flex shrink-0 items-center rounded-lg p-1 no-underline transition-opacity hover:opacity-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-mid/50"
-            aria-label="La Montecchia Green — Home"
+            aria-label="La Montecchia Green Home"
             onClick={() => setOpen(false)}
           >
             <Image

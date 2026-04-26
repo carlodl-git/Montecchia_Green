@@ -24,11 +24,11 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   metadataBase: new URL(CONTACT.site),
   title: {
-    default: 'La Montecchia Green — Bistrot & Events near Padua, Italy',
+    default: 'La Montecchia Green | Lounge Bar Restaurant near Padua, Italy',
     template: '%s | La Montecchia Green',
   },
   description:
-    'Bistrot & events at Golf della Montecchia, 10 min from Padua. Italian cuisine, weddings, aperitivo. Book on WhatsApp.',
+    'Lounge bar, restaurant & events at Golf della Montecchia, 10 min from Padua. Italian cuisine, weddings, aperitivo. Book on WhatsApp.',
   openGraph: {
     type: 'website',
     locale: 'en_GB',

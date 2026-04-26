@@ -9,7 +9,7 @@ import { telUrl, mailtoUrl, whatsappUrl } from '@/lib/contact';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata = {
-  title: 'Book a table — La Montecchia Green',
+  title: 'Book a table | La Montecchia Green',
   description:
     'Book a table at La Montecchia Green. Open to everyone inside the Golf della Montecchia in Selvazzano Dentro (PD). Lunch daily and dinner Friday & Saturday on reservation.',
   alternates: hreflangForEn('/en/book'),
@@ -30,7 +30,7 @@ export default function EnPrenotaPage() {
         <div className="absolute inset-0">
           <Image
             src={PAGE_HERO_IMAGES.prenota}
-            alt="Dining room table at La Montecchia Green — book your table"
+            alt="Dining room table at La Montecchia Green: book your table"
             fill
             priority
             sizes="100vw"
@@ -46,7 +46,7 @@ export default function EnPrenotaPage() {
                 Book a table
               </h1>
               <p className="mt-2 text-sm text-warm-white/90 md:text-base">
-                La Montecchia Green — Golf della Montecchia, Selvazzano Dentro
+                La Montecchia Green: Golf della Montecchia, Selvazzano Dentro
               </p>
             </div>
           </Reveal>
@@ -95,7 +95,10 @@ export default function EnPrenotaPage() {
                     <span className="font-semibold">Dinner:</span> Friday and Saturday (on reservation)
                   </div>
                   <div className="text-xs text-text-mid/80">
-                    Tel: +39 049 805 8464 / +39 334 677 4483
+                    Tel: +39 049 805 8464
+                  </div>
+                  <div className="text-xs text-text-mid/80">
+                    WhatsApp: +39 334 677 4483
                   </div>
                 </div>
               </InfoBox>

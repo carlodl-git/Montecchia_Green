@@ -196,7 +196,7 @@ export default function CosaMangiareSelvazzanoPage() {
               Il contesto aggiunge valore all&apos;esperienza gastronomica: la terrazza panoramica con
               vista sui Colli Euganei e sul campo da golf, il verde curato della tenuta, il silenzio
               della campagna creano un ambiente dove il cibo si gusta con tutti i sensi. Per il pranzo
-              il ristorante offre una formula bistrot accessibile e informale, mentre le cene del
+              il ristorante offre una formula lounge bar accessibile e informale, mentre le cene del
               venerdi e sabato sera propongono un&apos;esperienza piu strutturata e raffinata.
             </p>
           </Reveal>

@@ -36,16 +36,17 @@ body {
 }
 
 body {
-  background:
-    radial-gradient(1000px 480px at 10% 0%, rgba(45, 74, 62, 0.12), transparent 55%),
-    radial-gradient(820px 420px at 95% 10%, rgba(143, 181, 160, 0.18), transparent 52%),
-    var(--cream);
+  background: var(--cream);
   color: var(--text-dark);
   font-size: 1.0625rem;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
+
+/* Sfumatura discreta riservata alla home (la classe è applicata nel <html lang="it">
+   solo per la pagina root via body[data-route='home']). Le pagine secondarie
+   restano su cream piatto per evitare incoerenze con i contenuti. */
 
 ::selection {
   background: rgba(45, 74, 62, 0.22);

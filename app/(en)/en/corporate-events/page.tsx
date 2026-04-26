@@ -13,9 +13,9 @@ import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
 
 export const metadata = {
-  title: 'Corporate Events Padua — Business Lunches, Team Building, Conventions | La Montecchia Green',
+  title: 'Corporate Events Padua: Business Lunches, Team Building, Conventions | La Montecchia Green',
   description:
-    'Host your corporate event at Golf della Montecchia: business lunches, team building on the green, conventions, year-end dinners, product launches and company retreats. Venues up to 300 guests, tailored menus, free parking. 10 minutes from Padua.',
+    'Host your corporate event at Golf della Montecchia: business lunches, team building on the green, conventions, year-end dinners, product launches and company retreats. Venues up to 400 guests, tailored menus, free parking. 10 minutes from Padua.',
   alternates: hreflangForEn('/en/corporate-events'),
   openGraph: {
     images: [{ url: '/images/Sala-Ristorante-eventi.jpg', width: 1200, height: 630 }],
@@ -26,13 +26,13 @@ const corporateEventsFaq = [
   { question: 'How much does a corporate lunch cost at La Montecchia Green?', answer: 'The cost depends on the number of participants, menu type and services requested. A corporate lunch starts from approximately €35-50 per person for a full menu with wines included. Contact us for a tailored quote.' },
   { question: 'Do you have projector and audio equipment for presentations?', answer: 'Yes, the rooms can be equipped with projector, screen, audio system and microphones. Our staff coordinates the technical setup based on your event requirements.' },
   { question: 'How many people can participate in team building on the green?', answer: 'Team building on the green is flexible and can involve groups from 10 to 100+ people. Activities take place outdoors in the Golf della Montecchia setting and can be customised for your group size.' },
-  { question: 'Are the rooms suitable for conventions and assemblies?', answer: 'Yes, Sala Petrarca hosts 100 to 300 people and can be configured theatre-style, with an imperial table or round tables. Sala Foscolo (30-80 people) and Sala Ruzante (20-40 people) are ideal for smaller meetings.' },
+  { question: 'Are the rooms suitable for conventions and assemblies?', answer: 'Yes, Sala Petrarca hosts 100 to 300 people and can be configured theatre-style, with an imperial table or round tables; combined with the terrace it can welcome up to 400 guests. Sala Foscolo (30-80 people) and Sala Ruzante (20-40 people) are ideal for smaller meetings.' },
   { question: 'Can we organize a year-end dinner for our company?', answer: 'Yes, year-end dinners are among our most requested events. Sala Petrarca is perfect for large groups, with a custom menu, sommelier service and the option of music and entertainment.' },
   { question: 'Do you offer options for special diets and intolerances?', answer: 'Yes, the chef prepares menus for coeliac, lactose intolerant, vegetarian and vegan guests. Nutritional consultancy through the Montecchia Performance Center is also available for special events.' },
   { question: 'Is there parking for all participants?', answer: 'Yes, the ample free parking inside Golf della Montecchia is sufficient even for large events. There are no parking issues in the area.' },
   { question: 'How far is La Montecchia Green from Padua?', answer: 'La Montecchia Green is just 10 minutes from Padua centre, 5 minutes from Abano Terme and less than 10 minutes from the Padova Ovest motorway exit (A4/A13). Easily reachable from the entire North-East.' },
   { question: 'Can we hold morning meetings?', answer: 'Yes, the rooms are available in the morning for meetings, workshops and work sessions. Service includes coffee breaks, working breakfast or light lunch depending on your needs.' },
-  { question: 'How do we book a corporate event?', answer: 'Contact us via WhatsApp at +39 334 677 4483 (fast response), email eventimontecchia@golfmontecchia.it, or call +39 334 677 4483. Staff responds within 24-48 business hours with a tailored proposal.' },
+  { question: 'How do we book a corporate event?', answer: 'Contact us via WhatsApp at +39 334 677 4483 (fast response), email eventimontecchia@golfmontecchia.it, or call +39 049 805 8464. Staff responds within 24-48 business hours with a tailored proposal.' },
   { question: 'Can we organize a multi-day corporate retreat?', answer: 'Yes, La Montecchia Green is ideal for corporate retreats. The proximity to hotels such as the thermal spas of Abano and Montegrotto Terme allows multi-day stays, combining work sessions, activities on the green and relaxation.' },
   { question: 'Is the venue accessible for people with disabilities?', answer: 'Yes, the venue is on the ground floor of the Club House of Golf della Montecchia with facilitated wheelchair access.' },
 ];
@@ -64,7 +64,7 @@ export default function EnEventiAziendaliPage() {
         <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-20">
           <Reveal>
             <h1 className="text-4xl md:text-6xl font-serif font-semibold tracking-tight text-warm-white">
-              Corporate Events at Golf della Montecchia — Padua
+              Corporate Events at Golf della Montecchia: Padua
             </h1>
           </Reveal>
         </div>
@@ -110,7 +110,7 @@ export default function EnEventiAziendaliPage() {
                     WhatsApp: <span className="font-semibold">+39 334 677 4483</span>
                   </div>
                   <div>
-                    Phone: <span className="font-semibold">+39 334 677 4483</span>
+                    Phone: <span className="font-semibold">+39 049 805 8464</span>
                   </div>
                   <div className="text-xs text-text-mid/80">Reply within 24-48 business hours.</div>
                 </div>
@@ -157,7 +157,7 @@ export default function EnEventiAziendaliPage() {
               {
                 icon: <Building2 className="h-5 w-5 text-green-mid" aria-hidden="true" />,
                 title: 'Year-end dinners',
-                desc: 'Close the year with your team in style. The Sala Petrarca hosts up to 300 guests for gala dinners, with a dedicated menu, sommelier service and the option to extend the evening on the panoramic terrace.',
+                desc: 'Close the year with your team in style. The venue hosts up to 400 guests for gala dinners, with a dedicated menu, sommelier service and the option to extend the evening on the panoramic terrace.',
               },
               {
                 icon: <Leaf className="h-5 w-5 text-green-mid" aria-hidden="true" />,
@@ -190,14 +190,14 @@ export default function EnEventiAziendaliPage() {
             </h2>
             <p className="mt-2 max-w-3xl text-base leading-relaxed text-text-mid">
               Every event has different needs. La Montecchia Green offers flexible indoor and outdoor spaces,
-              suitable for groups from 20 to 300 guests. Our staff will help you choose the ideal configuration
+              suitable for groups from 20 to 400 guests. Our staff will help you choose the ideal configuration
               for your format.
             </p>
           </Reveal>
 
           <div className="mt-8 grid gap-4 md:grid-cols-2">
             <Reveal>
-              <InfoBox title="Sala Petrarca — 100 / 300 guests">
+              <InfoBox title="Sala Petrarca: 100 / 300 guests">
                 <div className="space-y-2">
                   <div className="flex items-start gap-3">
                     <Users className="h-4 w-4 mt-0.5 text-green-mid" aria-hidden="true" />
@@ -207,7 +207,7 @@ export default function EnEventiAziendaliPage() {
               </InfoBox>
             </Reveal>
             <Reveal delayMs={60}>
-              <InfoBox title="Sala Foscolo — 30 / 80 guests">
+              <InfoBox title="Sala Foscolo: 30 / 80 guests">
                 <div className="space-y-2">
                   <div className="flex items-start gap-3">
                     <Users className="h-4 w-4 mt-0.5 text-green-mid" aria-hidden="true" />
@@ -217,7 +217,7 @@ export default function EnEventiAziendaliPage() {
               </InfoBox>
             </Reveal>
             <Reveal delayMs={120}>
-              <InfoBox title="Sala Ruzante — 20 / 40 guests">
+              <InfoBox title="Sala Ruzante: 20 / 40 guests">
                 <div className="space-y-2">
                   <div className="flex items-start gap-3">
                     <Users className="h-4 w-4 mt-0.5 text-green-mid" aria-hidden="true" />
@@ -372,7 +372,7 @@ export default function EnEventiAziendaliPage() {
         <div className="mt-14">
           <Reveal>
             <h2 className="text-2xl font-serif font-semibold tracking-tight text-green-dark">
-              FAQ — Frequently asked questions about corporate events
+              FAQ: frequently asked questions about corporate events
             </h2>
           </Reveal>
           <Reveal delayMs={80}>
@@ -432,7 +432,7 @@ export default function EnEventiAziendaliPage() {
                   <Link href={mailtoUrl('events', 'en')}>Email</Link>
                 </Button>
                 <Button asChild variant="secondary" size="lg">
-                  <a href={telUrl('mobile')}>Call</a>
+                  <a href={telUrl('landline')}>Call</a>
                 </Button>
               </div>
             </Reveal>
@@ -441,15 +441,15 @@ export default function EnEventiAziendaliPage() {
               <InfoBox title="Key information">
                 <div className="space-y-2">
                   <div>
-                    Capacity: <span className="font-semibold">from 20 to 300 guests</span>
+                    Capacity: <span className="font-semibold">from 20 to 400 guests</span>
                   </div>
                   <div>
-                    Area: <span className="font-semibold">Selvazzano Dentro (PD)</span> — 10 min from Padua
+                    Area: <span className="font-semibold">Selvazzano Dentro (PD)</span>, 10 min from Padua
                   </div>
                   <div>
                     Parking: <span className="font-semibold">free</span> inside the golf grounds
                   </div>
-                  <div className="text-xs text-text-mid/80">Open to all companies — no golf membership required.</div>
+                  <div className="text-xs text-text-mid/80">Open to all companies, no golf membership required.</div>
                 </div>
               </InfoBox>
             </Reveal>

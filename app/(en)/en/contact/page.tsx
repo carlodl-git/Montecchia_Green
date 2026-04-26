@@ -10,7 +10,7 @@ import { telUrl, mailtoUrl, whatsappUrl } from '@/lib/contact';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata = {
-  title: 'Contacts & directions — La Montecchia Green',
+  title: 'Contacts & directions | La Montecchia Green',
   description:
     'How to reach La Montecchia Green at Via Montecchia 12, Selvazzano Dentro (PD). Google Maps pin, directions from Padua and Abano Terme, free parking and contact details.',
   alternates: hreflangForEn('/en/contact'),
@@ -48,7 +48,7 @@ export default function EnContattiPage() {
         <div className="relative mx-auto max-w-6xl px-4 py-14">
           <Reveal>
             <h1 className="text-4xl md:text-5xl font-serif font-semibold tracking-tight text-warm-white">
-              How to reach La Montecchia Green — Via Montecchia 12, Selvazzano Dentro
+              How to reach La Montecchia Green: Via Montecchia 12, Selvazzano Dentro
             </h1>
           </Reveal>
         </div>
@@ -113,22 +113,26 @@ export default function EnContattiPage() {
                     <a className="hover:text-green-dark transition-colors" href={telUrl('landline')}>
                       +39 049 805 8464
                     </a>
-                    {' / '}
-                    <a className="hover:text-green-dark transition-colors" href={telUrl('mobile')}>
+                  </div>
+                  <div>
+                    <span className="font-semibold">WhatsApp:</span>{' '}
+                    <a
+                      className="hover:text-green-dark transition-colors"
+                      href={whatsappUrl('info', 'en')}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       +39 334 677 4483
                     </a>
                   </div>
                   <div>
-                    <span className="font-semibold">Email:</span>{' '}
+                    <span className="font-semibold">Events email:</span>{' '}
                     <a
                       className="hover:text-green-dark transition-colors"
-                      href={mailtoUrl('booking', 'en')}
+                      href={mailtoUrl('events', 'en')}
                     >
-                      lamontecchiagreen@gmail.com
+                      eventimontecchia@golfmontecchia.it
                     </a>
-                  </div>
-                  <div className="pt-3 text-xs text-text-mid/80">
-                    Events email: eventimontecchia@golfmontecchia.it
                   </div>
                 </div>
 
@@ -143,7 +147,7 @@ export default function EnContattiPage() {
                     </Link>
                   </Button>
                   <Button asChild variant="secondary" size="lg">
-                    <Link href={mailtoUrl('booking', 'en')}>Send an email</Link>
+                    <Link href={mailtoUrl('events', 'en')}>Send an email</Link>
                   </Button>
                 </div>
               </InfoBox>

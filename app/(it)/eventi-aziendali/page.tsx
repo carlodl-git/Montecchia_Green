@@ -14,9 +14,9 @@ import { Card, CardContent } from '@/components/ui/Card';
 import { CONTACT } from '@/lib/contact';
 
 export const metadata = {
-  title: 'Eventi Aziendali Padova — Pranzi, Team Building, Convention | La Montecchia Green',
+  title: 'Eventi Aziendali Padova: Pranzi, Team Building, Convention | La Montecchia Green',
   description:
-    'Organizza il tuo evento aziendale al Golf della Montecchia: pranzi aziendali, team building sul green, convention, cene di fine anno, presentazioni prodotto e retreat. Sale fino a 300 persone, menu personalizzato, parcheggio gratuito. A 10 minuti da Padova.',
+    'Organizza il tuo evento aziendale al Golf della Montecchia: pranzi aziendali, team building sul green, convention, cene di fine anno, presentazioni prodotto e retreat. Sale fino a 400 persone, menu personalizzato, parcheggio gratuito. A 10 minuti da Padova.',
   alternates: hreflangForIt('/eventi-aziendali'),
   openGraph: {
     images: [{ url: '/images/Sala-Ristorante-eventi.jpg', width: 1200, height: 630 }],
@@ -33,7 +33,7 @@ const eventiAziendaliFaq = [
   {
     question: 'Le sale sono adatte a convention, meeting e team building?',
     answer:
-      'Sì. Sala Petrarca (100-300 persone) è configurabile a teatro, tavolo imperiale o tavoli rotondi. Foscolo (30-80) e Ruzante (20-40) per meeting ristretti. Il team building sul green coinvolge gruppi da 10 a 100+ persone.',
+      'Sì. Sala Petrarca (100-300 persone) è configurabile a teatro, tavolo imperiale o tavoli rotondi e si può combinare con la terrazza per eventi fino a 400 invitati. Foscolo (30-80) e Ruzante (20-40) per meeting ristretti. Il team building sul green coinvolge gruppi da 10 a 100+ persone.',
   },
   {
     question: 'Avete proiettore, schermo e impianto audio?',
@@ -79,7 +79,7 @@ export default function EventiAziendaliPage() {
         <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-20">
           <Reveal>
             <h1 className="text-4xl md:text-6xl font-serif font-semibold tracking-tight text-warm-white">
-              Eventi Aziendali al Golf della Montecchia — Padova
+              Eventi Aziendali al Golf della Montecchia: Padova
             </h1>
           </Reveal>
         </div>
@@ -125,7 +125,7 @@ export default function EventiAziendaliPage() {
                     WhatsApp: <span className="font-semibold">+39 334 677 4483</span>
                   </div>
                   <div>
-                    Telefono: <span className="font-semibold">+39 334 677 4483</span>
+                    Telefono: <span className="font-semibold">+39 049 805 8464</span>
                   </div>
                   <div className="text-xs text-text-mid/80">Risposta entro 24-48 ore lavorative.</div>
                 </div>
@@ -171,7 +171,7 @@ export default function EventiAziendaliPage() {
               {
                 icon: <Building2 className="h-5 w-5 text-green-mid" aria-hidden="true" />,
                 title: 'Cene di fine anno',
-                desc: 'Chiudi l\'anno con il tuo team in grande stile. La Sala Petrarca ospita fino a 300 persone per cene di gala, con menu dedicato, servizio sommelier e la possibilita di estendere la serata sulla terrazza panoramica.',
+                desc: 'Chiudi l\'anno con il tuo team in grande stile. La location ospita fino a 400 persone per cene di gala, con menu dedicato, servizio sommelier e la possibilita di estendere la serata sulla terrazza panoramica.',
               },
               {
                 icon: <Leaf className="h-5 w-5 text-green-mid" aria-hidden="true" />,
@@ -204,14 +204,14 @@ export default function EventiAziendaliPage() {
             </h2>
             <p className="mt-2 max-w-3xl text-base leading-relaxed text-text-mid">
               Ogni evento ha esigenze diverse. La Montecchia Green offre sale interne ed esterne modulabili,
-              adatte a gruppi da 20 a 300 persone. Il nostro staff ti aiutera a scegliere la configurazione
+              adatte a gruppi da 20 a 400 persone. Il nostro staff ti aiutera a scegliere la configurazione
               ideale per il tuo formato.
             </p>
           </Reveal>
 
           <div className="mt-8 grid gap-4 md:grid-cols-2">
             <Reveal>
-              <InfoBox title="Sala Petrarca — 100 / 300 persone">
+              <InfoBox title="Sala Petrarca: 100 / 300 persone">
                 <div className="space-y-2">
                   <div className="flex items-start gap-3">
                     <Users className="h-4 w-4 mt-0.5 text-green-mid" aria-hidden="true" />
@@ -221,7 +221,7 @@ export default function EventiAziendaliPage() {
               </InfoBox>
             </Reveal>
             <Reveal delayMs={60}>
-              <InfoBox title="Sala Foscolo — 30 / 80 persone">
+              <InfoBox title="Sala Foscolo: 30 / 80 persone">
                 <div className="space-y-2">
                   <div className="flex items-start gap-3">
                     <Users className="h-4 w-4 mt-0.5 text-green-mid" aria-hidden="true" />
@@ -231,7 +231,7 @@ export default function EventiAziendaliPage() {
               </InfoBox>
             </Reveal>
             <Reveal delayMs={120}>
-              <InfoBox title="Sala Ruzante — 20 / 40 persone">
+              <InfoBox title="Sala Ruzante: 20 / 40 persone">
                 <div className="space-y-2">
                   <div className="flex items-start gap-3">
                     <Users className="h-4 w-4 mt-0.5 text-green-mid" aria-hidden="true" />
@@ -385,7 +385,7 @@ export default function EventiAziendaliPage() {
         <div className="mt-14">
           <Reveal>
             <h2 className="text-2xl font-serif font-semibold tracking-tight text-green-dark">
-              FAQ — Domande frequenti sugli eventi aziendali
+              FAQ: domande frequenti sugli eventi aziendali
             </h2>
           </Reveal>
           <Reveal delayMs={80}>
@@ -469,7 +469,7 @@ export default function EventiAziendaliPage() {
                   <Link href={mailtoUrl('events', 'it')}>Email</Link>
                 </Button>
                 <Button asChild variant="secondary" size="lg">
-                  <a href={telUrl('mobile')}>Chiama</a>
+                  <a href={telUrl('landline')}>Chiama</a>
                 </Button>
               </div>
             </Reveal>
@@ -478,10 +478,10 @@ export default function EventiAziendaliPage() {
               <InfoBox title="Informazioni essenziali">
                 <div className="space-y-2">
                   <div>
-                    Capacita: <span className="font-semibold">da 20 a 300 persone</span>
+                    Capacita: <span className="font-semibold">da 20 a 400 persone</span>
                   </div>
                   <div>
-                    Area: <span className="font-semibold">Selvazzano Dentro (PD)</span> — 10 min da Padova
+                    Area: <span className="font-semibold">Selvazzano Dentro (PD)</span>, 10 min da Padova
                   </div>
                   <div>
                     Parcheggio: <span className="font-semibold">gratuito</span> all&apos;interno del golf

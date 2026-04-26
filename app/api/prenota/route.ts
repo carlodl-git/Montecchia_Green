@@ -52,7 +52,7 @@ export async function POST(req: Request) {
     auth: { user: SMTP_USER, pass: SMTP_PASS },
   });
 
-  const to = PRENOTA_TO_EMAIL || 'lamontecchiagreen@gmail.com';
+  const to = PRENOTA_TO_EMAIL || 'eventimontecchia@golfmontecchia.it';
 
   const subject = `Prenotazione - La Montecchia Green (${values.nome})`;
   const text = [

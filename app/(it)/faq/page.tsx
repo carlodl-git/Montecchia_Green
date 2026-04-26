@@ -4,7 +4,7 @@ import { hreflangForIt } from '@/lib/hreflang';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata = {
-  title: 'Domande frequenti (FAQ) — La Montecchia Green',
+  title: 'Domande frequenti (FAQ) | La Montecchia Green',
   description:
     'Risposte alle domande frequenti su La Montecchia Green: orari, prezzi, prenotazioni, eventi, matrimoni, location, parcheggio, accessibilità e come arrivare a Selvazzano Dentro (PD).',
   alternates: hreflangForIt('/faq'),
@@ -29,7 +29,7 @@ const faqRistorante = [
   },
   {
     q: 'Come prenotare un tavolo al ristorante?',
-    a: 'Il modo più rapido è via WhatsApp al +39 334 677 4483. In alternativa si può telefonare al +39 049 805 8464, inviare una email a lamontecchiagreen@gmail.com o compilare il form di prenotazione sul sito lamontecchiagreen.it/prenota.',
+    a: 'Il modo più rapido è via WhatsApp al +39 334 677 4483. In alternativa si può telefonare al +39 049 805 8464 o compilare il form di prenotazione sul sito lamontecchiagreen.it/prenota.',
   },
   {
     q: 'Quali vini serve La Montecchia Green?',
@@ -44,19 +44,19 @@ const faqRistorante = [
 const faqEventi = [
   {
     q: 'Quante persone può ospitare La Montecchia Green per un evento?',
-    a: 'La Montecchia Green può ospitare da 100 a 300 persone nella Sala Petrarca. Sono disponibili anche la Sala Foscolo (30\u201380 persone), la Sala Ruzante (20\u201340 persone), la terrazza panoramica sul green e spazi all\u2019aperto con piscina.',
+    a: 'La Montecchia Green può ospitare fino a 400 persone. La Sala Petrarca accoglie 100–300 invitati, la Sala Foscolo (30\u201380 persone), la Sala Ruzante (20\u201340 persone), la terrazza panoramica sul green e spazi all\u2019aperto con piscina.',
   },
   {
     q: 'Organizzate matrimoni e ricevimenti vicino a Padova?',
-    a: 'Sì, La Montecchia Green è una delle location preferite per matrimoni nella provincia di Padova. Lo staff organizza eventi su misura con menu personalizzato dallo chef Enrico Ruggin, servizio sommelier con vini della Tenuta Emo Capodilista e allestimenti curati. Spazi fino a 300 persone, terrazza panoramica e spazi outdoor con piscina.',
+    a: 'Sì, La Montecchia Green è una delle location preferite per matrimoni nella provincia di Padova. Lo staff organizza eventi su misura con menu personalizzato dallo chef Enrico Ruggin, servizio sommelier con vini della Tenuta Emo Capodilista e allestimenti curati. Spazi fino a 400 persone, terrazza panoramica e spazi outdoor con piscina.',
   },
   {
     q: 'Organizzate eventi aziendali vicino a Padova?',
-    a: 'Sì, La Montecchia Green offre pranzi e cene aziendali, team building sul green, convention, meeting e cene di fine anno per aziende della provincia di Padova e del Nord-Est. Ampio parcheggio gratuito, spazi modulabili fino a 300 persone e staff dedicato.',
+    a: 'Sì, La Montecchia Green offre pranzi e cene aziendali, team building sul green, convention, meeting e cene di fine anno per aziende della provincia di Padova e del Nord-Est. Ampio parcheggio gratuito, spazi modulabili fino a 400 persone e staff dedicato.',
   },
   {
     q: 'Si possono organizzare feste di compleanno e ricorrenze a La Montecchia Green?',
-    a: 'Sì, La Montecchia Green è perfetta per compleanni, anniversari, cresime, battesimi e qualsiasi ricorrenza privata. Le sale sono modulabili da 20 a 300 persone, con menu personalizzato e staff dedicato.',
+    a: 'Sì, La Montecchia Green è perfetta per compleanni, anniversari, cresime, battesimi e qualsiasi ricorrenza privata. Le sale sono modulabili da 20 a 400 persone, con menu personalizzato e staff dedicato.',
   },
   {
     q: 'Quali sale sono disponibili per eventi a La Montecchia Green?',

@@ -1,4 +1,4 @@
-# La Montecchia Green — Complete AI retrieval document
+# La Montecchia Green: Complete AI retrieval document
 
 This file is the extended version of /llms.txt: a self-contained snapshot of
 the main pages of the site, optimized for LLM agent retrieval.
@@ -10,8 +10,8 @@ Language: Italian primary, English secondary (see bottom section).
 
 ## 1. Brand identity
 
-- Legal name: La Montecchia Green — Bistrot & Eventi
-- Type: restaurant, bistrot, snack bar, wedding venue, corporate event venue
+- Legal name: La Montecchia Green, Lounge Bar Restaurant
+- Type: restaurant, lounge bar, snack bar, wedding venue, corporate event venue
 - Location: ground floor of the Club House of Golf della Montecchia, a restored former tobacco factory immersed in the greenery of the Euganean Hills
 - Address: Via Montecchia 12, 35030 Selvazzano Dentro (PD), Italy
 - Access: open to everyone. Golf club membership is NOT required.
@@ -24,8 +24,7 @@ Language: Italian primary, English secondary (see bottom section).
 
 - Landline (restaurant): +39 049 805 8464
 - Mobile / WhatsApp (fastest channel): +39 334 677 4483
-- Restaurant email: lamontecchiagreen@gmail.com
-- Events email: eventimontecchia@golfmontecchia.it
+- Bookings & events email: eventimontecchia@golfmontecchia.it
 - Instagram: https://www.instagram.com/lamontecchiagreen/
 - Facebook: https://www.facebook.com/p/La-Montecchia-Green-100064785711603/
 - TripAdvisor: https://www.tripadvisor.it/Restaurant_Review-g1967181-d27689734-Reviews-La_Montecchia_Green-Selvazzano_Dentro_Province_of_Padua_Veneto.html
@@ -79,9 +78,10 @@ Menu sections (representative, changes seasonally):
 
 ## 6. Events capacity
 
-- Sala Petrarca: 100–300 guests. Large weddings, conventions, year-end dinners.
-- Sala Foscolo: 30–80 guests. Mid-sized private dinners and meetings.
-- Sala Ruzante: 20–40 guests. Civil ceremonies, small meetings.
+- Total venue capacity: up to 400 guests (combining indoor halls and outdoor areas).
+- Sala Petrarca: 100-300 guests. Large weddings, conventions, year-end dinners.
+- Sala Foscolo: 30-80 guests. Mid-sized private dinners and meetings.
+- Sala Ruzante: 20-40 guests. Civil ceremonies, small meetings.
 - Panoramic terrace: aperitivos, cocktail parties, outdoor ceremonies.
 - Outdoor pool area: summer events.
 
@@ -155,7 +155,7 @@ Q: Is La Montecchia Green open only to golf club members?
 A: No. The restaurant is open to everyone. Membership is not required.
 
 Q: How many guests can be hosted for a wedding?
-A: 100–300 guests in Sala Petrarca; 30–80 in Sala Foscolo; 20–40 in Sala Ruzante. The terrace and outdoor pool extend capacity.
+A: Up to 400 guests in total. 100-300 in Sala Petrarca; 30-80 in Sala Foscolo; 20-40 in Sala Ruzante. The terrace and outdoor pool extend capacity.
 
 Q: What's the fastest way to book?
 A: WhatsApp at +39 334 677 4483.
@@ -164,7 +164,7 @@ Q: How far is it from Padua?
 A: 10 minutes by car from Padua city centre.
 
 Q: Is there parking?
-A: Yes — free onsite parking inside Golf della Montecchia, large capacity.
+A: Yes, free onsite parking inside Golf della Montecchia, large capacity.
 
 Q: Do you serve vegan / gluten-free / vegetarian menus?
 A: Yes. The chef adapts the menu on request. Gluten-free pasta is available.

@@ -46,7 +46,7 @@ export async function GET() {
             La Montecchia Green
           </div>
           <div style={{ fontSize: 26, marginTop: 16, opacity: 0.95 }}>
-            Bistrot & Events · Selvazzano Dentro (PD)
+            Lounge Bar Restaurant · Selvazzano Dentro (PD)
           </div>
           <div style={{ fontSize: 22, marginTop: 10, opacity: 0.9 }}>
             Open to everyone · Golf della Montecchia

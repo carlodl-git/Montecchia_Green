@@ -1,7 +1,7 @@
 {
   "name": "montecchia_green",
   "version": "1.0.0",
-  "description": "La Montecchia Green — Bistrot & Eventi",
+  "description": "La Montecchia Green — Lounge Bar Restaurant",
   "main": "index.js",
   "scripts": {
     "dev": "next dev -p 3000",

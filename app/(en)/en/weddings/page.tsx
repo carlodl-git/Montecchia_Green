@@ -15,9 +15,9 @@ import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
 
 export const metadata = {
-  title: 'Weddings at Golf della Montecchia — Wedding venue near Padua, Italy',
+  title: 'Weddings at Golf della Montecchia: wedding venue near Padua, Italy',
   description:
-    'Wedding venue at Golf della Montecchia, Selvazzano Dentro (Padua). Restored tobacco warehouse at the foot of the Euganean Hills: halls up to 300 guests, panoramic terrace, pool, tailored menu by chef Enrico Ruggin, Tenuta Emo Capodilista wines. 10 minutes from Padua.',
+    'Wedding venue at Golf della Montecchia, Selvazzano Dentro (Padua). Restored tobacco warehouse at the foot of the Euganean Hills: halls up to 400 guests, panoramic terrace, pool, tailored menu by chef Enrico Ruggin, Tenuta Emo Capodilista wines. 10 minutes from Padua.',
   alternates: hreflangForEn('/en/weddings'),
   openGraph: {
     images: [{ url: '/images/Sala-Ristorante-eventi.jpg', width: 1200, height: 630 }],
@@ -51,7 +51,7 @@ export default function EnMatrimoniPage() {
         <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-20">
           <Reveal>
             <h1 className="text-4xl md:text-6xl font-serif font-semibold tracking-tight text-warm-white">
-              Your wedding at Golf della Montecchia — Padua, Italy
+              Your wedding at Golf della Montecchia: Padua, Italy
             </h1>
           </Reveal>
         </div>
@@ -77,7 +77,7 @@ export default function EnMatrimoniPage() {
             </Reveal>
             <Reveal delayMs={140}>
               <p className="text-base leading-relaxed text-text-mid">
-                Whether you are looking for an intimate reception or a grand celebration for up to 300 guests,
+                Whether you are looking for an intimate reception or a grand celebration for up to 400 guests,
                 La Montecchia Green will guide you from the planning stage to the big day with a dedicated team,
                 a bespoke menu and meticulous attention to detail that turns every wedding into an unforgettable
                 experience.
@@ -96,7 +96,7 @@ export default function EnMatrimoniPage() {
                     WhatsApp: <span className="font-semibold">+39 334 677 4483</span>
                   </div>
                   <div>
-                    Phone: <span className="font-semibold">+39 334 677 4483</span>
+                    Phone: <span className="font-semibold">+39 049 805 8464</span>
                   </div>
                   <div className="text-xs text-text-mid/80">Reply within 24-48 business hours.</div>
                 </div>
@@ -397,7 +397,7 @@ export default function EnMatrimoniPage() {
                   <Link href={mailtoUrl('events', 'en')}>Email</Link>
                 </Button>
                 <Button asChild variant="secondary" size="lg">
-                  <a href={telUrl('mobile')}>Call</a>
+                  <a href={telUrl('landline')}>Call</a>
                 </Button>
               </div>
             </Reveal>
@@ -417,15 +417,15 @@ export default function EnMatrimoniPage() {
               <InfoBox title="Key information">
                 <div className="space-y-2">
                   <div>
-                    Capacity: <span className="font-semibold">20 to 300 guests</span>
+                    Capacity: <span className="font-semibold">20 to 400 guests</span>
                   </div>
                   <div>
-                    Location: <span className="font-semibold">Selvazzano Dentro (PD)</span> — 10 min from Padua
+                    Location: <span className="font-semibold">Selvazzano Dentro (PD)</span>, 10 min from Padua
                   </div>
                   <div>
                     Parking: <span className="font-semibold">free</span>
                   </div>
-                  <div className="text-xs text-text-mid/80">Open to everyone — no golf membership required.</div>
+                  <div className="text-xs text-text-mid/80">Open to everyone, no golf membership required.</div>
                 </div>
               </InfoBox>
             </Reveal>

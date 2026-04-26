@@ -52,9 +52,9 @@ const restaurantSchema = {
   '@context': 'https://schema.org',
   '@type': ['Restaurant', 'FoodEstablishment', 'EventVenue', 'BarOrPub'],
   name: 'La Montecchia Green',
-  alternateName: ['La Montecchia Green – Bistrot & Eventi', 'Montecchia Green', 'Green Bistrot Golf Montecchia'],
+  alternateName: ['La Montecchia Green', 'Montecchia Green', 'Lounge Bar Golf Montecchia'],
   description:
-    'Bistrot, ristorante e location per eventi privati e aziendali al Golf della Montecchia, in un ex tabacchificio restaurato ai piedi dei Colli Euganei. Cucina italiana con ingredienti locali e stagionali, aperitivo sul green, matrimoni, team building e cene aziendali. A 10 minuti da Padova, aperto a tutti.',
+    'Lounge bar, ristorante e location per eventi privati e aziendali al Golf della Montecchia, in un ex tabacchificio restaurato ai piedi dei Colli Euganei. Cucina italiana con ingredienti locali e stagionali, aperitivo sul green, matrimoni, team building e cene aziendali. A 10 minuti da Padova, aperto a tutti.',
   url: CONTACT.site,
   telephone: CONTACT.phones.landline.tel,
   email: CONTACT.emails.booking,
@@ -145,7 +145,7 @@ const restaurantSchema = {
       {
         '@type': 'Offer',
         name: 'Location per matrimoni',
-        description: 'Organizzazione matrimoni con spazi fino a 300 persone, menu personalizzato, sommelier, terrazza e spazi outdoor',
+        description: 'Organizzazione matrimoni con spazi fino a 400 persone, menu personalizzato, sommelier, terrazza e spazi outdoor',
       },
       {
         '@type': 'Offer',
@@ -159,17 +159,17 @@ const restaurantSchema = {
 const eventVenueSchema = {
   '@context': 'https://schema.org',
   '@type': ['EventVenue', 'WeddingVenue'],
-  name: 'La Montecchia Green — Location per eventi matrimoni e aziendali',
+  name: 'La Montecchia Green: Location per eventi matrimoni e aziendali',
   description:
-    'Location esclusiva per matrimoni, feste private e eventi aziendali al Golf della Montecchia, ai piedi dei Colli Euganei. Ex tabacchificio restaurato con spazi modulabili fino a 300 persone, terrazza panoramica sul green, catering personalizzato con chef, sommelier e staff dedicato. A 10 minuti da Padova.',
-  maximumAttendeeCapacity: 300,
+    'Location esclusiva per matrimoni, feste private e eventi aziendali al Golf della Montecchia, ai piedi dei Colli Euganei. Ex tabacchificio restaurato con spazi modulabili fino a 400 persone, terrazza panoramica sul green, catering personalizzato con chef, sommelier e staff dedicato. A 10 minuti da Padova.',
+  maximumAttendeeCapacity: 400,
   address: sharedAddress,
   geo: sharedGeo,
-  telephone: '+393346774483',
+  telephone: '+390498058464',
   email: 'eventimontecchia@golfmontecchia.it',
   url: 'https://www.lamontecchiagreen.it/eventi',
   amenityFeature: [
-    { '@type': 'LocationFeatureSpecification', name: 'Sala Petrarca (100–300 persone)', value: true },
+    { '@type': 'LocationFeatureSpecification', name: 'Sala Petrarca (100-300 persone)', value: true },
     { '@type': 'LocationFeatureSpecification', name: 'Sala Foscolo', value: true },
     { '@type': 'LocationFeatureSpecification', name: 'Sala Ruzante', value: true },
     { '@type': 'LocationFeatureSpecification', name: 'Terrazza panoramica sul green', value: true },
@@ -183,7 +183,7 @@ const eventVenueSchema = {
 const aperitivoSchema = {
   '@context': 'https://schema.org',
   '@type': ['BarOrPub', 'FoodEstablishment'],
-  name: 'La Montecchia Green — Aperitivo sul green a Padova',
+  name: 'La Montecchia Green: Aperitivo sul green a Padova',
   description:
     'Aperitivo e snack bar sulla terrazza panoramica del Golf della Montecchia, con vista sui Colli Euganei. Cocktail, vini della Tenuta Emo Capodilista, taglieri e stuzzichini. Un aperitivo diverso dal solito a 10 minuti da Padova.',
   address: sharedAddress,
@@ -209,7 +209,7 @@ const faqSchema = {
       name: 'Quante persone può ospitare La Montecchia Green per un evento?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'La Montecchia Green può ospitare da 100 a 300 persone nella Sala Petrarca. Sono disponibili anche la Sala Foscolo (30-80 persone), la Sala Ruzante (20-40 persone), la terrazza panoramica sul green e spazi all\'aperto con piscina.',
+        text: 'La Montecchia Green può ospitare fino a 400 persone. La Sala Petrarca accoglie 100-300 invitati, la Sala Foscolo 30-80, la Sala Ruzante 20-40; sono disponibili anche la terrazza panoramica sul green e gli spazi all\'aperto con piscina.',
       },
     },
     {
@@ -225,7 +225,7 @@ const faqSchema = {
       name: 'Organizzate matrimoni e ricevimenti vicino a Padova?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sì, La Montecchia Green è una delle location preferite per matrimoni nella provincia di Padova. Lo staff organizza eventi su misura con menu personalizzato dallo chef Enrico Ruggin, servizio sommelier con vini della Tenuta Emo Capodilista e allestimenti curati. Spazi fino a 300 persone, terrazza panoramica e spazi outdoor con piscina.',
+        text: 'Sì, La Montecchia Green è una delle location preferite per matrimoni nella provincia di Padova. Lo staff organizza eventi su misura con menu personalizzato dallo chef Enrico Ruggin, servizio sommelier con vini della Tenuta Emo Capodilista e allestimenti curati. Spazi fino a 400 persone, terrazza panoramica e spazi outdoor con piscina.',
       },
     },
     {
@@ -233,7 +233,7 @@ const faqSchema = {
       name: 'Organizzate eventi aziendali vicino a Padova?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sì, La Montecchia Green offre pranzi e cene aziendali, team building sul green, convention, meeting e cene di fine anno per aziende della provincia di Padova e del Nord-Est. Ampio parcheggio gratuito, spazi modulabili fino a 300 persone e staff dedicato.',
+        text: 'Sì, La Montecchia Green offre pranzi e cene aziendali, team building sul green, convention, meeting e cene di fine anno per aziende della provincia di Padova e del Nord-Est. Ampio parcheggio gratuito, spazi modulabili fino a 400 persone e staff dedicato.',
       },
     },
     {
@@ -249,7 +249,7 @@ const faqSchema = {
       name: 'Come si prenota un evento privato a La Montecchia Green?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Contattare via WhatsApp al +39 334 677 4483 (risposta rapida), email a eventimontecchia@golfmontecchia.it, oppure chiamare il +39 334 677 4483. Lo staff risponde entro 24-48 ore lavorative.',
+        text: 'Contattare via WhatsApp al +39 334 677 4483 (risposta rapida), email a eventimontecchia@golfmontecchia.it, oppure chiamare il +39 049 805 8464. Lo staff risponde entro 24-48 ore lavorative.',
       },
     },
     {
@@ -297,7 +297,7 @@ const faqSchema = {
       name: 'Come prenotare un tavolo al ristorante?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Il modo più rapido è via WhatsApp al +39 334 677 4483. In alternativa si può telefonare al +39 049 805 8464, inviare una email a lamontecchiagreen@gmail.com o compilare il form di prenotazione sul sito lamontecchiagreen.it/prenota.',
+        text: 'Il modo più rapido è via WhatsApp al +39 334 677 4483. In alternativa si può telefonare al +39 049 805 8464 o compilare il form di prenotazione sul sito lamontecchiagreen.it/prenota.',
       },
     },
     {
@@ -305,7 +305,7 @@ const faqSchema = {
       name: 'Si possono organizzare feste di compleanno e ricorrenze a La Montecchia Green?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sì, La Montecchia Green è perfetta per compleanni, anniversari, cresime, battesimi e qualsiasi ricorrenza privata. Le sale sono modulabili da 20 a 300 persone, con menu personalizzato e staff dedicato.',
+        text: 'Sì, La Montecchia Green è perfetta per compleanni, anniversari, cresime, battesimi e qualsiasi ricorrenza privata. Le sale sono modulabili da 20 a 400 persone, con menu personalizzato e staff dedicato.',
       },
     },
     {
@@ -356,7 +356,7 @@ const faqSchema = {
 const restaurantSchemaEn = {
   ...restaurantSchema,
   description:
-    'Bistrot, restaurant and event venue at Golf della Montecchia, in a restored tobacco factory at the foot of the Euganean Hills. Italian cuisine with local seasonal ingredients, aperitivo on the green, weddings, team building and corporate dinners. 10 minutes from Padua, open to everyone.',
+    'Lounge bar, restaurant and event venue at Golf della Montecchia, in a restored tobacco factory at the foot of the Euganean Hills. Italian cuisine with local seasonal ingredients, aperitivo on the green, weddings, team building and corporate dinners. 10 minutes from Padua, open to everyone.',
   openingHoursSpecification: [
     { ...restaurantSchema.openingHoursSpecification[0], description: 'Lunch every day' },
     { ...restaurantSchema.openingHoursSpecification[1], description: 'Dinner Friday and Saturday by reservation' },
@@ -386,7 +386,7 @@ const restaurantSchemaEn = {
       { '@type': 'Offer', name: 'Restaurant lunch', description: 'Daily lunch with seasonal Italian cuisine, homemade pasta, wines from Tenuta Emo Capodilista' },
       { '@type': 'Offer', name: 'Friday & Saturday dinner', description: 'Elegant dinner Friday and Saturday by reservation with tasting menu and wine selection' },
       { '@type': 'Offer', name: 'Aperitivo on the green', description: 'Aperitivo on the panoramic terrace overlooking the golf course and Euganean Hills. Cocktails, local wines, charcuterie boards.' },
-      { '@type': 'Offer', name: 'Wedding venue', description: 'Wedding planning with spaces up to 300 guests, custom menu, sommelier, terrace and outdoor areas' },
+      { '@type': 'Offer', name: 'Wedding venue', description: 'Wedding planning with spaces up to 400 guests, custom menu, sommelier, terrace and outdoor areas' },
       { '@type': 'Offer', name: 'Corporate event venue', description: 'Corporate lunches, team building on the green, conventions, year-end dinners for companies near Padua' },
     ],
   },
@@ -394,11 +394,11 @@ const restaurantSchemaEn = {
 
 const eventVenueSchemaEn = {
   ...eventVenueSchema,
-  name: 'La Montecchia Green — Venue for weddings and corporate events',
+  name: 'La Montecchia Green: Venue for weddings and corporate events',
   description:
-    'Exclusive venue for weddings, private celebrations and corporate events at Golf della Montecchia, at the foot of the Euganean Hills. Restored tobacco factory with modular spaces up to 300 guests, panoramic terrace on the green, customized catering with chef, sommelier and dedicated staff. 10 minutes from Padua.',
+    'Exclusive venue for weddings, private celebrations and corporate events at Golf della Montecchia, at the foot of the Euganean Hills. Restored tobacco factory with modular spaces up to 400 guests, panoramic terrace on the green, customized catering with chef, sommelier and dedicated staff. 10 minutes from Padua.',
   amenityFeature: [
-    { '@type': 'LocationFeatureSpecification', name: 'Sala Petrarca (100–300 guests)', value: true },
+    { '@type': 'LocationFeatureSpecification', name: 'Sala Petrarca (100-300 guests)', value: true },
     { '@type': 'LocationFeatureSpecification', name: 'Sala Foscolo', value: true },
     { '@type': 'LocationFeatureSpecification', name: 'Sala Ruzante', value: true },
     { '@type': 'LocationFeatureSpecification', name: 'Panoramic terrace on the green', value: true },
@@ -411,7 +411,7 @@ const eventVenueSchemaEn = {
 
 const aperitivoSchemaEn = {
   ...aperitivoSchema,
-  name: 'La Montecchia Green — Aperitivo on the green near Padua',
+  name: 'La Montecchia Green: Aperitivo on the green near Padua',
   description:
     'Aperitivo and snack bar on the panoramic terrace of Golf della Montecchia, overlooking the Euganean Hills. Cocktails, wines from Tenuta Emo Capodilista, charcuterie boards and snacks. A unique aperitivo experience 10 minutes from Padua.',
   servesCuisine: ['Italian', 'Aperitivo', 'Snack'],
@@ -428,19 +428,19 @@ const faqSchemaEn = {
   '@type': 'FAQPage',
   mainEntity: faqSchema.mainEntity.map((q) => {
     const translations: Record<string, { name: string; text: string }> = {
-      'Quante persone può ospitare La Montecchia Green per un evento?': { name: 'How many guests can La Montecchia Green host for an event?', text: 'La Montecchia Green can host 100 to 300 guests in Sala Petrarca. Sala Foscolo (30-80 guests), Sala Ruzante (20-40 guests), the panoramic terrace on the green and outdoor areas with pool are also available.' },
+      'Quante persone può ospitare La Montecchia Green per un evento?': { name: 'How many guests can La Montecchia Green host for an event?', text: 'La Montecchia Green can host up to 400 guests, with Sala Petrarca seating 100 to 300. Sala Foscolo (30-80 guests), Sala Ruzante (20-40 guests), the panoramic terrace on the green and outdoor areas with pool are also available.' },
       'Il ristorante La Montecchia Green è aperto solo ai soci del golf?': { name: 'Is La Montecchia Green restaurant open only to golf club members?', text: 'No, La Montecchia Green is open to everyone: golfers, families, tourists, companies and individuals. You do not need to be a member of Golf della Montecchia to dine or host an event.' },
-      'Organizzate matrimoni e ricevimenti vicino a Padova?': { name: 'Do you organize weddings and receptions near Padua?', text: 'Yes, La Montecchia Green is one of the most popular wedding venues in the province of Padua. Our staff organizes bespoke events with a custom menu by chef Enrico Ruggin, sommelier service with Tenuta Emo Capodilista wines, and curated decorations. Spaces up to 300 guests, panoramic terrace and outdoor areas with pool.' },
-      'Organizzate eventi aziendali vicino a Padova?': { name: 'Do you host corporate events near Padua?', text: 'Yes, La Montecchia Green offers corporate lunches and dinners, team building on the green, conventions, meetings and year-end dinners for companies in the Padua province and the entire North-East. Ample free parking, modular spaces up to 300 people and dedicated staff.' },
+      'Organizzate matrimoni e ricevimenti vicino a Padova?': { name: 'Do you organize weddings and receptions near Padua?', text: 'Yes, La Montecchia Green is one of the most popular wedding venues in the province of Padua. Our staff organizes bespoke events with a custom menu by chef Enrico Ruggin, sommelier service with Tenuta Emo Capodilista wines, and curated decorations. Spaces up to 400 guests, panoramic terrace and outdoor areas with pool.' },
+      'Organizzate eventi aziendali vicino a Padova?': { name: 'Do you host corporate events near Padua?', text: 'Yes, La Montecchia Green offers corporate lunches and dinners, team building on the green, conventions, meetings and year-end dinners for companies in the Padua province and the entire North-East. Ample free parking, modular spaces up to 400 people and dedicated staff.' },
       'Dove si può fare aperitivo vicino a Padova in un posto suggestivo?': { name: 'Where can you have a scenic aperitivo near Padua?', text: 'La Montecchia Green offers aperitivo on the panoramic terrace of Golf della Montecchia, overlooking the Euganean Hills. Cocktails, local wines from Tenuta Emo Capodilista, charcuterie boards and snacks in a green setting, just 10 minutes from Padua centre. Free parking.' },
-      'Come si prenota un evento privato a La Montecchia Green?': { name: 'How do you book a private event at La Montecchia Green?', text: 'Contact us via WhatsApp at +39 334 677 4483 (fast response), email eventimontecchia@golfmontecchia.it, or call +39 334 677 4483. Staff responds within 24-48 business hours.' },
+      'Come si prenota un evento privato a La Montecchia Green?': { name: 'How do you book a private event at La Montecchia Green?', text: 'Contact us via WhatsApp at +39 334 677 4483 (fast response), email eventimontecchia@golfmontecchia.it, or call +39 049 805 8464. Staff responds within 24-48 business hours.' },
       'Dove si trova La Montecchia Green?': { name: 'Where is La Montecchia Green located?', text: 'La Montecchia Green is at Via Montecchia 12, Selvazzano Dentro (PD), inside the Club House of Golf della Montecchia, at the foot of the Euganean Hills. About 10 minutes from Padua centre, 5 minutes from Abano Terme and 30 minutes from Venice.' },
       "C'è il parcheggio a La Montecchia Green?": { name: 'Is there parking at La Montecchia Green?', text: 'Yes, La Montecchia Green has ample free parking inside Golf della Montecchia, convenient for all guests and event attendees.' },
       'Qual è il prezzo medio al ristorante La Montecchia Green?': { name: 'What is the average price at La Montecchia Green restaurant?', text: 'The average price is in the €€ range: high quality with local seasonal ingredients, homemade pasta and selected wines, in an exclusive setting at accessible prices. A full lunch is approximately €25-40 per person.' },
       'Che tipo di cucina offre La Montecchia Green?': { name: 'What type of cuisine does La Montecchia Green offer?', text: 'La Montecchia Green serves contemporary Italian cuisine by chef Enrico Ruggin. Dishes are prepared with local seasonal ingredients, including vegetables from their own garden, homemade pasta and artisan desserts. Wines are curated by a sommelier, featuring labels from Tenuta Emo Capodilista.' },
       'La Montecchia Green è accessibile per persone con disabilità?': { name: 'Is La Montecchia Green accessible for people with disabilities?', text: 'Yes, La Montecchia Green is wheelchair accessible. The venue is on the ground floor of the Club House of Golf della Montecchia with facilitated access.' },
-      'Come prenotare un tavolo al ristorante?': { name: 'How do you book a table at the restaurant?', text: 'The fastest way is via WhatsApp at +39 334 677 4483. Alternatively, call +39 049 805 8464, email lamontecchiagreen@gmail.com or fill in the booking form at lamontecchiagreen.it/en/prenota.' },
-      'Si possono organizzare feste di compleanno e ricorrenze a La Montecchia Green?': { name: 'Can you organize birthday parties and celebrations at La Montecchia Green?', text: 'Yes, La Montecchia Green is perfect for birthdays, anniversaries, christenings and any private celebration. Rooms are modular from 20 to 300 guests, with a custom menu and dedicated staff.' },
+      'Come prenotare un tavolo al ristorante?': { name: 'How do you book a table at the restaurant?', text: 'The fastest way is via WhatsApp at +39 334 677 4483. Alternatively, call +39 049 805 8464 or fill in the booking form at lamontecchiagreen.it/en/prenota.' },
+      'Si possono organizzare feste di compleanno e ricorrenze a La Montecchia Green?': { name: 'Can you organize birthday parties and celebrations at La Montecchia Green?', text: 'Yes, La Montecchia Green is perfect for birthdays, anniversaries, christenings and any private celebration. Rooms are modular from 20 to 400 guests, with a custom menu and dedicated staff.' },
       'Quali sale sono disponibili per eventi a La Montecchia Green?': { name: 'Which rooms are available for events at La Montecchia Green?', text: 'Available rooms: Sala Petrarca (100-300 guests, ideal for weddings and large events), Sala Foscolo (30-80 guests, private dinners and medium events), Sala Ruzante (20-40 guests, meetings and civil ceremonies), panoramic terrace (aperitivos and cocktail parties) and outdoor areas with pool.' },
       "Cos'è il team building sul green a La Montecchia Green?": { name: 'What is team building on the green at La Montecchia Green?', text: 'Team building on the green is a corporate activity that combines the natural setting of Golf della Montecchia with outdoor group experiences. It takes place surrounded by the greenery of the Euganean Hills, followed by lunch or aperitivo with a custom menu. Ideal for companies seeking an alternative to conventional conference centres.' },
       'La Montecchia Green è vicina ad Abano Terme?': { name: 'Is La Montecchia Green close to Abano Terme?', text: 'Yes, La Montecchia Green is just 5 minutes by car from Abano Terme and about 10 minutes from Montegrotto Terme. It is an ideal choice for spa guests looking for a scenic restaurant or event venue.' },
@@ -492,7 +492,7 @@ export default function SchemaOrg({ variant, lang = 'it', breadcrumbItems, blogP
         return {
           '@context': 'https://schema.org',
           '@type': 'CollectionPage',
-          name: lang === 'en' ? 'Blog — La Montecchia Green' : 'Blog — La Montecchia Green',
+          name: 'Blog | La Montecchia Green',
           mainEntity: {
             '@type': 'ItemList',
             itemListElement: listItems.map((item, idx) => ({
@@ -534,7 +534,7 @@ export default function SchemaOrg({ variant, lang = 'it', breadcrumbItems, blogP
           '@context': 'https://schema.org',
           '@type': 'WebSite',
           name: 'La Montecchia Green',
-          alternateName: 'La Montecchia Green – Bistrot & Eventi',
+          alternateName: 'La Montecchia Green',
           url: CONTACT.site,
           inLanguage: ['it', 'en'],
           publisher: {
@@ -549,7 +549,7 @@ export default function SchemaOrg({ variant, lang = 'it', breadcrumbItems, blogP
         return {
           '@context': 'https://schema.org',
           '@type': 'Menu',
-          name: 'La Montecchia Green — Menu',
+          name: 'La Montecchia Green | Menu',
           url: `${CONTACT.site}${lang === 'en' ? '/en/menu' : '/menu'}`,
           inLanguage: lang === 'en' ? 'en' : 'it',
           hasMenuSection: menuSections.map((section) => ({

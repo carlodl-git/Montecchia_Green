@@ -12,9 +12,9 @@ import { hreflangForIt } from '@/lib/hreflang';
 import { CONTACT, telUrl, whatsappUrl } from '@/lib/contact';
 
 export const metadata = {
-  title: 'Bistrot, Cucina & Aperitivo — La Montecchia Green, Padova',
+  title: 'Lounge Bar, Ristorante & Aperitivo | La Montecchia Green, Padova',
   description:
-    "Ristorante, bistrot e aperitivo sul green al Golf della Montecchia, Selvazzano Dentro (PD). Cucina italiana stagionale, pasta fatta in casa, vini selezionati. Terrazza panoramica sui Colli Euganei. A 10 minuti da Padova.",
+    "Lounge bar, ristorante e aperitivo sul green al Golf della Montecchia, Selvazzano Dentro (PD). Cucina italiana stagionale, pasta fatta in casa, vini selezionati. Terrazza panoramica sui Colli Euganei. A 10 minuti da Padova.",
   alternates: hreflangForIt('/ristorante'),
   openGraph: {
     images: [{ url: '/images/chef-preparing-a-dish.jpg', width: 1200, height: 630 }],
@@ -76,7 +76,7 @@ export default function RistorantePage() {
         <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-20">
           <Reveal>
             <h1 className="text-4xl md:text-6xl font-serif font-semibold tracking-tight text-warm-white">
-              Bistrot La Montecchia Green — Cucina italiana nel verde di Selvazzano
+              La Montecchia Green: lounge bar e ristorante nel verde di Selvazzano
             </h1>
           </Reveal>
         </div>
@@ -173,8 +173,8 @@ Prenotazioni: +39 049 805 8464`}
                 un&apos;identità riconoscibile. Tra i piatti più apprezzati: le pappardelle fatte in casa con ragù di
                 selvaggina, il risotto ai carciofi con fonduta di Asiago, la tartare di manzo con maionese al lime e
                 capperi. I secondi spaziano dalle carni selezionate ai pesci del giorno, sempre accompagnati da verdure
-                dell&apos;orto. I dessert artigianali — come il tiramisù alla grappa euganea e la millefoglie con crema
-                alla vaniglia — chiudono il pasto con dolcezza.
+                dell&apos;orto. I dessert artigianali, come il tiramisù alla grappa euganea e la millefoglie con crema
+                alla vaniglia, chiudono il pasto con dolcezza.
               </p>
             </Reveal>
 
@@ -229,7 +229,7 @@ Prenotazioni: +39 049 805 8464`}
           <Reveal>
             <span className="divider-gold mb-5" />
             <h2 className="font-serif text-3xl font-semibold tracking-tight text-green-dark">
-              Aperitivo a Padova — sul green, con vista
+              Aperitivo a Padova: sul green, con vista
             </h2>
           </Reveal>
           <Reveal delayMs={70}>
@@ -244,7 +244,7 @@ Prenotazioni: +39 049 805 8464`}
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {[
               { label: 'Cocktail e drink', sub: 'Selezione di cocktail classici e proposte stagionali' },
-              { label: 'Vini della Tenuta', sub: 'Vini DOC Colli Euganei della Tenuta Emo Capodilista' },
+              { label: 'Vini Emo Capodilista', sub: 'Etichette DOC Colli Euganei della Tenuta' },
               { label: 'Taglieri e stuzzichini', sub: 'Ingredienti locali e stagionali, prodotti artigianali' },
               { label: 'Terrazza panoramica', sub: 'Vista aperta sul green e sui Colli Euganei' },
               { label: 'A 10 minuti da Padova', sub: 'Parcheggio gratuito, facile da raggiungere' },

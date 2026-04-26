@@ -14,7 +14,7 @@ import TestimonialCard from '@/components/TestimonialCard';
 export const metadata = {
   // Meta description < 155 char with WhatsApp CTA.
   description:
-    'Bistrot & events at Golf della Montecchia, 10 min from Padua. Italian cuisine, weddings, aperitivo. Book on WhatsApp.',
+    'Lounge bar, restaurant & events at Golf della Montecchia, 10 min from Padua. Italian cuisine, weddings, aperitivo. Book on WhatsApp.',
   alternates: hreflangForEn('/en'),
 };
 
@@ -28,7 +28,7 @@ export default function EnHomePage() {
     {
       name: 'Marco L.',
       title: 'Contemporary Italian cuisine',
-      text: 'Local, seasonal ingredients with dishes that surprise. Fresh homemade pasta and handmade desserts — we will come back.',
+      text: 'Local, seasonal ingredients with dishes that surprise. Fresh homemade pasta and handmade desserts: we will come back.',
     },
     {
       name: 'Sara & Luca',
@@ -43,7 +43,7 @@ export default function EnHomePage() {
         <div className="absolute inset-0">
           <Image
             src={PAGE_HERO_IMAGES.home}
-            alt="Historic façade of the Club House at Golf della Montecchia with terrace and outdoor dining at sunset — La Montecchia Green, Selvazzano Dentro near Padua"
+            alt="Historic façade of the Club House at Golf della Montecchia with terrace and outdoor dining at sunset. La Montecchia Green, Selvazzano Dentro near Padua"
             fill
             priority
             sizes="100vw"
@@ -57,13 +57,13 @@ export default function EnHomePage() {
             <div className="flex flex-col gap-6">
               <Reveal>
                 <div className="inline-flex w-fit items-center rounded-full border border-white/20 bg-black/35 px-4 py-2 text-sm font-semibold text-warm-white shadow-sm">
-                  Open to everyone — no golf membership required
+                  Open to everyone, no golf membership required
                 </div>
               </Reveal>
 
               <Reveal delayMs={80}>
                 <h1 className="font-serif text-4xl font-semibold leading-[1.12] tracking-tight text-warm-white drop-shadow-[0_2px_24px_rgba(0,0,0,0.45)] md:text-5xl lg:text-6xl">
-                  La Montecchia Green — Bistrot &amp; Events in Selvazzano Dentro
+                  La Montecchia Green: Lounge Bar Restaurant in Selvazzano Dentro
                 </h1>
               </Reveal>
 
@@ -121,8 +121,8 @@ export default function EnHomePage() {
                 <div className="flex items-start gap-3">
                   <Phone className="h-4 w-4 mt-0.5 text-green-mid" aria-hidden="true" />
                   <div>
-                    +39 049 805 8464 / +39 334 677 4483
-                    <div className="text-xs text-text-mid/75">lamontecchiagreen@gmail.com</div>
+                    +39 049 805 8464
+                    <div className="text-xs text-text-mid/75">WhatsApp: +39 334 677 4483</div>
                   </div>
                 </div>
               </InfoBox>
@@ -134,7 +134,7 @@ export default function EnHomePage() {
       <section className="mx-auto max-w-6xl px-4 py-14">
         <Reveal>
           <h2 className="text-3xl md:text-4xl font-serif font-semibold tracking-tight text-green-dark">
-            A relaxed bistrot in the golf green
+            A relaxed lounge bar restaurant in the golf green
           </h2>
         </Reveal>
         <Reveal delayMs={70}>
@@ -158,7 +158,7 @@ export default function EnHomePage() {
             },
             {
               title: 'Events',
-              text: 'Weddings, private celebrations and corporate team building in flexible spaces up to 300 people.',
+              text: 'Weddings, private celebrations and corporate team building in flexible spaces up to 400 people.',
             },
           ].map((card, idx) => (
             <Reveal key={card.title} delayMs={idx * 90}>
@@ -190,7 +190,7 @@ export default function EnHomePage() {
               'Local seasonal ingredients and our garden products',
               'Chef Enrico Ruggin: refined contemporary style',
               'Flexible spaces for private and corporate events',
-              '10 minutes from Padua — easy to reach',
+              '10 minutes from Padua, easy to reach',
               'Wines from Tenuta Emo Capodilista selected by our sommelier',
             ].map((f, idx) => (
               <Reveal key={f} delayMs={idx * 60}>
@@ -262,7 +262,7 @@ export default function EnHomePage() {
                 <h2 className="text-3xl font-serif font-semibold tracking-tight">Have an event in mind?</h2>
                 <p className="mt-2 text-sm leading-relaxed text-warm-white/90 max-w-xl">
                   Tell us about your wedding, private celebration or corporate event. We create tailored proposals with
-                  flexible spaces up to 300 guests.
+                  flexible spaces up to 400 guests.
                 </p>
               </div>
               <div className="flex flex-col gap-3 sm:flex-row sm:justify-end">

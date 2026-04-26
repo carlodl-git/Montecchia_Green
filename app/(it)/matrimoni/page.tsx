@@ -45,9 +45,9 @@ const weddingFaq = [
 ];
 
 export const metadata = {
-  title: 'Matrimoni al Golf della Montecchia — Location per matrimoni vicino a Padova',
+  title: 'Matrimoni al Golf della Montecchia: location per matrimoni vicino a Padova',
   description:
-    'Location per matrimoni al Golf della Montecchia, Selvazzano Dentro (PD). Ex tabacchificio restaurato ai piedi dei Colli Euganei: sale fino a 300 persone, terrazza panoramica, piscina, menu personalizzato dallo chef Enrico Ruggin, vini Tenuta Emo Capodilista. A 10 minuti da Padova.',
+    'Location per matrimoni al Golf della Montecchia, Selvazzano Dentro (PD). Ex tabacchificio restaurato ai piedi dei Colli Euganei: sale fino a 400 persone, terrazza panoramica, piscina, menu personalizzato dallo chef Enrico Ruggin, vini Tenuta Emo Capodilista. A 10 minuti da Padova.',
   alternates: hreflangForIt('/matrimoni'),
   openGraph: {
     images: [{ url: '/images/Sala-Ristorante-eventi.jpg', width: 1200, height: 630 }],
@@ -81,7 +81,7 @@ export default function MatrimoniPage() {
         <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-20">
           <Reveal>
             <h1 className="text-4xl md:text-6xl font-serif font-semibold tracking-tight text-warm-white">
-              Il tuo matrimonio al Golf della Montecchia — Padova
+              Il tuo matrimonio al Golf della Montecchia: Padova
             </h1>
           </Reveal>
         </div>
@@ -107,7 +107,7 @@ export default function MatrimoniPage() {
             </Reveal>
             <Reveal delayMs={140}>
               <p className="text-base leading-relaxed text-text-mid">
-                Che siate una coppia alla ricerca di un ricevimento intimo o di una grande festa fino a 300
+                Che siate una coppia alla ricerca di un ricevimento intimo o di una grande festa fino a 400
                 invitati, La Montecchia Green vi accompagna dalla pianificazione al giorno del si con uno staff
                 dedicato, un menu personalizzato e una cura dei dettagli che trasforma ogni matrimonio in
                 un&apos;esperienza indimenticabile.
@@ -455,7 +455,7 @@ export default function MatrimoniPage() {
                   <Link href={mailtoUrl('events', 'it')}>Email</Link>
                 </Button>
                 <Button asChild variant="secondary" size="lg">
-                  <a href={telUrl('mobile')}>Chiama</a>
+                  <a href={telUrl('landline')}>Chiama</a>
                 </Button>
               </div>
             </Reveal>
@@ -475,10 +475,10 @@ export default function MatrimoniPage() {
               <InfoBox title="Informazioni essenziali">
                 <div className="space-y-2">
                   <div>
-                    Capacita: <span className="font-semibold">da 20 a 300 persone</span>
+                    Capacita: <span className="font-semibold">da 20 a 400 persone</span>
                   </div>
                   <div>
-                    Area: <span className="font-semibold">Selvazzano Dentro (PD)</span> — 10 min da Padova
+                    Area: <span className="font-semibold">Selvazzano Dentro (PD)</span>, 10 min da Padova
                   </div>
                   <div>
                     Parcheggio: <span className="font-semibold">gratuito</span>

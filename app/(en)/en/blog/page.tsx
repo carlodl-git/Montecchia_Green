@@ -7,7 +7,7 @@ import { hreflangForEn } from '@/lib/hreflang';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata = {
-  title: 'Blog — Weddings, events and gastronomy',
+  title: 'Blog: weddings, events and gastronomy',
   description:
     'Articles and insights about weddings, events, gastronomy and aperitivos near Padua. Discover the Euganean Hills, event venues and tips from the La Montecchia Green staff.',
   alternates: hreflangForEn('/en/blog'),

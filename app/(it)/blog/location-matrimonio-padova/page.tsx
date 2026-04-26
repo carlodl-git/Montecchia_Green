@@ -214,7 +214,7 @@ export default function LocationMatrimonioPadovaPage() {
               una scelta che soddisfa ciascuno dei cinque criteri descritti sopra. Situata all&apos;interno
               della Club House del Golf della Montecchia, in un ex tabacchificio restaurato ai piedi
               dei Colli Euganei, offre un&apos;atmosfera unica che mescola eleganza storica e natura
-              incontaminata. Le sale modulabili ospitano da 20 a 300 persone, con la possibilita di
+              incontaminata. Le sale modulabili ospitano da 20 a 400 persone, con la possibilita di
               sfruttare la terrazza panoramica sul green, gli spazi all&apos;aperto e la piscina.
             </p>
           </Reveal>

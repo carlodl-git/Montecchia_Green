@@ -11,7 +11,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import { CONTACT } from '@/lib/contact';
 
 export const metadata = {
-  title: 'Menu La Montecchia Green — Seasonal cuisine in Selvazzano Dentro',
+  title: 'Menu La Montecchia Green: seasonal cuisine in Selvazzano Dentro',
   description:
     'La Montecchia Green seasonal menu: appetizers, homemade pasta, selected main courses, summer pizzas and handmade desserts. Inside Golf della Montecchia, Selvazzano Dentro (PD).',
   alternates: hreflangForEn('/en/menu'),
@@ -106,7 +106,7 @@ export default function EnMenuPage() {
         <div className="relative mx-auto max-w-6xl px-4 py-14 md:py-18">
           <Reveal>
             <h1 className="text-4xl md:text-5xl font-serif font-semibold tracking-tight text-warm-white">
-              Menu La Montecchia Green — Seasonal cuisine in Selvazzano Dentro
+              Menu La Montecchia Green: seasonal cuisine in Selvazzano Dentro
             </h1>
           </Reveal>
         </div>

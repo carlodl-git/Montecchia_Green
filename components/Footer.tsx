@@ -10,7 +10,7 @@ import { CONTACT, whatsappUrl } from '@/lib/contact';
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'La Montecchia Green – Bistrot & Eventi',
+  name: 'La Montecchia Green',
   url: CONTACT.site,
   email: CONTACT.emails.booking,
   telephone: [CONTACT.phones.landline.tel, CONTACT.phones.mobile.tel],
@@ -90,8 +90,8 @@ export default function Footer() {
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-text-mid">
               {isEn
-                ? <>Bistrot &amp; Events in the green of Golf della Montecchia.<br />Open to everyone.</>
-                : <>Bistrot &amp; Eventi nel verde del Golf della Montecchia.<br />Aperto a tutti.</>
+                ? <>Lounge Bar Restaurant in the green of Golf della Montecchia.<br />Open to everyone.</>
+                : <>Lounge Bar Restaurant nel verde del Golf della Montecchia.<br />Aperto a tutti.</>
               }
             </p>
 
@@ -192,11 +192,15 @@ export default function Footer() {
                 >
                   {CONTACT.phones.landline.display}
                 </a>
-                {' / '}
+              </div>
+              <div className="text-xs text-text-mid/80">
+                {isEn ? 'WhatsApp:' : 'WhatsApp:'}{' '}
                 <a
                   className="hover:text-green-dark transition-colors"
-                  href={`tel:${CONTACT.phones.mobile.tel}`}
-                  data-cta="phone-mobile"
+                  href={whatsappUrl('generic', isEn ? 'en' : 'it')}
+                  target="_blank"
+                  rel="noreferrer"
+                  data-cta="whatsapp-footer-link"
                 >
                   {CONTACT.phones.mobile.display}
                 </a>
