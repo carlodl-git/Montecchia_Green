@@ -119,7 +119,7 @@ export default function EnHomePage() {
                 href={whatsappUrl('booking', 'en')}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center justify-center gap-2 rounded-full bg-[#075E54] px-8 py-3.5 text-sm font-semibold text-white shadow-lg transition-opacity hover:opacity-90"
+                className="flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-8 py-3.5 text-sm font-semibold text-white shadow-lg transition-opacity hover:opacity-90"
               >
                 <MessageCircle className="h-4 w-4" />
                 WhatsApp
@@ -346,7 +346,7 @@ export default function EnHomePage() {
                   href={whatsappUrl('events', 'en')}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center justify-center gap-2 rounded-xl bg-[#075E54] px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90"
+                  className="flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90"
                 >
                   <MessageCircle className="h-4 w-4" />
                   WhatsApp

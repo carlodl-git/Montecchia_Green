@@ -1,13 +1,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Building2, Users, UtensilsCrossed, MapPin, Car, TreePine, Award, Leaf, Phone } from 'lucide-react';
+import { Building2, Users, UtensilsCrossed, MapPin, Car, TreePine, Award, Leaf } from 'lucide-react';
 import { hreflangForEn } from '@/lib/hreflang';
-import { telUrl, mailtoUrl, whatsappUrl } from '@/lib/contact';
+import { mailtoUrl, whatsappUrl } from '@/lib/contact';
 import Breadcrumb from '@/components/Breadcrumb';
 
 import Reveal from '@/components/Reveal';
 import { PAGE_HERO_IMAGES } from '@/lib/site-images';
 import InfoBox from '@/components/InfoBox';
+import EventForm from '@/components/EventForm';
 import SchemaOrg from '@/components/SchemaOrg';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
@@ -409,57 +410,41 @@ export default function EnEventiAziendaliPage() {
         <SchemaOrg variant="customFaq" lang="en" faqItems={corporateEventsFaq} />
 
         {/* ── CTA ── */}
-        <div className="mt-14 grid gap-6 lg:grid-cols-[1fr_420px] lg:items-start">
+        <div className="mt-14">
           <Reveal>
             <h2 className="text-3xl font-serif font-semibold tracking-tight text-green-dark">
               Organize your corporate event
             </h2>
             <p className="mt-2 max-w-2xl text-base leading-relaxed text-text-mid">
-              Contact us for a tailored proposal for your event. Our staff will guide you through
-              the choice of spaces, menu and every detail. Guaranteed reply within 24-48 business hours.
+              Fill in the form to receive a tailored proposal, or contact us directly via WhatsApp or email.
+              Guaranteed reply within 24-48 business hours.
             </p>
           </Reveal>
 
-          <div className="grid gap-4">
-            <Reveal>
-              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-start">
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-green-dark text-warm-white hover:bg-green-mid"
+          <Reveal delayMs={70}>
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-start">
+              <Button
+                asChild
+                size="lg"
+                className="bg-green-dark text-warm-white hover:bg-green-mid"
+              >
+                <Link
+                  href={whatsappUrl('events', 'en')}
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  <Link
-                    href={whatsappUrl('events', 'en')}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    WhatsApp
-                  </Link>
-                </Button>
-                <Button asChild variant="secondary" size="lg">
-                  <Link href={mailtoUrl('events', 'en')}>Email</Link>
-                </Button>
-                <Button asChild variant="secondary" size="lg">
-                  <a href={telUrl('landline')}>Call</a>
-                </Button>
-              </div>
-            </Reveal>
+                  WhatsApp
+                </Link>
+              </Button>
+              <Button asChild variant="secondary" size="lg">
+                <Link href={mailtoUrl('events', 'en')}>Email</Link>
+              </Button>
+            </div>
+          </Reveal>
 
-            <Reveal delayMs={90}>
-              <InfoBox title="Key information">
-                <div className="space-y-2">
-                  <div>
-                    Capacity: <span className="font-semibold">from 20 to 400 guests</span>
-                  </div>
-                  <div>
-                    Area: <span className="font-semibold">Selvazzano Dentro (PD)</span>, 10 min from Padua
-                  </div>
-                  <div>
-                    Parking: <span className="font-semibold">free</span> inside the golf grounds
-                  </div>
-                  <div className="text-xs text-text-mid/80">Open to all companies, no golf membership required.</div>
-                </div>
-              </InfoBox>
+          <div className="mt-8">
+            <Reveal>
+              <EventForm />
             </Reveal>
           </div>
         </div>

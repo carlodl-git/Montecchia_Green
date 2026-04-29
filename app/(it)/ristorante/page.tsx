@@ -17,7 +17,7 @@ export const metadata = {
     "Lounge bar, ristorante e aperitivo sul green al Golf della Montecchia, Selvazzano Dentro (PD). Cucina italiana stagionale, pasta fatta in casa, vini selezionati. Terrazza panoramica sui Colli Euganei. A 10 minuti da Padova.",
   alternates: hreflangForIt('/ristorante'),
   openGraph: {
-    images: [{ url: '/images/chef-preparing-a-dish.jpg', width: 1200, height: 630 }],
+    images: [{ url: '/images/facciata-montecchia-green.jpg', width: 1200, height: 630 }],
   },
 };
 
@@ -64,8 +64,8 @@ export default function RistorantePage() {
       <section className="relative min-h-[55vh]">
         <div className="absolute inset-0">
           <Image
-            src={PAGE_HERO_IMAGES.ristorante}
-            alt="Lo chef in cucina de La Montecchia Green"
+            src={PAGE_HERO_IMAGES.home}
+            alt="Facciata storica della Club House del Golf della Montecchia con terrazza e dehors al tramonto"
             fill
             priority
             sizes="100vw"
@@ -280,7 +280,7 @@ Prenotazioni: +39 049 805 8464`}
                 href={whatsappUrl('info', 'it')}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#075E54] px-6 py-3 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-6 py-3 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90"
               >
                 <MessageCircle className="h-4 w-4" />
                 Chiedi info aperitivo su WhatsApp

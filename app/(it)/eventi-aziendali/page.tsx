@@ -1,17 +1,17 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Building2, Users, UtensilsCrossed, MapPin, Car, TreePine, Award, Leaf, Phone } from 'lucide-react';
+import { Building2, Users, UtensilsCrossed, MapPin, Car, TreePine, Award, Leaf } from 'lucide-react';
 import { hreflangForIt } from '@/lib/hreflang';
-import { telUrl, mailtoUrl, whatsappUrl } from '@/lib/contact';
+import { CONTACT, mailtoUrl, whatsappUrl } from '@/lib/contact';
 
 import Reveal from '@/components/Reveal';
 import { PAGE_HERO_IMAGES } from '@/lib/site-images';
 import InfoBox from '@/components/InfoBox';
+import EventForm from '@/components/EventForm';
 import SchemaOrg from '@/components/SchemaOrg';
 import Breadcrumb from '@/components/Breadcrumb';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
-import { CONTACT } from '@/lib/contact';
 
 export const metadata = {
   title: 'Eventi Aziendali Padova: Pranzi, Team Building, Convention | La Montecchia Green',
@@ -445,58 +445,41 @@ export default function EventiAziendaliPage() {
         <SchemaOrg variant="customFaq" faqItems={eventiAziendaliFaq} />
 
         {/* ── CTA contatti ── */}
-        <div className="mt-14 grid gap-6 lg:grid-cols-[1fr_420px] lg:items-start">
+        <div className="mt-14">
           <Reveal>
             <h2 className="text-3xl font-serif font-semibold tracking-tight text-green-dark">
               Organizza il tuo evento aziendale
             </h2>
             <p className="mt-2 max-w-2xl text-base leading-relaxed text-text-mid">
-              Contattaci per ricevere una proposta personalizzata per il tuo evento. Il nostro staff ti guidera
-              nella scelta degli spazi, del menu e di ogni dettaglio. Risposta garantita entro 24-48 ore
-              lavorative.
+              Compila il form per ricevere una proposta personalizzata, oppure scrivici subito via WhatsApp
+              o email. Risposta garantita entro 24-48 ore lavorative.
             </p>
           </Reveal>
 
-          <div className="grid gap-4">
-            <Reveal>
-              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-start">
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-green-dark text-warm-white hover:bg-green-mid"
+          <Reveal delayMs={70}>
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-start">
+              <Button
+                asChild
+                size="lg"
+                className="bg-green-dark text-warm-white hover:bg-green-mid"
+              >
+                <Link
+                  href={whatsappUrl('events', 'it')}
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  <Link
-                    href={whatsappUrl('events', 'it')}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    WhatsApp
-                  </Link>
-                </Button>
-                <Button asChild variant="secondary" size="lg">
-                  <Link href={mailtoUrl('events', 'it')}>Email</Link>
-                </Button>
-                <Button asChild variant="secondary" size="lg">
-                  <a href={telUrl('landline')}>Chiama</a>
-                </Button>
-              </div>
-            </Reveal>
+                  WhatsApp
+                </Link>
+              </Button>
+              <Button asChild variant="secondary" size="lg">
+                <Link href={mailtoUrl('events', 'it')}>Email</Link>
+              </Button>
+            </div>
+          </Reveal>
 
-            <Reveal delayMs={90}>
-              <InfoBox title="Informazioni essenziali">
-                <div className="space-y-2">
-                  <div>
-                    Capacita: <span className="font-semibold">da 20 a 400 persone</span>
-                  </div>
-                  <div>
-                    Area: <span className="font-semibold">Selvazzano Dentro (PD)</span>, 10 min da Padova
-                  </div>
-                  <div>
-                    Parcheggio: <span className="font-semibold">gratuito</span> all&apos;interno del golf
-                  </div>
-                  <div className="text-xs text-text-mid/80">Aperto a tutte le aziende, non serve essere soci del golf.</div>
-                </div>
-              </InfoBox>
+          <div className="mt-8">
+            <Reveal>
+              <EventForm />
             </Reveal>
           </div>
         </div>

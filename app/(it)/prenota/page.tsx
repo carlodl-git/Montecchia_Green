@@ -4,10 +4,9 @@ import Reveal from '@/components/Reveal';
 import SchemaOrg from '@/components/SchemaOrg';
 import { PAGE_HERO_IMAGES } from '@/lib/site-images';
 import InfoBox from '@/components/InfoBox';
-import BookingForm from '@/components/BookingForm';
 import { Button } from '@/components/ui/Button';
 import { hreflangForIt } from '@/lib/hreflang';
-import { telUrl, mailtoUrl, whatsappUrl } from '@/lib/contact';
+import { mailtoUrl, whatsappUrl } from '@/lib/contact';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata = {
@@ -68,58 +67,46 @@ export default function PrenotaPage() {
             <Reveal>
               <p className="text-base leading-relaxed text-text-mid md:text-[1.05rem]">
                 La Montecchia Green è aperto a tutti: prenota per il pranzo di ogni giorno e per la cena del venerdì
-                e del sabato (su prenotazione). Compila il form qui sotto oppure contattaci direttamente via
-                WhatsApp, email o telefono.
+                e del sabato (su prenotazione). Contattaci subito via WhatsApp o email.
               </p>
             </Reveal>
 
-            <Reveal delayMs={70}>
-              <BookingForm />
+            <Reveal delayMs={90}>
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+                <Button asChild size="lg" className="bg-green-dark text-warm-white hover:bg-green-mid">
+                  <Link
+                    href={whatsappUrl('booking', 'it')}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    WhatsApp
+                  </Link>
+                </Button>
+                <Button asChild variant="secondary" size="lg">
+                  <Link href={mailtoUrl('booking', 'it')}>Email</Link>
+                </Button>
+              </div>
             </Reveal>
           </div>
 
           <aside className="hidden lg:block">
             <Reveal>
-              <InfoBox title="Preferisci contattarci direttamente?">
-                <div className="flex flex-col gap-3">
-                  <Button asChild size="lg" className="bg-green-dark text-warm-white hover:bg-green-mid">
-                    <Link
-                      href={whatsappUrl('booking', 'it')}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      WhatsApp
-                    </Link>
-                  </Button>
-                  <Button asChild variant="secondary" size="lg">
-                    <Link href={mailtoUrl('booking', 'it')}>Email</Link>
-                  </Button>
-                  <Button asChild variant="secondary" size="lg">
-                    <a href={telUrl('landline')}>Chiama</a>
-                  </Button>
+              <InfoBox title="Orari e contatti">
+                <div className="space-y-2">
+                  <div>
+                    <span className="font-semibold">Pranzo:</span> tutti i giorni
+                  </div>
+                  <div>
+                    <span className="font-semibold">Cena:</span> venerdì e sabato (su prenotazione)
+                  </div>
+                  <div className="text-xs text-text-mid/80">
+                    Tel: +39 049 805 8464
+                  </div>
+                  <div className="text-xs text-text-mid/80">
+                    WhatsApp: +39 334 677 4483
+                  </div>
                 </div>
               </InfoBox>
-            </Reveal>
-
-            <Reveal delayMs={90}>
-              <div className="mt-4">
-                <InfoBox title="Orari e contatti">
-                  <div className="space-y-2">
-                    <div>
-                      <span className="font-semibold">Pranzo:</span> tutti i giorni
-                    </div>
-                    <div>
-                      <span className="font-semibold">Cena:</span> venerdì e sabato (su prenotazione)
-                    </div>
-                    <div className="text-xs text-text-mid/80">
-                      Tel: +39 049 805 8464
-                    </div>
-                    <div className="text-xs text-text-mid/80">
-                      WhatsApp: +39 334 677 4483
-                    </div>
-                  </div>
-                </InfoBox>
-              </div>
             </Reveal>
           </aside>
         </div>

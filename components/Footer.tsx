@@ -224,7 +224,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 data-cta="whatsapp-footer"
-                className="mt-3 inline-flex items-center gap-2 rounded-xl bg-[#075E54] px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90"
+                className="mt-3 inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90"
               >
                 <WhatsAppIcon className="h-4 w-4" />
                 {isEn ? 'Message us on WhatsApp' : 'Scrivici su WhatsApp'}

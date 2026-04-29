@@ -14,7 +14,7 @@ export const metadata = {
     'La Montecchia Green is an Italian contemporary restaurant inside the Golf della Montecchia in Selvazzano Dentro (PD). Seasonal ingredients, homemade pasta, handmade desserts and curated wines.',
   alternates: hreflangForEn('/en/restaurant'),
   openGraph: {
-    images: [{ url: '/images/chef-preparing-a-dish.jpg', width: 1200, height: 630 }],
+    images: [{ url: '/images/facciata-montecchia-green.jpg', width: 1200, height: 630 }],
   },
 };
 
@@ -32,8 +32,8 @@ export default function EnRistorantePage() {
       <section className="relative min-h-[55vh]">
         <div className="absolute inset-0">
           <Image
-            src={PAGE_HERO_IMAGES.ristorante}
-            alt="Chef preparing food at La Montecchia Green"
+            src={PAGE_HERO_IMAGES.home}
+            alt="Historic façade of the Club House at Golf della Montecchia with terrace and outdoor dining at sunset"
             fill
             priority
             sizes="100vw"
