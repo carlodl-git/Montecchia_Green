@@ -9,6 +9,7 @@ import Link from 'next/link';
 import { hreflangForIt } from '@/lib/hreflang';
 import { telUrl, mailtoUrl, whatsappUrl } from '@/lib/contact';
 import Breadcrumb from '@/components/Breadcrumb';
+import MapsEmbed from '@/components/MapsEmbed';
 
 export const metadata = {
   title: 'Contatti e come arrivare | La Montecchia Green',
@@ -73,15 +74,7 @@ export default function ContattiPage() {
           <div className="grid gap-6">
             <Reveal>
               <div className="overflow-hidden rounded-2xl border border-black/10 bg-warm-white/70">
-                <iframe
-                  title="Google Maps - La Montecchia Green"
-                  src={mapSrc}
-                  width="100%"
-                  height="420"
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="border-0"
-                />
+                <MapsEmbed src={mapSrc} lang="it" />
               </div>
             </Reveal>
 

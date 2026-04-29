@@ -254,6 +254,13 @@ export default function Footer() {
             <Link className="hover:text-green-dark transition-colors" href={isEn ? '/en/cookie-policy' : '/cookie-policy'}>
               Cookie Policy
             </Link>
+            <button
+              type="button"
+              data-cc="show-preferencesModal"
+              className="cursor-pointer hover:text-green-dark transition-colors"
+            >
+              {isEn ? 'Cookie preferences' : 'Preferenze cookie'}
+            </button>
             <Link className="hover:text-green-dark transition-colors" href={contactHref}>
               {isEn ? 'How to get here' : 'Come arrivare'}
             </Link>

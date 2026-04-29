@@ -6,6 +6,7 @@ import '../globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import SchemaOrg from '@/components/SchemaOrg';
+import CookieConsentProvider from '@/components/CookieConsent';
 import { CONTACT } from '@/lib/contact';
 
 const inter = Inter({
@@ -54,6 +55,30 @@ export default function EnRootLayout({ children }: { children: React.ReactNode }
     <html lang="en" className={`${inter.variable} ${cormorant.variable}`}>
       <head>
         <link rel="alternate" type="text/plain" title="LLM info" href="/llms.txt" />
+
+        {/* Google Consent Mode v2 — defaults set BEFORE any tag fires */}
+        <Script
+          id="gtag-consent-default"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              window.gtag = gtag;
+              gtag('consent', 'default', {
+                ad_storage: 'denied',
+                analytics_storage: 'denied',
+                ad_user_data: 'denied',
+                ad_personalization: 'denied',
+                functionality_storage: 'denied',
+                personalization_storage: 'denied',
+                security_storage: 'granted',
+                wait_for_update: 500
+              });
+            `,
+          }}
+        />
+
         {gaMeasurementId ? (
           <>
             <Script
@@ -65,8 +90,6 @@ export default function EnRootLayout({ children }: { children: React.ReactNode }
               strategy="afterInteractive"
               dangerouslySetInnerHTML={{
                 __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
                 gtag('config', '${gaMeasurementId}', { page_path: window.location.pathname });
               `,
@@ -92,6 +115,8 @@ export default function EnRootLayout({ children }: { children: React.ReactNode }
         {/* Schema globali (EN) */}
         <SchemaOrg variant="restaurant" lang="en" />
         <SchemaOrg variant="webSite" lang="en" />
+
+        <CookieConsentProvider />
       </body>
     </html>
   );
