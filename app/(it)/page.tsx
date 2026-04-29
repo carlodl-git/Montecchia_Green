@@ -127,7 +127,7 @@ export default function HomePage() {
                 href={whatsappUrl('booking', 'it')}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-8 py-3.5 text-sm font-semibold text-white shadow-lg transition-opacity hover:opacity-90"
+                className="flex items-center justify-center gap-2 rounded-full bg-[#075E54] px-8 py-3.5 text-sm font-semibold text-white shadow-lg transition-opacity hover:opacity-90"
               >
                 <MessageCircle className="h-4 w-4" />
                 WhatsApp
@@ -161,7 +161,7 @@ export default function HomePage() {
                 <MapPin className="h-4 w-4 text-green-light" />
               </div>
               <div>
-                <div className="text-xs font-semibold uppercase tracking-wider text-green-light/70">Dove siamo</div>
+                <div className="text-xs font-semibold uppercase tracking-wider text-warm-white/85">Dove siamo</div>
                 <div className="mt-1 text-sm font-medium text-warm-white">Club House Golf Montecchia</div>
                 <div className="text-xs text-warm-white/60">Via Montecchia 12, Selvazzano Dentro (PD)</div>
               </div>
@@ -172,7 +172,7 @@ export default function HomePage() {
                 <CalendarClock className="h-4 w-4 text-green-light" />
               </div>
               <div>
-                <div className="text-xs font-semibold uppercase tracking-wider text-green-light/70">Orari</div>
+                <div className="text-xs font-semibold uppercase tracking-wider text-warm-white/85">Orari</div>
                 <div className="mt-1 text-sm font-medium text-warm-white">Pranzo: tutti i giorni</div>
                 <div className="text-xs text-warm-white/60">Cena: ven e sab su prenotazione</div>
               </div>
@@ -183,7 +183,7 @@ export default function HomePage() {
                 <Phone className="h-4 w-4 text-green-light" />
               </div>
               <div>
-                <div className="text-xs font-semibold uppercase tracking-wider text-green-light/70">Contatti</div>
+                <div className="text-xs font-semibold uppercase tracking-wider text-warm-white/85">Contatti</div>
                 <a href={telUrl('landline')} className="mt-1 block text-sm font-medium text-warm-white hover:text-green-light transition-colors">
                   +39 049 805 8464
                 </a>
@@ -354,7 +354,7 @@ export default function HomePage() {
                   href={whatsappUrl('events', 'it')}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90"
+                  className="flex items-center justify-center gap-2 rounded-xl bg-[#075E54] px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90"
                 >
                   <MessageCircle className="h-4 w-4" />
                   WhatsApp

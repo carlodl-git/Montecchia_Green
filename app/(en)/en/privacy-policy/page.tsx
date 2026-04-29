@@ -39,7 +39,7 @@ export default function PrivacyPolicyPage() {
             </h1>
           </Reveal>
           <Reveal delayMs={140}>
-            <p className="mt-4 max-w-2xl text-sm text-text-mid/80">Last updated: 28 April 2026</p>
+            <p className="mt-4 max-w-2xl text-sm text-text-mid/80">Last updated: 29 April 2026</p>
           </Reveal>
         </div>
       </section>
@@ -74,7 +74,7 @@ export default function PrivacyPolicyPage() {
             <ul className="mt-3 list-disc space-y-1.5 pl-6">
               <li>Handling table reservations, event enquiries and information requests submitted via the forms, phone, email or WhatsApp.</li>
               <li>Fulfilling contractual, tax and legal obligations.</li>
-              <li>Anonymous, aggregated analysis of website navigation for statistical purposes.</li>
+              <li>Anonymous, aggregated analysis of website navigation for statistical purposes (only with prior consent).</li>
             </ul>
           </div>
 
@@ -91,8 +91,76 @@ export default function PrivacyPolicyPage() {
             <h2 className="font-serif text-2xl font-semibold tracking-tight text-green-dark">Storage and retention</h2>
             <p className="mt-3">
               Data is processed using electronic and paper tools, with appropriate security measures. It is retained
-              only for the time strictly necessary for the purposes for which it was collected and in any case in
-              compliance with the applicable legal obligations.
+              for the time periods listed below or, if different, for the time required by specific legal obligations:
+            </p>
+            <ul className="mt-3 list-disc space-y-1.5 pl-6">
+              <li>
+                <strong>Booking and contact requests</strong> (forms, email, WhatsApp): up to 24 months from the
+                last interaction, unless otherwise requested by the data subject.
+              </li>
+              <li>
+                <strong>Accounting and tax documents</strong> (invoices, receipts): 10 years, pursuant to art. 2220 of
+                the Italian Civil Code and DPR 600/1973.
+              </li>
+              <li>
+                <strong>Web server access logs</strong>: maximum 6 months, in line with the Italian DPA decision of
+                27 November 2008.
+              </li>
+              <li>
+                <strong>Consent cookies</strong> (banner preferences): 6 months.
+              </li>
+              <li>
+                <strong>Analytics cookies</strong> (Google Analytics 4, only with prior consent): 14 months.
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="font-serif text-2xl font-semibold tracking-tight text-green-dark">
+              Categories of recipients and external processors
+            </h2>
+            <p className="mt-3">
+              Data may be communicated to the following categories of recipients, appointed as Data Processors under
+              Art. 28 GDPR where applicable:
+            </p>
+            <ul className="mt-3 list-disc space-y-1.5 pl-6">
+              <li>
+                <strong>Hosting and infrastructure provider</strong>: Vercel Inc. (United States), for publishing and
+                running the website.
+              </li>
+              <li>
+                <strong>Email service provider</strong>: Aruba S.p.A. (Italy), SMTP server used to deliver requests
+                submitted through the website forms to the Data Controller.
+              </li>
+              <li>
+                <strong>Interactive maps services</strong>: Google LLC (United States), for the Google Maps embed on
+                the contact page (loaded only after consent).
+              </li>
+              <li>
+                <strong>Website analytics services</strong>: Google LLC (United States), for Google Analytics 4
+                (active only after consent).
+              </li>
+              <li>
+                <strong>Messaging services</strong>: WhatsApp Ireland Ltd (Meta Platforms group), only if the user
+                chooses to contact us via WhatsApp.
+              </li>
+              <li>
+                <strong>Public authorities</strong> (Italian Revenue Agency, judicial authorities) where required by law.
+              </li>
+            </ul>
+            <p className="mt-3">
+              Data is not disseminated nor sold to third parties for commercial purposes under any circumstances.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="font-serif text-2xl font-semibold tracking-tight text-green-dark">Transfers outside the EU</h2>
+            <p className="mt-3">
+              Some of the providers listed above (Vercel Inc., Google LLC) are based in the United States. Personal
+              data transfers outside the European Economic Area are based on the <strong>Standard Contractual
+              Clauses</strong> (SCC) approved by the European Commission with Decision 2021/914/EU and within the
+              framework of the <strong>EU-US Data Privacy Framework</strong>, where applicable. A copy of the
+              safeguards adopted may be obtained on request by writing to the Data Controller.
             </p>
           </div>
 

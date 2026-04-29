@@ -57,7 +57,7 @@ export default function RomanticDinnerEuganeanHillsPage() {
             <h1 className="text-4xl md:text-5xl font-serif font-semibold tracking-tight text-warm-white max-w-3xl">
               Romantic Dinner in the Euganean Hills: Where and How to Plan It
             </h1>
-            <div className="mt-2 text-xs font-medium uppercase tracking-wider text-text-mid/70">
+            <div className="mt-2 text-xs font-medium uppercase tracking-wider text-text-mid/85">
               <time dateTime="2026-03-12">March 12, 2026</time>
             </div>
           </Reveal>

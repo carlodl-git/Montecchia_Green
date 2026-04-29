@@ -60,7 +60,7 @@ export default function ContactCTA({
         rel="noreferrer"
         data-cta="whatsapp"
         data-intent={intent}
-        className="flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90"
+        className="flex items-center justify-center gap-2 rounded-xl bg-[#075E54] px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90"
       >
         <MessageCircle className="h-4 w-4" />
         {t.whatsapp}

@@ -177,7 +177,7 @@ export default function MenuPage() {
                 <p className="mt-2 text-sm leading-relaxed text-text-mid">
                   Coperto: 2€ a persona. Disponibili su richiesta prodotti vegani. A disposizione pasta senza glutine.
                 </p>
-                <p className="mt-1 text-xs leading-relaxed text-text-mid/70">
+                <p className="mt-1 text-xs leading-relaxed text-text-mid/85">
                   Guida allergeni: (1) Cereali contenenti glutine, (2) Crostacei, (3) Uova, (4) Pesce, (5) Arachidi, (6) Soia, (7) Latte, (8) Frutta a guscio, (9) Sedano, (10) Senape, (11) Semi di sesamo, (12) Solfiti, (13) Lupini, (14) Molluschi.
                 </p>
               </div>

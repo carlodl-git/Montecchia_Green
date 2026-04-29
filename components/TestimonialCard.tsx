@@ -20,7 +20,7 @@ export default function TestimonialCard({
       </span>
 
       {/* Stelle */}
-      <div className="flex items-center gap-1 mb-4" aria-label="Valutazione 5 stelle">
+      <div className="flex items-center gap-1 mb-4" role="img" aria-label="Valutazione 5 stelle">
         {Array.from({ length: 5 }).map((_, i) => (
           <Star key={i} className="h-4 w-4 fill-gold text-gold" aria-hidden="true" />
         ))}

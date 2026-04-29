@@ -57,7 +57,7 @@ export default function GuideEmoCapodilistaWinesPage() {
             <h1 className="text-4xl md:text-5xl font-serif font-semibold tracking-tight text-warm-white max-w-3xl">
               A Guide to Tenuta Emo Capodilista Wines
             </h1>
-            <div className="mt-2 text-xs font-medium uppercase tracking-wider text-text-mid/70">
+            <div className="mt-2 text-xs font-medium uppercase tracking-wider text-text-mid/85">
               <time dateTime="2026-04-08">April 8, 2026</time>
             </div>
           </Reveal>

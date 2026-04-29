@@ -280,7 +280,7 @@ Prenotazioni: +39 049 805 8464`}
                 href={whatsappUrl('info', 'it')}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-6 py-3 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#075E54] px-6 py-3 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90"
               >
                 <MessageCircle className="h-4 w-4" />
                 Chiedi info aperitivo su WhatsApp
@@ -318,7 +318,7 @@ Prenotazioni: +39 049 805 8464`}
 
         {/* ── Cross-link blog ── */}
         <div className="mt-8 rounded-2xl border border-green-dark/10 bg-warm-white p-5">
-          <div className="text-xs font-semibold uppercase tracking-wider text-green-dark/60">Approfondisci</div>
+          <div className="text-xs font-semibold uppercase tracking-wider text-green-dark/85">Approfondisci</div>
           <p className="mt-2 text-sm leading-relaxed text-text-mid">
             Scopri{' '}
             <Link href="/blog/cosa-mangiare-selvazzano-dentro" className="font-semibold text-green-dark underline decoration-green-mid/40 underline-offset-2 hover:decoration-green-dark">

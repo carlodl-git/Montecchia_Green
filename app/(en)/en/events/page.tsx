@@ -10,6 +10,7 @@ import Reveal from '@/components/Reveal';
 import { PAGE_HERO_IMAGES } from '@/lib/site-images';
 import InfoBox from '@/components/InfoBox';
 import EventCard from '@/components/EventCard';
+import EventForm from '@/components/EventForm';
 import TestimonialCard from '@/components/TestimonialCard';
 import SchemaOrg from '@/components/SchemaOrg';
 import { Button } from '@/components/ui/Button';
@@ -230,51 +231,42 @@ export default function EnEventiPage() {
           ]}
         />
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-[1fr_420px] lg:items-start">
+        <div className="mt-14">
           <Reveal>
             <h2 className="text-3xl font-serif font-semibold tracking-tight text-green-dark">
-              Contact us for your event
+              Request a proposal for your event
             </h2>
             <p className="mt-2 max-w-2xl text-base leading-relaxed text-text-mid">
-              Have a private or corporate event? Get a tailored proposal: contact us via WhatsApp, email or phone.
+              Have a private or corporate event? Fill in the form and we will get back to you with a tailored
+              proposal within 24-48 business hours. Or contact us directly via WhatsApp, email or phone.
             </p>
           </Reveal>
 
-          <div className="grid gap-4">
+          <div className="mt-8">
             <Reveal>
-              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-start">
-                <Button asChild size="lg" className="bg-green-dark text-warm-white hover:bg-green-mid">
-                  <Link
-                    href={whatsappUrl('events', 'en')}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    WhatsApp
-                  </Link>
-                </Button>
-                <Button asChild variant="secondary" size="lg">
-                  <Link href={mailtoUrl('events', 'en')}>Email</Link>
-                </Button>
-                <Button asChild variant="secondary" size="lg">
-                  <a href={telUrl('landline')}>Call</a>
-                </Button>
-              </div>
-            </Reveal>
-
-            <Reveal delayMs={90}>
-              <InfoBox title="Quick info">
-                <div className="space-y-2">
-                  <div>
-                    Capacity: <span className="font-semibold">up to 400 guests</span>
-                  </div>
-                  <div>
-                    Area: <span className="font-semibold">Selvazzano Dentro (PD)</span>, near Padua
-                  </div>
-                  <div className="text-xs text-text-mid/80">Open to everyone, no golf membership required.</div>
-                </div>
-              </InfoBox>
+              <EventForm />
             </Reveal>
           </div>
+
+          <Reveal delayMs={90}>
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-start">
+              <Button asChild size="lg" className="bg-green-dark text-warm-white hover:bg-green-mid">
+                <Link
+                  href={whatsappUrl('events', 'en')}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  WhatsApp
+                </Link>
+              </Button>
+              <Button asChild variant="secondary" size="lg">
+                <Link href={mailtoUrl('events', 'en')}>Email</Link>
+              </Button>
+              <Button asChild variant="secondary" size="lg">
+                <a href={telUrl('landline')}>Call</a>
+              </Button>
+            </div>
+          </Reveal>
         </div>
       </section>
     </div>

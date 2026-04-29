@@ -1,6 +1,7 @@
 'use client';
 
 import * as React from 'react';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -20,6 +21,9 @@ const bookingSchema = z.object({
   data: z.string().optional(),
   orario: z.string().optional(),
   note: z.string().optional(),
+  privacy: z.boolean().refine((v) => v === true, {
+    message: 'Devi accettare l’informativa privacy per inviare la richiesta.',
+  }),
 });
 
 export default function BookingForm() {
@@ -37,6 +41,7 @@ export default function BookingForm() {
       data: '',
       orario: '',
       note: '',
+      privacy: false,
     },
     mode: 'onSubmit',
   });
@@ -62,7 +67,9 @@ export default function BookingForm() {
       if (!res.ok) {
         setStatus({
           ok: false,
-          message: data?.message || 'Si è verificato un errore durante l’invio della richiesta.',
+          message: data?.message || (isEn
+            ? 'An error occurred while sending the request.'
+            : 'Si è verificato un errore durante l’invio della richiesta.'),
         });
         return;
       }
@@ -71,22 +78,31 @@ export default function BookingForm() {
         ok: true,
         message:
           data?.message ||
-          'Richiesta inviata. Ti contatteremo a breve per confermare la disponibilità.',
+          (isEn
+            ? 'Request received. We will get back to you shortly to confirm availability.'
+            : 'Richiesta inviata. Ti contatteremo a breve per confermare la disponibilità.'),
       });
       form.reset();
     } catch {
       setStatus({
         ok: false,
-        message: 'Impossibile inviare la richiesta. Riprova più tardi.',
+        message: isEn
+          ? 'Unable to send the request. Please try again later.'
+          : 'Impossibile inviare la richiesta. Riprova più tardi.',
       });
     }
   }
+
+  const privacyHref = isEn ? '/en/privacy-policy' : '/privacy-policy';
+  const privacyLabel = isEn ? 'Privacy Policy' : 'Privacy Policy';
+  const privacyError = form.formState.errors.privacy?.message as string | undefined;
 
   return (
     <div className="max-w-2xl">
       <form
         className="grid gap-5 rounded-2xl border border-green-dark/10 bg-warm-white p-6 shadow-[0_4px_28px_-6px_rgba(45,74,62,0.14)] md:p-8"
         onSubmit={form.handleSubmit(onSubmit)}
+        noValidate
       >
         <div className="border-b border-black/5 pb-4">
           <h2 className="font-serif text-2xl font-semibold tracking-tight text-green-dark md:text-[1.65rem]">
@@ -158,6 +174,45 @@ export default function BookingForm() {
           />
         </div>
 
+        <div className="grid gap-2 border-t border-black/5 pt-5">
+          <label className="flex items-start gap-2.5 text-sm leading-relaxed text-text-mid">
+            <input
+              id="privacy"
+              type="checkbox"
+              {...form.register('privacy')}
+              aria-invalid={!!privacyError}
+              aria-describedby={privacyError ? 'privacy-error' : undefined}
+              className="mt-0.5 h-4 w-4 shrink-0 rounded border-green-dark/30 text-green-dark focus:ring-2 focus:ring-green-mid focus:ring-offset-0"
+            />
+            <span>
+              {isEn ? (
+                <>
+                  I have read the{' '}
+                  <Link href={privacyHref} className="text-green-dark underline hover:no-underline">
+                    {privacyLabel}
+                  </Link>{' '}
+                  and consent to the processing of my data to manage this request.
+                </>
+              ) : (
+                <>
+                  Ho letto la{' '}
+                  <Link href={privacyHref} className="text-green-dark underline hover:no-underline">
+                    {privacyLabel}
+                  </Link>{' '}
+                  e acconsento al trattamento dei miei dati per gestire questa richiesta.
+                </>
+              )}
+            </span>
+          </label>
+          {privacyError ? (
+            <p id="privacy-error" className="text-xs text-red-700">
+              {isEn
+                ? 'You must accept the Privacy Policy to send the request.'
+                : privacyError}
+            </p>
+          ) : null}
+        </div>
+
         <div className="flex flex-col gap-4 border-t border-black/5 pt-5 sm:flex-row sm:items-center sm:justify-between">
           <Button type="submit" size="lg" disabled={form.formState.isSubmitting} className="min-w-[200px]">
             {form.formState.isSubmitting
@@ -189,4 +244,3 @@ export default function BookingForm() {
     </div>
   );
 }
-

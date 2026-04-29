@@ -126,7 +126,7 @@ export default function BlogPage() {
                     />
                   </div>
                   <CardContent className="p-5">
-                    <span className="text-sm text-text-mid/70">{a.date}</span>
+                    <span className="text-sm text-text-mid/85">{a.date}</span>
                     <h2 className="mt-1 text-xl font-serif font-semibold tracking-tight text-green-dark group-hover:underline">
                       {a.title}
                     </h2>

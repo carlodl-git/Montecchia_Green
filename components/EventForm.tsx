@@ -1,6 +1,8 @@
 'use client';
 
 import * as React from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -20,9 +22,14 @@ const eventSchema = z.object({
   persone: z.coerce.number().int().min(1).max(600),
   data: z.string().optional(),
   messaggio: z.string().optional(),
+  privacy: z.boolean().refine((v) => v === true, {
+    message: 'Devi accettare l’informativa privacy per inviare la richiesta.',
+  }),
 });
 
 export default function EventForm() {
+  const pathname = usePathname();
+  const isEn = pathname?.startsWith('/en') ?? false;
   const [status, setStatus] = React.useState<{ ok: boolean; message: string } | null>(null);
 
   const form = useForm({
@@ -31,10 +38,11 @@ export default function EventForm() {
       nome: '',
       email: '',
       telefono: '',
-      tipo: 'Matrimonio',
+      tipo: 'Matrimonio' as const,
       persone: 120,
       data: '',
       messaggio: '',
+      privacy: false,
     },
     mode: 'onSubmit',
   });
@@ -60,7 +68,9 @@ export default function EventForm() {
       if (!res.ok) {
         setStatus({
           ok: false,
-          message: data?.message || 'Si è verificato un errore durante l’invio della richiesta.',
+          message: data?.message || (isEn
+            ? 'An error occurred while sending the request.'
+            : 'Si è verificato un errore durante l’invio della richiesta.'),
         });
         return;
       }
@@ -69,33 +79,55 @@ export default function EventForm() {
         ok: true,
         message:
           data?.message ||
-          'Richiesta inviata. Ti contatteremo a breve con una proposta personalizzata.',
+          (isEn
+            ? 'Request received. We will reply with a tailored proposal.'
+            : 'Richiesta inviata. Ti contatteremo a breve con una proposta personalizzata.'),
       });
       form.reset();
     } catch {
       setStatus({
         ok: false,
-        message: 'Impossibile inviare la richiesta. Riprova più tardi.',
+        message: isEn
+          ? 'Unable to send the request. Please try again later.'
+          : 'Impossibile inviare la richiesta. Riprova più tardi.',
       });
     }
   }
+
+  const eventTypes = isEn
+    ? [
+        { value: 'Matrimonio', label: 'Wedding' },
+        { value: 'Evento aziendale', label: 'Corporate event' },
+        { value: 'Compleanno', label: 'Birthday' },
+        { value: 'Altro', label: 'Other' },
+      ]
+    : [
+        { value: 'Matrimonio', label: 'Matrimonio' },
+        { value: 'Evento aziendale', label: 'Evento aziendale' },
+        { value: 'Compleanno', label: 'Compleanno' },
+        { value: 'Altro', label: 'Altro' },
+      ];
+
+  const privacyHref = isEn ? '/en/privacy-policy' : '/privacy-policy';
+  const privacyError = form.formState.errors.privacy?.message as string | undefined;
 
   return (
     <div className="grid gap-6 lg:grid-cols-[1fr_340px] lg:items-start">
       <form
         className="grid gap-4 rounded-2xl border border-black/10 bg-warm-white/80 p-5 shadow-sm"
         onSubmit={form.handleSubmit(onSubmit)}
+        noValidate
       >
         <div className="grid gap-3 sm:grid-cols-2">
           <div className="grid gap-2">
-            <Label htmlFor="nome">Nome</Label>
+            <Label htmlFor="nome">{isEn ? 'Name' : 'Nome'}</Label>
             <Input id="nome" autoComplete="name" {...form.register('nome')} />
             {form.formState.errors.nome ? (
               <p className="text-xs text-red-700">{form.formState.errors.nome.message}</p>
             ) : null}
           </div>
           <div className="grid gap-2">
-            <Label htmlFor="telefono">Telefono</Label>
+            <Label htmlFor="telefono">{isEn ? 'Phone' : 'Telefono'}</Label>
             <Input id="telefono" autoComplete="tel" {...form.register('telefono')} />
             {form.formState.errors.telefono ? (
               <p className="text-xs text-red-700">{form.formState.errors.telefono.message}</p>
@@ -105,53 +137,99 @@ export default function EventForm() {
 
         <div className="grid gap-3 sm:grid-cols-2">
           <div className="grid gap-2">
-            <Label htmlFor="email">Email (opzionale)</Label>
+            <Label htmlFor="email">{isEn ? 'Email (optional)' : 'Email (opzionale)'}</Label>
             <Input id="email" autoComplete="email" inputMode="email" {...form.register('email')} />
           </div>
 
           <div className="grid gap-2">
-            <Label htmlFor="tipo">Tipo evento</Label>
+            <Label htmlFor="tipo">{isEn ? 'Event type' : 'Tipo evento'}</Label>
             <select
               id="tipo"
               className="flex h-10 w-full rounded-md border border-black/10 bg-warm-white px-3 text-sm shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-mid"
               {...form.register('tipo')}
             >
-              <option value="Matrimonio">Matrimonio</option>
-              <option value="Evento aziendale">Evento aziendale</option>
-              <option value="Compleanno">Compleanno</option>
-              <option value="Altro">Altro</option>
+              {eventTypes.map((t) => (
+                <option key={t.value} value={t.value}>
+                  {t.label}
+                </option>
+              ))}
             </select>
           </div>
         </div>
 
         <div className="grid gap-3 sm:grid-cols-2">
           <div className="grid gap-2">
-            <Label htmlFor="persone">Numero persone</Label>
+            <Label htmlFor="persone">{isEn ? 'Guests' : 'Numero persone'}</Label>
             <Input id="persone" type="number" min={1} max={600} {...form.register('persone')} />
             {form.formState.errors.persone ? (
               <p className="text-xs text-red-700">{form.formState.errors.persone.message}</p>
             ) : null}
           </div>
           <div className="grid gap-2">
-            <Label htmlFor="data">Data (opzionale)</Label>
+            <Label htmlFor="data">{isEn ? 'Date (optional)' : 'Data (opzionale)'}</Label>
             <Input id="data" type="date" {...form.register('data')} />
           </div>
         </div>
 
         <div className="grid gap-2">
-          <Label htmlFor="messaggio">Dettagli (opzionale)</Label>
+          <Label htmlFor="messaggio">{isEn ? 'Details (optional)' : 'Dettagli (opzionale)'}</Label>
           <Textarea
             id="messaggio"
-            placeholder="Es. preferenze menu, allestimenti, esigenze aziendali..."
+            placeholder={isEn
+              ? 'E.g. menu preferences, decor, corporate needs…'
+              : 'Es. preferenze menu, allestimenti, esigenze aziendali...'}
             {...form.register('messaggio')}
           />
         </div>
 
+        <div className="grid gap-2 border-t border-black/5 pt-4">
+          <label className="flex items-start gap-2.5 text-sm leading-relaxed text-text-mid">
+            <input
+              id="privacy"
+              type="checkbox"
+              {...form.register('privacy')}
+              aria-invalid={!!privacyError}
+              aria-describedby={privacyError ? 'privacy-error' : undefined}
+              className="mt-0.5 h-4 w-4 shrink-0 rounded border-green-dark/30 text-green-dark focus:ring-2 focus:ring-green-mid focus:ring-offset-0"
+            />
+            <span>
+              {isEn ? (
+                <>
+                  I have read the{' '}
+                  <Link href={privacyHref} className="text-green-dark underline hover:no-underline">
+                    Privacy Policy
+                  </Link>{' '}
+                  and consent to the processing of my data to manage this request.
+                </>
+              ) : (
+                <>
+                  Ho letto la{' '}
+                  <Link href={privacyHref} className="text-green-dark underline hover:no-underline">
+                    Privacy Policy
+                  </Link>{' '}
+                  e acconsento al trattamento dei miei dati per gestire questa richiesta.
+                </>
+              )}
+            </span>
+          </label>
+          {privacyError ? (
+            <p id="privacy-error" className="text-xs text-red-700">
+              {isEn
+                ? 'You must accept the Privacy Policy to send the request.'
+                : privacyError}
+            </p>
+          ) : null}
+        </div>
+
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <Button type="submit" disabled={form.formState.isSubmitting}>
-            {form.formState.isSubmitting ? 'Invio...' : 'Invia richiesta eventi'}
+            {form.formState.isSubmitting
+              ? isEn ? 'Sending…' : 'Invio...'
+              : isEn ? 'Send event request' : 'Invia richiesta eventi'}
           </Button>
-          <div className="text-xs text-text-mid/80">Risposta entro 24–48 ore lavorative.</div>
+          <div className="text-xs text-text-mid/80">
+            {isEn ? 'Reply within 24–48 business hours.' : 'Risposta entro 24–48 ore lavorative.'}
+          </div>
         </div>
 
         {status ? (
@@ -167,13 +245,17 @@ export default function EventForm() {
       </form>
 
       <aside className="hidden lg:block">
-        <InfoBox title="Informazioni essenziali">
+        <InfoBox title={isEn ? 'Essential info' : 'Informazioni essenziali'}>
           <div className="space-y-2">
             <div>
-              <span className="font-semibold">Capienza:</span> fino a 400 persone, con la Sala Petrarca per 100-300 invitati.
+              <span className="font-semibold">{isEn ? 'Capacity:' : 'Capienza:'}</span>{' '}
+              {isEn
+                ? 'up to 400 guests, with Sala Petrarca for 100–300.'
+                : 'fino a 400 persone, con la Sala Petrarca per 100-300 invitati.'}
             </div>
             <div>
-              <span className="font-semibold">Contatti eventi:</span> eventimontecchia@golfmontecchia.it
+              <span className="font-semibold">{isEn ? 'Events contacts:' : 'Contatti eventi:'}</span>{' '}
+              eventimontecchia@golfmontecchia.it
             </div>
             <div>
               <span className="font-semibold">WhatsApp:</span> +39 334 677 4483
@@ -184,4 +266,3 @@ export default function EventForm() {
     </div>
   );
 }
-

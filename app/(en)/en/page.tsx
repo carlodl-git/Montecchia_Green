@@ -119,7 +119,7 @@ export default function EnHomePage() {
                 href={whatsappUrl('booking', 'en')}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-8 py-3.5 text-sm font-semibold text-white shadow-lg transition-opacity hover:opacity-90"
+                className="flex items-center justify-center gap-2 rounded-full bg-[#075E54] px-8 py-3.5 text-sm font-semibold text-white shadow-lg transition-opacity hover:opacity-90"
               >
                 <MessageCircle className="h-4 w-4" />
                 WhatsApp
@@ -153,7 +153,7 @@ export default function EnHomePage() {
                 <MapPin className="h-4 w-4 text-green-light" />
               </div>
               <div>
-                <div className="text-xs font-semibold uppercase tracking-wider text-green-light/70">Where we are</div>
+                <div className="text-xs font-semibold uppercase tracking-wider text-warm-white/85">Where we are</div>
                 <div className="mt-1 text-sm font-medium text-warm-white">Club House Golf Montecchia</div>
                 <div className="text-xs text-warm-white/60">Via Montecchia 12, Selvazzano Dentro (PD)</div>
               </div>
@@ -164,7 +164,7 @@ export default function EnHomePage() {
                 <CalendarClock className="h-4 w-4 text-green-light" />
               </div>
               <div>
-                <div className="text-xs font-semibold uppercase tracking-wider text-green-light/70">Opening hours</div>
+                <div className="text-xs font-semibold uppercase tracking-wider text-warm-white/85">Opening hours</div>
                 <div className="mt-1 text-sm font-medium text-warm-white">Lunch: every day</div>
                 <div className="text-xs text-warm-white/60">Dinner: Fri &amp; Sat on reservation</div>
               </div>
@@ -175,7 +175,7 @@ export default function EnHomePage() {
                 <Phone className="h-4 w-4 text-green-light" />
               </div>
               <div>
-                <div className="text-xs font-semibold uppercase tracking-wider text-green-light/70">Contact</div>
+                <div className="text-xs font-semibold uppercase tracking-wider text-warm-white/85">Contact</div>
                 <a href={telUrl('landline')} className="mt-1 block text-sm font-medium text-warm-white hover:text-green-light transition-colors">
                   +39 049 805 8464
                 </a>
@@ -346,7 +346,7 @@ export default function EnHomePage() {
                   href={whatsappUrl('events', 'en')}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90"
+                  className="flex items-center justify-center gap-2 rounded-xl bg-[#075E54] px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90"
                 >
                   <MessageCircle className="h-4 w-4" />
                   WhatsApp

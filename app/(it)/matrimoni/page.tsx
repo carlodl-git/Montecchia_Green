@@ -406,7 +406,7 @@ export default function MatrimoniPage() {
 
         {/* ── CROSS-LINK BLOG ───────────────────────────── */}
         <div className="mt-10 rounded-2xl border border-green-dark/10 bg-warm-white p-5">
-          <div className="text-xs font-semibold uppercase tracking-wider text-green-dark/60">Approfondimenti</div>
+          <div className="text-xs font-semibold uppercase tracking-wider text-green-dark/85">Approfondimenti</div>
           <p className="mt-2 text-sm leading-relaxed text-text-mid">
             Scopri perché siamo considerati una delle migliori{' '}
             <Link href="/blog/location-matrimonio-padova" className="font-semibold text-green-dark underline decoration-green-mid/40 underline-offset-2 hover:decoration-green-dark">

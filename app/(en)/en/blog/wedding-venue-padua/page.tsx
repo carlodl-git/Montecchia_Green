@@ -57,7 +57,7 @@ export default function WeddingVenuePaduaPage() {
             <h1 className="text-4xl md:text-5xl font-serif font-semibold tracking-tight text-warm-white max-w-3xl">
               How to Choose a Wedding Venue in Padua
             </h1>
-            <div className="mt-2 text-xs font-medium uppercase tracking-wider text-text-mid/70">
+            <div className="mt-2 text-xs font-medium uppercase tracking-wider text-text-mid/85">
               <time dateTime="2026-03-15">March 15, 2026</time>
             </div>
           </Reveal>

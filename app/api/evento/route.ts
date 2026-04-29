@@ -9,6 +9,7 @@ const eventSchema = z.object({
   persone: z.number().int().min(1).max(600),
   data: z.string().optional(),
   messaggio: z.string().optional(),
+  privacy: z.literal(true, { message: 'Consenso privacy obbligatorio.' }),
 });
 
 export async function POST(req: Request) {

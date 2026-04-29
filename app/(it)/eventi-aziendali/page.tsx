@@ -411,7 +411,7 @@ export default function EventiAziendaliPage() {
 
         {/* ── Cross-link blog ── */}
         <div className="mt-8 rounded-2xl border border-green-dark/10 bg-warm-white p-5">
-          <div className="text-xs font-semibold uppercase tracking-wider text-green-dark/60">
+          <div className="text-xs font-semibold uppercase tracking-wider text-green-dark/85">
             Leggi anche
           </div>
           <p className="mt-2 text-sm leading-relaxed text-text-mid">

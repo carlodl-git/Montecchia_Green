@@ -141,7 +141,7 @@ export default function Footer() {
 
           {/* Link rapidi */}
           <div>
-            <div className="mb-4 text-xs font-semibold uppercase tracking-widest text-green-dark/60">
+            <div className="mb-4 text-xs font-semibold uppercase tracking-widest text-green-dark/85">
               {isEn ? 'Quick links' : 'Link rapidi'}
             </div>
             <div className="flex flex-col gap-2.5">
@@ -179,7 +179,7 @@ export default function Footer() {
 
           {/* Contatti */}
           <div>
-            <div className="mb-4 text-xs font-semibold uppercase tracking-widest text-green-dark/60">
+            <div className="mb-4 text-xs font-semibold uppercase tracking-widest text-green-dark/85">
               {isEn ? 'Contact' : 'Contatti'}
             </div>
             <div className="space-y-3 text-sm text-text-mid">
@@ -224,7 +224,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 data-cta="whatsapp-footer"
-                className="mt-3 inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90"
+                className="mt-3 inline-flex items-center gap-2 rounded-xl bg-[#075E54] px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90"
               >
                 <WhatsAppIcon className="h-4 w-4" />
                 {isEn ? 'Message us on WhatsApp' : 'Scrivici su WhatsApp'}
@@ -235,7 +235,7 @@ export default function Footer() {
 
         {/* Legal block */}
         <div className="mt-10 border-t border-green-dark/8 pt-6">
-          <div className="text-[11px] leading-relaxed text-text-mid/70">
+          <div className="text-[11px] leading-relaxed text-text-mid/85">
             <span className="font-semibold text-text-mid/85">Montecchia Servizi S.r.l.</span>{' '}
             &middot; {isEn ? 'Registered office:' : 'Sede legale:'} Via Montecchia 12, 35030 Selvazzano Dentro (PD) &mdash; Italia
             {' '}&middot; P.IVA / C.F. 05326460283
@@ -244,10 +244,10 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-4 flex flex-col gap-2 border-t border-green-dark/8 pt-6 md:flex-row md:items-center md:justify-between">
-          <div className="text-xs text-text-mid/70">
+          <div className="text-xs text-text-mid/85">
             © {new Date().getFullYear()} La Montecchia Green. {isEn ? 'All rights reserved.' : 'Tutti i diritti riservati.'}
           </div>
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-text-mid/70">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-text-mid/85">
             <Link className="hover:text-green-dark transition-colors" href={isEn ? '/en/privacy-policy' : '/privacy-policy'}>
               Privacy Policy
             </Link>

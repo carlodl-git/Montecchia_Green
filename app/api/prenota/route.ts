@@ -9,6 +9,7 @@ const bookingSchema = z.object({
   data: z.string().optional(),
   orario: z.string().optional(),
   note: z.string().optional(),
+  privacy: z.literal(true, { message: 'Consenso privacy obbligatorio.' }),
 });
 
 export async function POST(req: Request) {

@@ -165,7 +165,7 @@ export default function EnMenuPage() {
                 <p className="mt-2 text-sm leading-relaxed text-text-mid">
                   Cover charge: 2€ per person. Vegan options available upon request. Gluten-free pasta available.
                 </p>
-                <p className="mt-1 text-xs leading-relaxed text-text-mid/70">
+                <p className="mt-1 text-xs leading-relaxed text-text-mid/85">
                   Allergen guide: (1) Gluten, (2) Crustaceans, (3) Eggs, (4) Fish, (5) Peanuts, (6) Soy, (7) Milk, (8) Tree nuts, (9) Celery, (10) Mustard, (11) Sesame, (12) Sulphites, (13) Lupin, (14) Molluscs.
                 </p>
               </div>
