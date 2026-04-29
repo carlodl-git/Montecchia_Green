@@ -38,17 +38,24 @@ export default function EnPrenotaPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/45 to-cream" />
         </div>
-        <div className="relative mx-auto flex max-w-6xl items-end px-4 pb-10 pt-16 md:pb-14 md:pt-20">
-          <Reveal className="w-full">
-            <div className="max-w-3xl rounded-2xl border border-white/15 bg-black/35 px-5 py-5 shadow-lg backdrop-blur-md md:px-7 md:py-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-warm-white/80">Reservations</p>
-              <h1 className="mt-2 text-3xl font-semibold leading-tight tracking-tight text-warm-white md:text-5xl font-serif">
-                Book a table
-              </h1>
-              <p className="mt-2 text-sm text-warm-white/90 md:text-base">
-                La Montecchia Green: Golf della Montecchia, Selvazzano Dentro
-              </p>
+        <div className="relative mx-auto max-w-6xl px-4 pb-10 pt-20 md:pb-14 md:pt-28">
+          <Reveal>
+            <div className="inline-flex items-center gap-3">
+              <span className="h-px w-10 bg-gold" aria-hidden="true" />
+              <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-warm-white/85">
+                Reservations
+              </span>
             </div>
+          </Reveal>
+          <Reveal delayMs={80}>
+            <h1 className="mt-5 max-w-3xl font-serif text-4xl font-medium leading-[1.08] tracking-tight text-warm-white md:text-5xl lg:text-6xl">
+              Book a table
+            </h1>
+          </Reveal>
+          <Reveal delayMs={140}>
+            <p className="mt-4 max-w-xl text-base text-warm-white/85">
+              La Montecchia Green &middot; Golf della Montecchia, Selvazzano Dentro
+            </p>
           </Reveal>
         </div>
       </section>

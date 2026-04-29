@@ -11,6 +11,9 @@ const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'La Montecchia Green',
+  legalName: 'Montecchia Servizi S.r.l.',
+  vatID: 'IT05326460283',
+  taxID: '05326460283',
   url: CONTACT.site,
   email: CONTACT.emails.booking,
   telephone: [CONTACT.phones.landline.tel, CONTACT.phones.mobile.tel],
@@ -230,12 +233,27 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Legal block */}
+        <div className="mt-10 border-t border-green-dark/8 pt-6">
+          <div className="text-[11px] leading-relaxed text-text-mid/70">
+            <span className="font-semibold text-text-mid/85">Montecchia Servizi S.r.l.</span>{' '}
+            &middot; {isEn ? 'Registered office:' : 'Sede legale:'} Via Montecchia 12, 35030 Selvazzano Dentro (PD) &mdash; Italia
+            {' '}&middot; P.IVA / C.F. 05326460283
+          </div>
+        </div>
+
         {/* Bottom bar */}
-        <div className="mt-10 flex flex-col gap-2 border-t border-green-dark/8 pt-6 md:flex-row md:items-center md:justify-between">
+        <div className="mt-4 flex flex-col gap-2 border-t border-green-dark/8 pt-6 md:flex-row md:items-center md:justify-between">
           <div className="text-xs text-text-mid/70">
             © {new Date().getFullYear()} La Montecchia Green. {isEn ? 'All rights reserved.' : 'Tutti i diritti riservati.'}
           </div>
-          <div className="text-xs text-text-mid/70">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-text-mid/70">
+            <Link className="hover:text-green-dark transition-colors" href={isEn ? '/en/privacy-policy' : '/privacy-policy'}>
+              Privacy Policy
+            </Link>
+            <Link className="hover:text-green-dark transition-colors" href={isEn ? '/en/cookie-policy' : '/cookie-policy'}>
+              Cookie Policy
+            </Link>
             <Link className="hover:text-green-dark transition-colors" href={contactHref}>
               {isEn ? 'How to get here' : 'Come arrivare'}
             </Link>

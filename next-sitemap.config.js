@@ -17,6 +17,8 @@ const pathMap = {
   '/prenota': '/en/book',
   '/faq': '/en/faq',
   '/contatti': '/en/contact',
+  '/privacy-policy': '/en/privacy-policy',
+  '/cookie-policy': '/en/cookie-policy',
   '/blog': '/en/blog',
   '/blog/aperitivo-colli-euganei': '/en/blog/aperitivo-euganean-hills',
   '/blog/team-building-padova': '/en/blog/team-building-padua',

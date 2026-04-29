@@ -61,10 +61,18 @@ export default function EnEventiAziendaliPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/15 to-cream/95" />
         </div>
-        <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-20">
+        <div className="relative mx-auto max-w-6xl px-4 py-20 md:py-28">
           <Reveal>
-            <h1 className="text-4xl md:text-6xl font-serif font-semibold tracking-tight text-warm-white">
-              Corporate Events at Golf della Montecchia: Padua
+            <div className="inline-flex items-center gap-3">
+              <span className="h-px w-10 bg-gold" aria-hidden="true" />
+              <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-warm-white/85">
+                Corporate events
+              </span>
+            </div>
+          </Reveal>
+          <Reveal delayMs={80}>
+            <h1 className="mt-5 max-w-3xl font-serif text-4xl font-medium leading-[1.08] tracking-tight text-warm-white md:text-5xl lg:text-6xl">
+              Companies at Golf della Montecchia, near Padua
             </h1>
           </Reveal>
         </div>

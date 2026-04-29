@@ -45,11 +45,24 @@ export default function EnContattiPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/15 to-cream/95" />
         </div>
-        <div className="relative mx-auto max-w-6xl px-4 py-14">
+        <div className="relative mx-auto max-w-6xl px-4 py-20 md:py-24">
           <Reveal>
-            <h1 className="text-4xl md:text-5xl font-serif font-semibold tracking-tight text-warm-white">
-              How to reach La Montecchia Green: Via Montecchia 12, Selvazzano Dentro
+            <div className="inline-flex items-center gap-3">
+              <span className="h-px w-10 bg-gold" aria-hidden="true" />
+              <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-warm-white/85">
+                Contact
+              </span>
+            </div>
+          </Reveal>
+          <Reveal delayMs={80}>
+            <h1 className="mt-5 max-w-3xl font-serif text-4xl font-medium leading-[1.08] tracking-tight text-warm-white md:text-5xl lg:text-6xl">
+              How to reach La Montecchia Green
             </h1>
+          </Reveal>
+          <Reveal delayMs={140}>
+            <p className="mt-4 max-w-xl text-base text-warm-white/80">
+              Via Montecchia 12, Selvazzano Dentro (PD)
+            </p>
           </Reveal>
         </div>
       </section>

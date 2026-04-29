@@ -84,14 +84,22 @@ export default function BlogPageEN() {
         ]}
       />
 
-      <section className="mx-auto max-w-6xl px-4 py-14">
+      <section className="mx-auto max-w-6xl px-4 py-16 md:py-20">
         <Reveal>
-          <h1 className="text-4xl md:text-5xl font-serif font-semibold tracking-tight text-green-dark">
-            Blog
-          </h1>
+          <div className="inline-flex items-center gap-3">
+            <span className="h-px w-10 bg-gold" aria-hidden="true" />
+            <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-green-dark/70">
+              Magazine
+            </span>
+          </div>
         </Reveal>
         <Reveal delayMs={80}>
-          <p className="mt-4 text-base leading-relaxed text-text-mid max-w-2xl">
+          <h1 className="mt-5 max-w-3xl font-serif text-4xl font-medium leading-[1.08] tracking-tight text-green-dark md:text-5xl lg:text-6xl">
+            Stories, recipes and inspiration from the Euganean Hills
+          </h1>
+        </Reveal>
+        <Reveal delayMs={140}>
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-text-mid">
             Insights, tips and inspiration about weddings, events, gastronomy and aperitivos
             at the foot of the Euganean Hills.
           </p>

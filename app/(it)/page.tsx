@@ -42,7 +42,7 @@ const features = [
   { label: 'Cucina di qualità', sub: 'Pasta fatta in casa e dessert artigianali' },
   { label: 'Spazi modulabili', sub: 'Per eventi privati e aziendali' },
   { label: 'A 10 minuti da Padova', sub: 'Facile da raggiungere, lontano dal caos' },
-  { label: 'Vini Emo Capodilista', sub: 'Etichette della Tenuta sui Colli Euganei' },
+  { label: 'Terrazza panoramica', sub: 'Vista sul green e sui Colli Euganei' },
 ];
 
 export default function HomePage() {
@@ -211,8 +211,8 @@ export default function HomePage() {
           <p className="mt-4 max-w-3xl text-base leading-relaxed text-text-mid">
             La Montecchia Green è un lounge bar e ristorante aperto a tutti: golfisti, famiglie, amici, turisti e aziende.
             È una cucina italiana contemporanea, con ingredienti locali e stagionali, prodotti dell&apos;orto e pasta
-            fatta in casa. Venerdì e sabato sera, su prenotazione, proponiamo un&apos;esperienza più curata, con selezione
-            di vini e dessert artigianali.
+            fatta in casa. Il venerdì e il sabato sera, su prenotazione, la sala si trasforma in un&apos;esperienza
+            più intima e raccolta, in una location unica nel verde dei Colli Euganei.
           </p>
         </Reveal>
 
