@@ -24,6 +24,19 @@ export type HomeGalleryItem = {
   altEn: string;
 };
 
+export const APERITIVO_IMAGES = [
+  {
+    src: '/images/aperitivo-spritz-cheers-tramonto.jpg',
+    altIt: 'Brindisi con due spritz al tramonto sulla terrazza de La Montecchia Green con vista sul green del Golf della Montecchia, Colli Euganei',
+    altEn: 'Cheers with two spritzes at sunset on the terrace at La Montecchia Green overlooking the green of Golf della Montecchia, Euganean Hills',
+  },
+  {
+    src: '/images/apericena-birra-tagliere.jpg',
+    altIt: 'Apericena alla Montecchia Green: birra artigianale, tagliere di salumi, formaggi e olive sulla terrazza panoramica sul green',
+    altEn: 'Apericena at La Montecchia Green: craft beer, charcuterie board with cold cuts, cheese and olives on the panoramic terrace overlooking the green',
+  },
+] as const;
+
 export const HOME_GALLERY: HomeGalleryItem[] = [
   {
     src: '/images/tavolo-in-salone-con-piatti.jpg',
@@ -41,9 +54,9 @@ export const HOME_GALLERY: HomeGalleryItem[] = [
     altEn: 'Eggplant parmigiana dish at La Montecchia Green restaurant, Selvazzano Dentro near Padua',
   },
   {
-    src: '/images/aperl-spritz.jpg',
-    altIt: 'Aperitivo spritz sulla terrazza de La Montecchia Green con vista sul Golf della Montecchia, Colli Euganei',
-    altEn: 'Aperitif spritz on the terrace at La Montecchia Green overlooking Montecchia Golf Course, Euganean Hills',
+    src: '/images/aperitivo-spritz-cheers-tramonto.jpg',
+    altIt: 'Brindisi con spritz al tramonto sulla terrazza de La Montecchia Green con vista sul Golf della Montecchia, Colli Euganei',
+    altEn: 'Cheers with spritz at sunset on the terrace at La Montecchia Green overlooking Montecchia Golf Course, Euganean Hills',
   },
   {
     src: '/images/cappuccino-croassint.jpg',

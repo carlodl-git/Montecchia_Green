@@ -173,9 +173,9 @@ export default function HomePage() {
               </div>
               <div>
                 <div className="text-xs font-semibold uppercase tracking-wider text-warm-white/85">Orari</div>
-                <div className="mt-1 text-sm font-medium text-warm-white">Pranzo: tutti i giorni</div>
-                <div className="text-xs text-warm-white/60">Apericena: mer e gio</div>
-                <div className="text-xs text-warm-white/60">Cena: ven e sab</div>
+                <div className="mt-1 text-sm font-medium text-warm-white">Pranzo: tutti i giorni · 12:00–15:00</div>
+                <div className="text-xs text-warm-white/60">Apericena: mer e gio · 19:00–21:00</div>
+                <div className="text-xs text-warm-white/60">Cena: ven e sab · 19:00–22:30</div>
               </div>
             </div>
 

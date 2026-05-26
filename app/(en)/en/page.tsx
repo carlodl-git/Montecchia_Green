@@ -165,9 +165,9 @@ export default function EnHomePage() {
               </div>
               <div>
                 <div className="text-xs font-semibold uppercase tracking-wider text-warm-white/85">Opening hours</div>
-                <div className="mt-1 text-sm font-medium text-warm-white">Lunch: every day</div>
-                <div className="text-xs text-warm-white/60">Apericena: Wed &amp; Thu</div>
-                <div className="text-xs text-warm-white/60">Dinner: Fri &amp; Sat</div>
+                <div className="mt-1 text-sm font-medium text-warm-white">Lunch: every day · 12:00–15:00</div>
+                <div className="text-xs text-warm-white/60">Apericena: Wed &amp; Thu · 19:00–21:00</div>
+                <div className="text-xs text-warm-white/60">Dinner: Fri &amp; Sat · 19:00–22:30</div>
               </div>
             </div>
 

@@ -71,23 +71,16 @@ const restaurantSchema = {
     },
     {
       '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Wednesday'],
+      dayOfWeek: ['Wednesday', 'Thursday'],
       opens: '19:00',
-      closes: '22:00',
-      description: 'Apericena mercoledì sera',
-    },
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Thursday'],
-      opens: '19:00',
-      closes: '23:00',
-      description: 'Apericena giovedì sera',
+      closes: '21:00',
+      description: 'Apericena mercoledì e giovedì sera',
     },
     {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: ['Friday', 'Saturday'],
-      opens: '19:30',
-      closes: '23:00',
+      opens: '19:00',
+      closes: '22:30',
       description: 'Cena venerdì e sabato',
     },
   ],
@@ -359,7 +352,7 @@ const faqSchema = {
       name: 'Quali sono gli orari di apertura de La Montecchia Green?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Pranzo tutti i giorni dalle 12:00 alle 15:00. Apericena il mercoledì sera (19:00–22:00) e il giovedì sera (19:00–23:00). Cena venerdì e sabato sera su prenotazione dalle 19:30 alle 23:00. Domenica, lunedì e martedì sera chiuso.',
+        text: 'Pranzo tutti i giorni dalle 12:00 alle 15:00. Apericena il mercoledì e giovedì sera dalle 19:00 alle 21:00. Cena venerdì e sabato sera su prenotazione dalle 19:00 alle 22:30. Domenica, lunedì e martedì sera chiuso.',
       },
     },
   ],
@@ -373,9 +366,8 @@ const restaurantSchemaEn = {
     'Lounge bar, restaurant and event venue at Golf della Montecchia, in a restored tobacco factory at the foot of the Euganean Hills. Italian cuisine with local seasonal ingredients, apericena Wednesday and Thursday evenings, dinner Friday and Saturday, weddings, team building and corporate dinners. 10 minutes from Padua, open to everyone.',
   openingHoursSpecification: [
     { ...restaurantSchema.openingHoursSpecification[0], description: 'Lunch every day' },
-    { ...restaurantSchema.openingHoursSpecification[1], description: 'Apericena Wednesday evening' },
-    { ...restaurantSchema.openingHoursSpecification[2], description: 'Apericena Thursday evening' },
-    { ...restaurantSchema.openingHoursSpecification[3], description: 'Dinner Friday and Saturday' },
+    { ...restaurantSchema.openingHoursSpecification[1], description: 'Apericena Wednesday and Thursday evening' },
+    { ...restaurantSchema.openingHoursSpecification[2], description: 'Dinner Friday and Saturday' },
   ],
   servesCuisine: ['Italian', 'Seasonal', 'Local', 'Venetian', 'Contemporary Italian'],
   amenityFeature: [
@@ -461,7 +453,7 @@ const faqSchemaEn = {
       "Cos'è il team building sul green a La Montecchia Green?": { name: 'What is team building on the green at La Montecchia Green?', text: 'Team building on the green is a corporate activity that combines the natural setting of Golf della Montecchia with outdoor group experiences. It takes place surrounded by the greenery of the Euganean Hills, followed by lunch or aperitivo with a custom menu. Ideal for companies seeking an alternative to conventional conference centres.' },
       'La Montecchia Green è vicina ad Abano Terme?': { name: 'Is La Montecchia Green close to Abano Terme?', text: 'Yes, La Montecchia Green is just 5 minutes by car from Abano Terme and about 10 minutes from Montegrotto Terme. It is an ideal choice for spa guests looking for a scenic restaurant or event venue.' },
       'Quali vini serve La Montecchia Green?': { name: 'What wines does La Montecchia Green serve?', text: 'La Montecchia Green offers a curated selection by the sommelier, with special focus on wines from Tenuta Emo Capodilista, one of the most prestigious wineries of the Colli Euganei DOC. National and international labels are also available.' },
-      'Quali sono gli orari di apertura de La Montecchia Green?': { name: 'What are the opening hours of La Montecchia Green?', text: 'Lunch every day from 12:00 to 15:00. Apericena on Wednesday evening (19:00–22:00) and Thursday evening (19:00–23:00). Dinner Friday and Saturday by reservation from 19:30 to 23:00. Closed on Sunday, Monday and Tuesday evenings.' },
+      'Quali sono gli orari di apertura de La Montecchia Green?': { name: 'What are the opening hours of La Montecchia Green?', text: 'Lunch every day from 12:00 to 15:00. Apericena on Wednesday and Thursday evenings from 19:00 to 21:00. Dinner Friday and Saturday by reservation from 19:00 to 22:30. Closed on Sunday, Monday and Tuesday evenings.' },
     };
     const t = translations[q.name];
     if (t) return { '@type': 'Question', name: t.name, acceptedAnswer: { '@type': 'Answer', text: t.text } };

@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { MessageCircle, Phone } from 'lucide-react';
 import Reveal from '@/components/Reveal';
-import { PAGE_HERO_IMAGES } from '@/lib/site-images';
+import { APERITIVO_IMAGES, PAGE_HERO_IMAGES } from '@/lib/site-images';
 import InfoBox from '@/components/InfoBox';
 import SchemaOrg from '@/components/SchemaOrg';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -31,12 +31,12 @@ const ristoranteFaq = [
   {
     question: 'Serve prenotare per pranzo o cena?',
     answer:
-      'Il pranzo non richiede prenotazione ma è consigliata nei weekend e festivi. L’apericena (mercoledì 19:00–22:00 e giovedì 19:00–23:00) non richiede prenotazione ma è consigliata. La cena (venerdì e sabato, 19:30–23:00) è sempre su prenotazione. Il modo più rapido è WhatsApp al +39 334 677 4483.',
+      'Il pranzo non richiede prenotazione ma è consigliata nei weekend e festivi. L’apericena (mercoledì e giovedì, 19:00–21:00) non richiede prenotazione ma è consigliata. La cena (venerdì e sabato, 19:00–22:30) è sempre su prenotazione. Il modo più rapido è WhatsApp al +39 334 677 4483.',
   },
   {
     question: 'Quali sono gli orari del ristorante?',
     answer:
-      'Pranzo tutti i giorni dalle 12:00 alle 15:00. Apericena il mercoledì sera (19:00–22:00) e il giovedì sera (19:00–23:00). Cena venerdì e sabato sera su prenotazione dalle 19:30 alle 23:00. Domenica, lunedì e martedì sera chiuso.',
+      'Pranzo tutti i giorni dalle 12:00 alle 15:00. Apericena il mercoledì e giovedì sera dalle 19:00 alle 21:00. Cena venerdì e sabato sera su prenotazione dalle 19:00 alle 22:30. Domenica, lunedì e martedì sera chiuso.',
   },
   {
     question: 'Avete opzioni per celiaci, vegetariani e vegani?',
@@ -250,6 +250,23 @@ Prenotazioni: +39 049 805 8464`}
               dal caos del centro, a soli 10 minuti da Padova.
             </p>
           </Reveal>
+
+          <div className="mt-10 grid gap-4 sm:grid-cols-2">
+            {APERITIVO_IMAGES.map((img, idx) => (
+              <Reveal key={img.src} delayMs={idx * 80}>
+                <div className="relative aspect-[16/9] overflow-hidden rounded-2xl border border-black/6 shadow-sm">
+                  <Image
+                    src={img.src}
+                    alt={img.altIt}
+                    fill
+                    loading="lazy"
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                </div>
+              </Reveal>
+            ))}
+          </div>
 
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {[
