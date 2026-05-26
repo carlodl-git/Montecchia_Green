@@ -1,13 +1,41 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Reveal from '@/components/Reveal';
-import { PAGE_HERO_IMAGES } from '@/lib/site-images';
+import { APERITIVO_IMAGES, PAGE_HERO_IMAGES } from '@/lib/site-images';
 import InfoBox from '@/components/InfoBox';
 import SchemaOrg from '@/components/SchemaOrg';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
 import { hreflangForIt } from '@/lib/hreflang';
 import Breadcrumb from '@/components/Breadcrumb';
+
+const ristoranteFaq = [
+  {
+    question: 'La Montecchia Green è aperta solo ai soci del golf?',
+    answer:
+      'No, il ristorante è aperto a tutti: famiglie, turisti, aziende e privati. Non è necessario essere soci del Golf della Montecchia per pranzare, cenare o fare aperitivo sul green.',
+  },
+  {
+    question: 'Serve prenotare per pranzo o cena?',
+    answer:
+      'Il pranzo non richiede prenotazione ma è consigliata nei weekend e festivi. L’apericena (mercoledì e giovedì, 19:00–21:00) non richiede prenotazione ma è consigliata. La cena (venerdì e sabato, 19:00–22:30) è sempre su prenotazione. Il modo più rapido è WhatsApp al +39 334 677 4483.',
+  },
+  {
+    question: 'Quali sono gli orari del ristorante?',
+    answer:
+      'Pranzo tutti i giorni dalle 12:00 alle 15:00. Apericena il mercoledì e giovedì sera dalle 19:00 alle 21:00. Cena venerdì e sabato sera su prenotazione dalle 19:00 alle 22:30. Domenica, lunedì e martedì sera chiuso.',
+  },
+  {
+    question: 'Avete opzioni per celiaci, vegetariani e vegani?',
+    answer:
+      'Sì, lo chef Enrico Ruggin adatta il menu per celiaci, intolleranti al lattosio, vegetariani e vegani. Pasta senza glutine disponibile su richiesta. Comunicalo al momento della prenotazione.',
+  },
+  {
+    question: 'C’è il parcheggio?',
+    answer:
+      'Sì, ampio parcheggio gratuito all\'interno del Golf della Montecchia per tutti gli ospiti del ristorante e dei partecipanti agli eventi. La location è a 10 minuti da Padova e 5 da Abano Terme.',
+  },
+];
 
 export const metadata = {
   title: 'Chi Siamo | La Montecchia Green, Lounge Bar Restaurant a Padova',
@@ -95,6 +123,73 @@ export default function ChiSiamoPage() {
                 storia e gastronomia si incontrano, lontano dal traffico cittadino ma facilmente raggiungibile,
                 con ampio parcheggio gratuito.
               </p>
+            </Reveal>
+
+            {/* ── IL RISTORANTE: ORARI, APERICENA, APERITIVO ─ */}
+            <Reveal delayMs={180}>
+              <h2 id="ristorante" className="scroll-mt-24 text-2xl md:text-3xl font-serif font-semibold tracking-tight text-green-dark">
+                Il ristorante: orari, apericena, aperitivo
+              </h2>
+            </Reveal>
+            <Reveal delayMs={195}>
+              <Card className="bg-warm-white/70">
+                <CardContent className="p-6">
+                  <pre className="whitespace-pre-wrap text-sm leading-relaxed text-text-mid">
+{`Pranzo: tutti i giorni · 12:00–15:00
+Apericena: mercoledì e giovedì sera · 19:00–21:00
+Cena: venerdì e sabato (su prenotazione) · 19:00–22:30
+Prenotazioni: +39 049 805 8464`}
+                  </pre>
+                </CardContent>
+              </Card>
+            </Reveal>
+            <Reveal delayMs={205}>
+              <h3 className="text-xl md:text-2xl font-serif font-semibold tracking-tight text-green-dark">
+                Apericena e aperitivo: sul green, con vista
+              </h3>
+            </Reveal>
+            <Reveal delayMs={215}>
+              <p className="text-base leading-relaxed text-text-mid">
+                Durante il giorno la terrazza panoramica affacciata sul campo da golf accoglie l&apos;aperitivo e lo
+                snack bar, con vista aperta sui Colli Euganei. Il mercoledì e il giovedì sera la formula apericena
+                entra in scena: menu ridotto, atmosfera informale a metà tra l&apos;aperitivo e la cena, vini della
+                Tenuta Emo Capodilista. Uno dei posti più suggestivi vicino a Padova: silenzio, natura, tramonto sul
+                green.
+              </p>
+            </Reveal>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              {APERITIVO_IMAGES.map((img, idx) => (
+                <Reveal key={img.src} delayMs={idx * 80}>
+                  <div className="relative aspect-[16/9] overflow-hidden rounded-2xl border border-black/6 shadow-sm">
+                    <Image
+                      src={img.src}
+                      alt={img.altIt}
+                      fill
+                      loading="lazy"
+                      sizes="(max-width: 640px) 100vw, 50vw"
+                      className="object-cover"
+                    />
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+
+            <Reveal delayMs={235}>
+              <h3 className="text-xl md:text-2xl font-serif font-semibold tracking-tight text-green-dark">
+                Domande frequenti sul ristorante
+              </h3>
+            </Reveal>
+            <Reveal delayMs={245}>
+              <div className="grid gap-4 rounded-2xl border border-black/10 bg-warm-white/70 p-5">
+                {ristoranteFaq.map((item, idx) => (
+                  <div key={item.question}>
+                    <h4 className="text-sm font-semibold text-text-dark">{item.question}</h4>
+                    <p className="mt-1 text-sm leading-relaxed text-text-mid/95">{item.answer}</p>
+                    {idx !== ristoranteFaq.length - 1 ? <div className="mt-4 border-t border-black/5" /> : null}
+                  </div>
+                ))}
+              </div>
             </Reveal>
 
             {/* ── FILOSOFIA ──────────────────────────────── */}
@@ -242,7 +337,7 @@ export default function ChiSiamoPage() {
             <Reveal delayMs={880}>
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
                 <Button asChild size="lg" className="bg-green-dark text-warm-white hover:bg-green-mid">
-                  <Link href="/ristorante">Scopri il ristorante</Link>
+                  <Link href="/prenota">Prenota un tavolo</Link>
                 </Button>
                 <Button asChild variant="secondary" size="lg">
                   <Link href="/menu">Consulta il menu</Link>
@@ -310,6 +405,8 @@ export default function ChiSiamoPage() {
             { name: 'Chi Siamo', url: 'https://www.lamontecchiagreen.it/chi-siamo' },
           ]}
         />
+        <SchemaOrg variant="aperitivo" />
+        <SchemaOrg variant="customFaq" faqItems={ristoranteFaq} />
       </section>
     </div>
   );

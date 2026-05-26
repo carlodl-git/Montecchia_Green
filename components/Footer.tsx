@@ -148,7 +148,6 @@ export default function Footer() {
               {(isEn
                 ? [
                     { href: '/en/about', label: 'About us' },
-                    { href: '/en/restaurant', label: 'Restaurant' },
                     { href: '/en/menu', label: 'Menu' },
                     { href: '/en/weddings', label: 'Weddings' },
                     { href: '/en/corporate-events', label: 'Corporate events' },
@@ -157,7 +156,6 @@ export default function Footer() {
                   ]
                 : [
                     { href: '/chi-siamo', label: 'Chi siamo' },
-                    { href: '/ristorante', label: 'Ristorante' },
                     { href: '/menu', label: 'Menu' },
                     { href: '/matrimoni', label: 'Matrimoni' },
                     { href: '/eventi-aziendali', label: 'Eventi aziendali' },

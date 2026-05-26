@@ -9,7 +9,6 @@ const SITE = 'https://www.lamontecchiagreen.it';
 const pathMap = {
   '/': '/en',
   '/chi-siamo': '/en/about',
-  '/ristorante': '/en/restaurant',
   '/menu': '/en/menu',
   '/matrimoni': '/en/weddings',
   '/eventi-aziendali': '/en/corporate-events',
@@ -134,7 +133,7 @@ module.exports = {
     }
 
     // 4. Hub service pages (high priority)
-    const hubPages = ['/matrimoni', '/eventi-aziendali', '/ristorante', '/menu'];
+    const hubPages = ['/matrimoni', '/eventi-aziendali', '/menu'];
     if (hubPages.includes(normalised)) {
       return {
         loc: routePath,

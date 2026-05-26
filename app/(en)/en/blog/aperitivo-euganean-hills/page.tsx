@@ -210,7 +210,7 @@ export default function AperitivoEuganeanHillsPage() {
                 <p className="text-base leading-relaxed text-text-mid">
                   Want to try an aperitivo with a view of the Euganean Hills? Discover our offering
                   on the{' '}
-                  <Link href="/en/ristorante" className="font-medium text-green-dark underline">
+                  <Link href="/en/about#restaurant" className="font-medium text-green-dark underline">
                     restaurant page
                   </Link>
                   , or simply drop by the terrace at Golf della Montecchia.

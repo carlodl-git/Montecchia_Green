@@ -240,7 +240,7 @@ export default function GuideEmoCapodilistaWinesPage() {
                 <p className="text-base leading-relaxed text-text-mid">
                   Want to discover the wines of Tenuta Emo Capodilista? Come and taste them on our
                   panoramic terrace. Find out more on the{' '}
-                  <Link href="/en/ristorante" className="font-medium text-green-dark underline">
+                  <Link href="/en/about#restaurant" className="font-medium text-green-dark underline">
                     restaurant page
                   </Link>
                   .

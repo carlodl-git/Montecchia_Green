@@ -1,13 +1,41 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Reveal from '@/components/Reveal';
-import { PAGE_HERO_IMAGES } from '@/lib/site-images';
+import { APERITIVO_IMAGES, PAGE_HERO_IMAGES } from '@/lib/site-images';
 import InfoBox from '@/components/InfoBox';
 import SchemaOrg from '@/components/SchemaOrg';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
 import { hreflangForEn } from '@/lib/hreflang';
 import Breadcrumb from '@/components/Breadcrumb';
+
+const restaurantFaq = [
+  {
+    question: 'Is La Montecchia Green open only to golf club members?',
+    answer:
+      'No, the restaurant is open to everyone: families, tourists, businesses and private guests. Golf club membership is not required to dine or have aperitivo on the green.',
+  },
+  {
+    question: 'Do I need to book for lunch or dinner?',
+    answer:
+      'Lunch does not require a reservation but is recommended on weekends and holidays. Apericena (Wednesday and Thursday, 19:00–21:00) does not require a reservation but is recommended. Dinner (Friday and Saturday, 19:00–22:30) is always by reservation. The quickest way is WhatsApp at +39 334 677 4483.',
+  },
+  {
+    question: 'What are the restaurant opening hours?',
+    answer:
+      'Lunch every day from 12:00 to 15:00. Apericena on Wednesday and Thursday evenings from 19:00 to 21:00. Dinner Friday and Saturday by reservation from 19:00 to 22:30. Closed on Sunday, Monday and Tuesday evenings.',
+  },
+  {
+    question: 'Do you have options for celiacs, vegetarians and vegans?',
+    answer:
+      'Yes, chef Enrico Ruggin adapts the menu for celiacs, lactose-intolerant, vegetarian and vegan guests. Gluten-free pasta available on request. Please let us know when booking.',
+  },
+  {
+    question: 'Is there parking?',
+    answer:
+      'Yes, ample free parking inside Golf della Montecchia for all restaurant guests and event attendees. The venue is 10 minutes from Padua and 5 minutes from Abano Terme.',
+  },
+];
 
 export const metadata = {
   title: 'About Us | La Montecchia Green, Lounge Bar Restaurant near Padua',
@@ -94,6 +122,72 @@ export default function EnChiSiamoPage() {
                 A place where nature, history, and gastronomy meet, far from city traffic yet easily accessible,
                 with ample free parking.
               </p>
+            </Reveal>
+
+            {/* ── THE RESTAURANT: HOURS, APERICENA, APERITIVO ─ */}
+            <Reveal delayMs={180}>
+              <h2 id="restaurant" className="scroll-mt-24 text-2xl md:text-3xl font-serif font-semibold tracking-tight text-green-dark">
+                The restaurant: opening hours, apericena, aperitivo
+              </h2>
+            </Reveal>
+            <Reveal delayMs={195}>
+              <Card className="bg-warm-white/70">
+                <CardContent className="p-6">
+                  <pre className="whitespace-pre-wrap text-sm leading-relaxed text-text-mid">
+{`Lunch: every day · 12:00–15:00
+Apericena: Wednesday and Thursday evenings · 19:00–21:00
+Dinner: Friday and Saturday (on reservation) · 19:00–22:30
+Bookings: +39 049 805 8464`}
+                  </pre>
+                </CardContent>
+              </Card>
+            </Reveal>
+            <Reveal delayMs={205}>
+              <h3 className="text-xl md:text-2xl font-serif font-semibold tracking-tight text-green-dark">
+                Apericena and aperitivo: on the green, with a view
+              </h3>
+            </Reveal>
+            <Reveal delayMs={215}>
+              <p className="text-base leading-relaxed text-text-mid">
+                During the day the panoramic terrace overlooking the golf course hosts the aperitivo and snack bar,
+                with open views of the Euganean Hills. On Wednesday and Thursday evenings the apericena formula takes
+                over: reduced menu, informal atmosphere halfway between aperitivo and dinner, wines from Tenuta Emo
+                Capodilista. One of the most scenic spots near Padua: quiet, nature, sunset over the green.
+              </p>
+            </Reveal>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              {APERITIVO_IMAGES.map((img, idx) => (
+                <Reveal key={img.src} delayMs={idx * 80}>
+                  <div className="relative aspect-[16/9] overflow-hidden rounded-2xl border border-black/6 shadow-sm">
+                    <Image
+                      src={img.src}
+                      alt={img.altEn}
+                      fill
+                      loading="lazy"
+                      sizes="(max-width: 640px) 100vw, 50vw"
+                      className="object-cover"
+                    />
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+
+            <Reveal delayMs={235}>
+              <h3 className="text-xl md:text-2xl font-serif font-semibold tracking-tight text-green-dark">
+                Frequently asked questions about the restaurant
+              </h3>
+            </Reveal>
+            <Reveal delayMs={245}>
+              <div className="grid gap-4 rounded-2xl border border-black/10 bg-warm-white/70 p-5">
+                {restaurantFaq.map((item, idx) => (
+                  <div key={item.question}>
+                    <h4 className="text-sm font-semibold text-text-dark">{item.question}</h4>
+                    <p className="mt-1 text-sm leading-relaxed text-text-mid/95">{item.answer}</p>
+                    {idx !== restaurantFaq.length - 1 ? <div className="mt-4 border-t border-black/5" /> : null}
+                  </div>
+                ))}
+              </div>
             </Reveal>
 
             {/* ── PHILOSOPHY ─────────────────────────────── */}
@@ -241,13 +335,13 @@ export default function EnChiSiamoPage() {
             <Reveal delayMs={880}>
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
                 <Button asChild size="lg" className="bg-green-dark text-warm-white hover:bg-green-mid">
-                  <Link href="/en/ristorante">Discover the restaurant</Link>
+                  <Link href="/en/book">Book a table</Link>
                 </Button>
                 <Button asChild variant="secondary" size="lg">
                   <Link href="/en/menu">View the menu</Link>
                 </Button>
                 <Button asChild variant="secondary" size="lg">
-                  <Link href="/en/eventi">Plan an event</Link>
+                  <Link href="/en/events">Plan an event</Link>
                 </Button>
               </div>
             </Reveal>
@@ -310,6 +404,8 @@ export default function EnChiSiamoPage() {
             { name: 'Chi Siamo', url: 'https://www.lamontecchiagreen.it/chi-siamo' },
           ]}
         />
+        <SchemaOrg variant="aperitivo" lang="en" />
+        <SchemaOrg variant="customFaq" faqItems={restaurantFaq} />
       </section>
     </div>
   );

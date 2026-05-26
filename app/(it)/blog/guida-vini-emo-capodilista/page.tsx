@@ -243,7 +243,7 @@ export default function GuidaViniEmoCapodilistaPage() {
                 <p className="text-base leading-relaxed text-text-mid">
                   Vuoi scoprire i vini della Tenuta Emo Capodilista? Vieni a degustarli sulla nostra
                   terrazza panoramica. Scopri di piu sulla{' '}
-                  <Link href="/ristorante" className="font-medium text-green-dark underline">
+                  <Link href="/chi-siamo#ristorante" className="font-medium text-green-dark underline">
                     pagina del ristorante
                   </Link>
                   .

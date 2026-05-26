@@ -195,7 +195,7 @@ const aperitivoSchema = {
     'Aperitivo e snack bar sulla terrazza panoramica del Golf della Montecchia, con vista sui Colli Euganei. Cocktail, vini della Tenuta Emo Capodilista, taglieri e stuzzichini. Un aperitivo diverso dal solito a 10 minuti da Padova.',
   address: sharedAddress,
   geo: sharedGeo,
-  url: 'https://www.lamontecchiagreen.it/ristorante',
+  url: 'https://www.lamontecchiagreen.it/chi-siamo',
   telephone: '+390498058464',
   servesCuisine: ['Italiana', 'Aperitivo', 'Snack'],
   hasMenu: 'https://www.lamontecchiagreen.it/menu',

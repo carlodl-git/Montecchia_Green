@@ -212,7 +212,7 @@ export default function AperitivoColliEuganeiPage() {
                 <p className="text-base leading-relaxed text-text-mid">
                   Vuoi provare un aperitivo con vista sui Colli Euganei? Scopri la nostra proposta
                   sulla{' '}
-                  <Link href="/ristorante" className="font-medium text-green-dark underline">
+                  <Link href="/chi-siamo#ristorante" className="font-medium text-green-dark underline">
                     pagina del ristorante
                   </Link>
                   , oppure passa a trovarci sulla terrazza del Golf della Montecchia.

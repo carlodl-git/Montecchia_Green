@@ -17,18 +17,18 @@ export default function Navbar() {
   const navItems = isEn
     ? [
         { href: '/en/about', label: 'About' },
-        { href: '/en/restaurant', label: 'Restaurant' },
         { href: '/en/menu', label: 'Menu' },
         { href: '/en/weddings', label: 'Weddings' },
         { href: '/en/corporate-events', label: 'Corporate' },
+        { href: '/en/contact', label: 'Contact' },
         { href: '/en/book', label: 'Book a table' },
       ]
     : [
         { href: '/chi-siamo', label: 'Chi siamo' },
-        { href: '/ristorante', label: 'Ristorante' },
         { href: '/menu', label: 'Menu' },
         { href: '/matrimoni', label: 'Matrimoni' },
         { href: '/eventi-aziendali', label: 'Aziende' },
+        { href: '/contatti', label: 'Contatti' },
         { href: '/prenota', label: 'Prenota' },
       ];
 

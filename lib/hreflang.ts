@@ -11,7 +11,6 @@ const SITE = CONTACT.site;
 export const IT_TO_EN: Record<string, string> = {
   '/': '/en',
   '/chi-siamo': '/en/about',
-  '/ristorante': '/en/restaurant',
   '/menu': '/en/menu',
   '/matrimoni': '/en/weddings',
   '/eventi-aziendali': '/en/corporate-events',
@@ -38,7 +37,8 @@ export const EN_TO_IT: Record<string, string> = Object.fromEntries(
  *  Usata in next.config.js per i 301 e come fallback dopo il rename. */
 export const LEGACY_EN_REDIRECTS: Record<string, string> = {
   '/en/chi-siamo': '/en/about',
-  '/en/ristorante': '/en/restaurant',
+  '/en/ristorante': '/en/about',
+  '/en/restaurant': '/en/about',
   '/en/matrimoni': '/en/weddings',
   '/en/eventi-aziendali': '/en/corporate-events',
   '/en/eventi': '/en/events',
