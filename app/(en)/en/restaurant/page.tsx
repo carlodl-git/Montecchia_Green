@@ -91,6 +91,7 @@ export default function EnRistorantePage() {
                 <CardContent className="p-6">
                   <pre className="whitespace-pre-wrap text-sm leading-relaxed text-text-mid">
 {`Lunch: every day
+Apericena: Wednesday and Thursday evenings
 Dinner: Friday and Saturday (on reservation)
 Bookings: +39 049 805 8464`}
                   </pre>

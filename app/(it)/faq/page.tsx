@@ -25,7 +25,7 @@ const faqRistorante = [
   },
   {
     q: 'Quali sono gli orari di apertura de La Montecchia Green?',
-    a: 'Pranzo tutti i giorni dalle 12:00 alle 15:00. Cena venerdì e sabato sera su prenotazione dalle 19:30 alle 23:00. Lo snack bar e l\u2019aperitivo sono disponibili durante il giorno sulla terrazza e sul green.',
+    a: 'Pranzo tutti i giorni dalle 12:00 alle 15:00. Apericena il mercoledì sera (19:00–22:00) e il giovedì sera (19:00–23:00). Cena venerdì e sabato sera su prenotazione dalle 19:30 alle 23:00. Domenica, luned\u00ec e marted\u00ec sera chiuso.',
   },
   {
     q: 'Come prenotare un tavolo al ristorante?',

@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: '%s | La Montecchia Green',
   },
   description:
-    'Lounge bar, ristorante & eventi nel verde del Golf della Montecchia, 10 min da Padova. Cucina italiana, matrimoni, aperitivo. Prenota su WhatsApp.',
+    'Lounge bar, ristorante & eventi nel verde del Golf della Montecchia, 10 min da Padova. Pranzo ogni giorno, apericena Mer-Gio, cena Ven-Sab. Prenota su WhatsApp.',
   openGraph: {
     type: 'website',
     locale: 'it_IT',

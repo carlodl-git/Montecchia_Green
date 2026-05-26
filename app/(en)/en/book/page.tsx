@@ -11,7 +11,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 export const metadata = {
   title: 'Book a table | La Montecchia Green',
   description:
-    'Book a table at La Montecchia Green. Open to everyone inside the Golf della Montecchia in Selvazzano Dentro (PD). Lunch daily and dinner Friday & Saturday on reservation.',
+    'Book a table at La Montecchia Green. Open to everyone inside the Golf della Montecchia in Selvazzano Dentro (PD). Lunch daily, apericena Wednesday & Thursday, dinner Friday & Saturday on reservation.',
   alternates: hreflangForEn('/en/book'),
 };
 
@@ -65,8 +65,8 @@ export default function EnPrenotaPage() {
           <div className="grid gap-8">
             <Reveal>
               <p className="text-base leading-relaxed text-text-mid md:text-[1.05rem]">
-                La Montecchia Green is open to everyone. Book for daily lunch and for dinner on Friday and Saturday
-                (on reservation). Contact us directly via WhatsApp or email.
+                La Montecchia Green is open to everyone. Book for daily lunch, apericena on Wednesday and Thursday
+                evenings, and dinner on Friday and Saturday (on reservation). Contact us directly via WhatsApp or email.
               </p>
             </Reveal>
 
@@ -94,6 +94,9 @@ export default function EnPrenotaPage() {
                 <div className="space-y-2">
                   <div>
                     <span className="font-semibold">Lunch:</span> every day
+                  </div>
+                  <div>
+                    <span className="font-semibold">Apericena:</span> Wednesday and Thursday evenings
                   </div>
                   <div>
                     <span className="font-semibold">Dinner:</span> Friday and Saturday (on reservation)

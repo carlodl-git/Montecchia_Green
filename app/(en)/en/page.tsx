@@ -18,7 +18,7 @@ const pillars = [
   {
     icon: UtensilsCrossed,
     title: 'Lunch & dinner',
-    text: 'Seasonal Italian cuisine every day for lunch, Friday and Saturday evening on reservation.',
+    text: 'Seasonal Italian cuisine for lunch every day, apericena on Wednesday and Thursday evenings, dinner on Friday and Saturday.',
   },
   {
     icon: Sparkles,
@@ -166,7 +166,8 @@ export default function EnHomePage() {
               <div>
                 <div className="text-xs font-semibold uppercase tracking-wider text-warm-white/85">Opening hours</div>
                 <div className="mt-1 text-sm font-medium text-warm-white">Lunch: every day</div>
-                <div className="text-xs text-warm-white/60">Dinner: Fri &amp; Sat on reservation</div>
+                <div className="text-xs text-warm-white/60">Apericena: Wed &amp; Thu</div>
+                <div className="text-xs text-warm-white/60">Dinner: Fri &amp; Sat</div>
               </div>
             </div>
 
@@ -203,8 +204,9 @@ export default function EnHomePage() {
           <p className="mt-4 max-w-3xl text-base leading-relaxed text-text-mid">
             La Montecchia Green is a lounge bar and restaurant open to everyone: golfers, families, friends, tourists
             and companies. We serve contemporary Italian cuisine with local seasonal ingredients, products from our
-            garden and homemade pasta. On Friday and Saturday evenings, on reservation, the dining room turns into a
-            more intimate experience, in a unique setting in the green of the Euganean Hills.
+            garden and homemade pasta. On Wednesday and Thursday evenings the dining room opens with the apericena
+            formula, while on Friday and Saturday evenings, on reservation, it turns into a more intimate experience
+            in a unique setting in the green of the Euganean Hills.
           </p>
         </Reveal>
 

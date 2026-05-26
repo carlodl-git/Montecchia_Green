@@ -25,7 +25,7 @@ const faqRestaurant = [
   },
   {
     q: 'What are the opening hours of La Montecchia Green?',
-    a: 'Lunch every day from 12:00 to 15:00. Dinner on Friday and Saturday evenings by reservation from 19:30 to 23:00. The snack bar and aperitivo are available during the day on the terrace and on the green.',
+    a: 'Lunch every day from 12:00 to 15:00. Apericena on Wednesday evening (19:00–22:00) and Thursday evening (19:00–23:00). Dinner on Friday and Saturday evenings by reservation from 19:30 to 23:00. Closed on Sunday, Monday and Tuesday evenings.',
   },
   {
     q: 'How can I book a table at the restaurant?',

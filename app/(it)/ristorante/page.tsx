@@ -31,12 +31,12 @@ const ristoranteFaq = [
   {
     question: 'Serve prenotare per pranzo o cena?',
     answer:
-      'Il pranzo non richiede prenotazione ma è consigliata nei weekend e festivi. La cena (venerdì e sabato, 19:30–23:00) è sempre su prenotazione. Il modo più rapido è WhatsApp al +39 334 677 4483.',
+      'Il pranzo non richiede prenotazione ma è consigliata nei weekend e festivi. L’apericena (mercoledì 19:00–22:00 e giovedì 19:00–23:00) non richiede prenotazione ma è consigliata. La cena (venerdì e sabato, 19:30–23:00) è sempre su prenotazione. Il modo più rapido è WhatsApp al +39 334 677 4483.',
   },
   {
     question: 'Quali sono gli orari del ristorante?',
     answer:
-      'Pranzo tutti i giorni dalle 12:00 alle 15:00. Cena venerdì e sabato sera su prenotazione dalle 19:30 alle 23:00. Snack bar e aperitivo sono disponibili durante il giorno sulla terrazza.',
+      'Pranzo tutti i giorni dalle 12:00 alle 15:00. Apericena il mercoledì sera (19:00–22:00) e il giovedì sera (19:00–23:00). Cena venerdì e sabato sera su prenotazione dalle 19:30 alle 23:00. Domenica, lunedì e martedì sera chiuso.',
   },
   {
     question: 'Avete opzioni per celiaci, vegetariani e vegani?',
@@ -127,6 +127,7 @@ export default function RistorantePage() {
                 <CardContent className="p-6">
                   <pre className="whitespace-pre-wrap text-sm leading-relaxed text-text-mid">
 {`Pranzo: tutti i giorni
+Apericena: mercoledì e giovedì sera
 Cena: venerdì e sabato (su prenotazione)
 Prenotazioni: +39 049 805 8464`}
                   </pre>
@@ -237,15 +238,16 @@ Prenotazioni: +39 049 805 8464`}
           <Reveal>
             <span className="divider-gold mb-5" />
             <h2 className="font-serif text-3xl font-semibold tracking-tight text-green-dark">
-              Aperitivo a Padova: sul green, con vista
+              Apericena e aperitivo: sul green, con vista
             </h2>
           </Reveal>
           <Reveal delayMs={70}>
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-text-mid">
-              Lo snack bar e l&apos;aperitivo de La Montecchia Green si svolgono sulla terrazza panoramica affacciata
-              sul campo da golf, con vista aperta sui Colli Euganei. È uno dei posti più suggestivi per un aperitivo
-              vicino a Padova: silenzio, natura, tramonto sul green e vini della Tenuta Emo Capodilista. Lontano dal
-              caos del centro, a soli 10 minuti da Padova.
+              Durante il giorno la terrazza panoramica affacciata sul campo da golf accoglie l&apos;aperitivo e lo snack
+              bar, con vista aperta sui Colli Euganei. Il mercoledì e il giovedì sera la formula apericena entra in
+              scena: menu ridotto, atmosfera informale a metà tra l&apos;aperitivo e la cena, vini della Tenuta Emo
+              Capodilista. Uno dei posti più suggestivi vicino a Padova: silenzio, natura, tramonto sul green. Lontano
+              dal caos del centro, a soli 10 minuti da Padova.
             </p>
           </Reveal>
 

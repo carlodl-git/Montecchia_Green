@@ -22,7 +22,7 @@ const pillars = [
   {
     icon: UtensilsCrossed,
     title: 'Pranzo e cena',
-    text: 'Cucina italiana stagionale ogni giorno a pranzo, venerdì e sabato sera su prenotazione.',
+    text: 'Cucina italiana stagionale a pranzo tutti i giorni, apericena il mercoledì e giovedì sera, cena il venerdì e sabato.',
   },
   {
     icon: Sparkles,
@@ -174,7 +174,8 @@ export default function HomePage() {
               <div>
                 <div className="text-xs font-semibold uppercase tracking-wider text-warm-white/85">Orari</div>
                 <div className="mt-1 text-sm font-medium text-warm-white">Pranzo: tutti i giorni</div>
-                <div className="text-xs text-warm-white/60">Cena: ven e sab su prenotazione</div>
+                <div className="text-xs text-warm-white/60">Apericena: mer e gio</div>
+                <div className="text-xs text-warm-white/60">Cena: ven e sab</div>
               </div>
             </div>
 
@@ -211,8 +212,9 @@ export default function HomePage() {
           <p className="mt-4 max-w-3xl text-base leading-relaxed text-text-mid">
             La Montecchia Green è un lounge bar e ristorante aperto a tutti: golfisti, famiglie, amici, turisti e aziende.
             È una cucina italiana contemporanea, con ingredienti locali e stagionali, prodotti dell&apos;orto e pasta
-            fatta in casa. Il venerdì e il sabato sera, su prenotazione, la sala si trasforma in un&apos;esperienza
-            più intima e raccolta, in una location unica nel verde dei Colli Euganei.
+            fatta in casa. Il mercoledì e il giovedì sera la sala apre con la formula apericena, mentre il venerdì
+            e il sabato sera, su prenotazione, si trasforma in un&apos;esperienza più intima e raccolta, in una
+            location unica nel verde dei Colli Euganei.
           </p>
         </Reveal>
 
