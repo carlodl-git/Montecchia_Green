@@ -64,24 +64,38 @@ const restaurantSchema = {
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-      opens: '12:00',
-      closes: '15:00',
-      description: 'Pranzo tutti i giorni',
+      dayOfWeek: ['Monday', 'Tuesday'],
+      opens: '08:30',
+      closes: '20:00',
+      description: 'Lunedì e martedì: apertura giornaliera',
     },
     {
       '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Wednesday', 'Thursday'],
-      opens: '19:00',
-      closes: '21:00',
-      description: 'Apericena mercoledì e giovedì sera',
+      dayOfWeek: ['Wednesday'],
+      opens: '08:30',
+      closes: '21:30',
+      description: 'Mercoledì: apertura con aperitivo Sunset Cup',
     },
     {
       '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Friday', 'Saturday'],
-      opens: '19:00',
-      closes: '22:30',
-      description: 'Cena venerdì e sabato',
+      dayOfWeek: ['Thursday', 'Friday'],
+      opens: '08:30',
+      closes: '22:00',
+      description: 'Giovedì e venerdì: bistrot serale fino alle 22:00',
+    },
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Saturday'],
+      opens: '08:00',
+      closes: '22:00',
+      description: 'Sabato: bistrot serale fino alle 22:00',
+    },
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Sunday'],
+      opens: '08:00',
+      closes: '20:30',
+      description: 'Domenica: apertura giornaliera',
     },
   ],
   servesCuisine: ['Italiana', 'Stagionale', 'Locale', 'Veneta', 'Italiana Contemporanea'],
@@ -141,13 +155,13 @@ const restaurantSchema = {
       },
       {
         '@type': 'Offer',
-        name: 'Apericena mercoledì e giovedì',
-        description: 'Formula serale del mercoledì e giovedì con menu ridotto sulla terrazza panoramica con vista sui Colli Euganei. Atmosfera informale a metà tra aperitivo e cena.',
+        name: 'Sunset Cup — aperitivo del mercoledì',
+        description: 'Aperitivo rinforzato Sunset Cup ogni mercoledì sera sulla terrazza panoramica con vista sui Colli Euganei e tramonto sul green. Cocktail signature, vini locali e tagliere.',
       },
       {
         '@type': 'Offer',
-        name: 'Cena venerdì e sabato',
-        description: 'Cena venerdì e sabato sera su prenotazione con menu à la carte e selezione vini in un\'atmosfera intima nell\'ex tabacchificio restaurato.',
+        name: 'Bistrot serale giovedì, venerdì e sabato',
+        description: 'Bistrot aperto anche la sera il giovedì, venerdì e sabato fino alle 22:00. Menu à la carte con cucina italiana stagionale e selezione vini della Tenuta Emo Capodilista.',
       },
       {
         '@type': 'Offer',
@@ -352,7 +366,7 @@ const faqSchema = {
       name: 'Quali sono gli orari di apertura de La Montecchia Green?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Pranzo tutti i giorni dalle 12:00 alle 15:00. Apericena il mercoledì e giovedì sera dalle 19:00 alle 21:00. Cena venerdì e sabato sera su prenotazione dalle 19:00 alle 22:30. Domenica, lunedì e martedì sera chiuso.',
+        text: 'Lunedì e martedì 8:30–20:00. Mercoledì 8:30–21:30 con aperitivo Sunset Cup. Giovedì e venerdì 8:30–22:00, sabato 8:00–22:00 con bistrot serale. Domenica 8:00–20:30. Il bistrot è sempre aperto a pranzo (12:00–15:00) e nelle serate di giovedì, venerdì e sabato.',
       },
     },
   ],
@@ -363,11 +377,13 @@ const faqSchema = {
 const restaurantSchemaEn = {
   ...restaurantSchema,
   description:
-    'Lounge bar, restaurant and event venue at Golf della Montecchia, in a restored tobacco factory at the foot of the Euganean Hills. Italian cuisine with local seasonal ingredients, apericena Wednesday and Thursday evenings, dinner Friday and Saturday, weddings, team building and corporate dinners. 10 minutes from Padua, open to everyone.',
+    'Lounge bar, restaurant and event venue at Golf della Montecchia, in a restored tobacco factory at the foot of the Euganean Hills. Italian cuisine with local seasonal ingredients, Sunset Cup aperitivo on Wednesdays, evening bistrot Thursday to Saturday, weddings, team building and corporate dinners. 10 minutes from Padua, open to everyone.',
   openingHoursSpecification: [
-    { ...restaurantSchema.openingHoursSpecification[0], description: 'Lunch every day' },
-    { ...restaurantSchema.openingHoursSpecification[1], description: 'Apericena Wednesday and Thursday evening' },
-    { ...restaurantSchema.openingHoursSpecification[2], description: 'Dinner Friday and Saturday' },
+    { ...restaurantSchema.openingHoursSpecification[0], description: 'Monday and Tuesday: daytime opening' },
+    { ...restaurantSchema.openingHoursSpecification[1], description: 'Wednesday: open with Sunset Cup aperitivo' },
+    { ...restaurantSchema.openingHoursSpecification[2], description: 'Thursday and Friday: evening bistrot until 22:00' },
+    { ...restaurantSchema.openingHoursSpecification[3], description: 'Saturday: evening bistrot until 22:00' },
+    { ...restaurantSchema.openingHoursSpecification[4], description: 'Sunday: daytime opening' },
   ],
   servesCuisine: ['Italian', 'Seasonal', 'Local', 'Venetian', 'Contemporary Italian'],
   amenityFeature: [
@@ -392,8 +408,8 @@ const restaurantSchemaEn = {
     name: 'La Montecchia Green Services',
     itemListElement: [
       { '@type': 'Offer', name: 'Restaurant lunch', description: 'Daily lunch with seasonal Italian cuisine, homemade pasta, wines from Tenuta Emo Capodilista' },
-      { '@type': 'Offer', name: 'Wednesday & Thursday apericena', description: 'Wednesday and Thursday evening formula with a reduced menu on the panoramic terrace overlooking the Euganean Hills. Casual, halfway between aperitivo and dinner.' },
-      { '@type': 'Offer', name: 'Friday & Saturday dinner', description: 'Friday and Saturday dinner by reservation with à la carte menu and wine selection in the intimate setting of the restored tobacco factory.' },
+      { '@type': 'Offer', name: 'Sunset Cup — Wednesday aperitivo', description: 'Reinforced Sunset Cup aperitivo every Wednesday evening on the panoramic terrace overlooking the Euganean Hills, with sunset over the green. Signature cocktails, local wines and charcuterie.' },
+      { '@type': 'Offer', name: 'Evening bistrot Thursday to Saturday', description: 'Bistrot open for dinner Thursday, Friday and Saturday until 22:00. À la carte menu with seasonal Italian cuisine and wines from Tenuta Emo Capodilista.' },
       { '@type': 'Offer', name: 'Wedding venue', description: 'Wedding planning with spaces up to 400 guests, custom menu, sommelier, terrace and outdoor areas' },
       { '@type': 'Offer', name: 'Corporate event venue', description: 'Corporate lunches, team building on the green, conventions, year-end dinners for companies near Padua' },
     ],
@@ -453,7 +469,7 @@ const faqSchemaEn = {
       "Cos'è il team building sul green a La Montecchia Green?": { name: 'What is team building on the green at La Montecchia Green?', text: 'Team building on the green is a corporate activity that combines the natural setting of Golf della Montecchia with outdoor group experiences. It takes place surrounded by the greenery of the Euganean Hills, followed by lunch or aperitivo with a custom menu. Ideal for companies seeking an alternative to conventional conference centres.' },
       'La Montecchia Green è vicina ad Abano Terme?': { name: 'Is La Montecchia Green close to Abano Terme?', text: 'Yes, La Montecchia Green is just 5 minutes by car from Abano Terme and about 10 minutes from Montegrotto Terme. It is an ideal choice for spa guests looking for a scenic restaurant or event venue.' },
       'Quali vini serve La Montecchia Green?': { name: 'What wines does La Montecchia Green serve?', text: 'La Montecchia Green offers a curated selection by the sommelier, with special focus on wines from Tenuta Emo Capodilista, one of the most prestigious wineries of the Colli Euganei DOC. National and international labels are also available.' },
-      'Quali sono gli orari di apertura de La Montecchia Green?': { name: 'What are the opening hours of La Montecchia Green?', text: 'Lunch every day from 12:00 to 15:00. Apericena on Wednesday and Thursday evenings from 19:00 to 21:00. Dinner Friday and Saturday by reservation from 19:00 to 22:30. Closed on Sunday, Monday and Tuesday evenings.' },
+      'Quali sono gli orari di apertura de La Montecchia Green?': { name: 'What are the opening hours of La Montecchia Green?', text: 'Monday and Tuesday 8:30–20:00. Wednesday 8:30–21:30 with Sunset Cup aperitivo. Thursday and Friday 8:30–22:00, Saturday 8:00–22:00 with evening bistrot service. Sunday 8:00–20:30. The bistrot is always open for lunch (12:00–15:00) and on Thursday, Friday and Saturday evenings.' },
     };
     const t = translations[q.name];
     if (t) return { '@type': 'Question', name: t.name, acceptedAnswer: { '@type': 'Answer', text: t.text } };

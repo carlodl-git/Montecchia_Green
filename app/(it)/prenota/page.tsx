@@ -12,7 +12,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 export const metadata = {
   title: 'Prenota un tavolo | La Montecchia Green',
   description:
-    "Prenota un tavolo a La Montecchia Green. Aperto a tutti nel Golf della Montecchia a Selvazzano Dentro (PD). Prenotazioni per pranzo e cena ven-sab su prenotazione.",
+    "Prenota un tavolo a La Montecchia Green. Aperto a tutti nel Golf della Montecchia a Selvazzano Dentro (PD). Pranzo tutti i giorni, bistrot serale gio-ven-sab, Sunset Cup il mercoledì.",
   alternates: hreflangForIt('/prenota'),
 };
 
@@ -66,8 +66,9 @@ export default function PrenotaPage() {
           <div className="grid gap-8">
             <Reveal>
               <p className="text-base leading-relaxed text-text-mid md:text-[1.05rem]">
-                La Montecchia Green è aperto a tutti: prenota per il pranzo di ogni giorno e per la cena del venerdì
-                e del sabato (su prenotazione). Contattaci subito via WhatsApp o email.
+                La Montecchia Green è aperto a tutti: prenota per il pranzo di ogni giorno e per il bistrot serale
+                del giovedì, venerdì e sabato. Il mercoledì sera è in scena l&apos;aperitivo Sunset Cup. Contattaci
+                subito via WhatsApp o email.
               </p>
             </Reveal>
 
@@ -94,10 +95,13 @@ export default function PrenotaPage() {
               <InfoBox title="Orari e contatti">
                 <div className="space-y-2">
                   <div>
-                    <span className="font-semibold">Pranzo:</span> tutti i giorni
+                    <span className="font-semibold">Pranzo:</span> tutti i giorni · 12:00–15:00
                   </div>
                   <div>
-                    <span className="font-semibold">Cena:</span> venerdì e sabato (su prenotazione)
+                    <span className="font-semibold">Cena bistrot:</span> gio · ven · sab · fino alle 22:00
+                  </div>
+                  <div>
+                    <span className="font-semibold">Sunset Cup:</span> mercoledì sera
                   </div>
                   <div className="text-xs text-text-mid/80">
                     Tel: +39 049 805 8464

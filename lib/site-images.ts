@@ -32,8 +32,8 @@ export const APERITIVO_IMAGES = [
   },
   {
     src: '/images/apericena-birra-tagliere.jpg',
-    altIt: 'Apericena alla Montecchia Green: birra artigianale, tagliere di salumi, formaggi e olive sulla terrazza panoramica sul green',
-    altEn: 'Apericena at La Montecchia Green: craft beer, charcuterie board with cold cuts, cheese and olives on the panoramic terrace overlooking the green',
+    altIt: 'Aperitivo serale alla Montecchia Green: birra artigianale, tagliere di salumi, formaggi e olive sulla terrazza panoramica sul green',
+    altEn: 'Evening aperitivo at La Montecchia Green: craft beer, charcuterie board with cold cuts, cheese and olives on the panoramic terrace overlooking the green',
   },
 ] as const;
 

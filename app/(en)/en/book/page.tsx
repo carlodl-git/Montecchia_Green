@@ -11,7 +11,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 export const metadata = {
   title: 'Book a table | La Montecchia Green',
   description:
-    'Book a table at La Montecchia Green. Open to everyone inside the Golf della Montecchia in Selvazzano Dentro (PD). Lunch daily, apericena Wednesday & Thursday, dinner Friday & Saturday on reservation.',
+    'Book a table at La Montecchia Green. Open to everyone inside the Golf della Montecchia in Selvazzano Dentro (PD). Lunch daily, evening bistrot Thu-Fri-Sat, Sunset Cup aperitivo on Wednesdays.',
   alternates: hreflangForEn('/en/book'),
 };
 
@@ -65,8 +65,9 @@ export default function EnPrenotaPage() {
           <div className="grid gap-8">
             <Reveal>
               <p className="text-base leading-relaxed text-text-mid md:text-[1.05rem]">
-                La Montecchia Green is open to everyone. Book for daily lunch, apericena on Wednesday and Thursday
-                evenings, and dinner on Friday and Saturday (on reservation). Contact us directly via WhatsApp or email.
+                La Montecchia Green is open to everyone. Book for daily lunch and for evening bistrot service on
+                Thursday, Friday and Saturday. On Wednesday evenings the Sunset Cup aperitivo is on. Contact us
+                directly via WhatsApp or email.
               </p>
             </Reveal>
 
@@ -93,13 +94,13 @@ export default function EnPrenotaPage() {
               <InfoBox title="Opening hours & contacts">
                 <div className="space-y-2">
                   <div>
-                    <span className="font-semibold">Lunch:</span> every day
+                    <span className="font-semibold">Lunch:</span> every day · 12:00–15:00
                   </div>
                   <div>
-                    <span className="font-semibold">Apericena:</span> Wednesday and Thursday evenings
+                    <span className="font-semibold">Evening bistrot:</span> Thu · Fri · Sat · until 22:00
                   </div>
                   <div>
-                    <span className="font-semibold">Dinner:</span> Friday and Saturday (on reservation)
+                    <span className="font-semibold">Sunset Cup:</span> Wednesday evening
                   </div>
                   <div className="text-xs text-text-mid/80">
                     Tel: +39 049 805 8464

@@ -36,11 +36,14 @@ Response time: staff replies within 24-48 business hours via email; near real-ti
 
 ## 3. Opening hours
 
-- Lunch: every day, 12:00–15:00
-- Apericena: Wednesday and Thursday, 19:00–21:00 (reduced menu, reservation recommended)
-- Dinner: Friday and Saturday, 19:00–22:30, by reservation only
-- Snack bar / daytime aperitivo: on the terrace and green
-- Closed for evening service: Sunday, Monday, Tuesday
+- Monday: 8:30–20:00
+- Tuesday: 8:30–20:00
+- Wednesday: 8:30–21:30 — Sunset Cup aperitivo (reinforced)
+- Thursday: 8:30–22:00 — bistrot open in the evening
+- Friday: 8:30–22:00 — bistrot open in the evening
+- Saturday: 8:00–22:00 — bistrot open in the evening
+- Sunday: 8:00–20:30
+- Bistrot: open daily for lunch (12:00–15:00) and on Thursday, Friday and Saturday evenings
 
 ---
 

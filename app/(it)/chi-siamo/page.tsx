@@ -18,12 +18,12 @@ const ristoranteFaq = [
   {
     question: 'Serve prenotare per pranzo o cena?',
     answer:
-      'Il pranzo non richiede prenotazione ma è consigliata nei weekend e festivi. L’apericena (mercoledì e giovedì, 19:00–21:00) non richiede prenotazione ma è consigliata. La cena (venerdì e sabato, 19:00–22:30) è sempre su prenotazione. Il modo più rapido è WhatsApp al +39 334 677 4483.',
+      'Il pranzo non richiede prenotazione ma è consigliata nei weekend e festivi. La cena al bistrot (giovedì, venerdì e sabato sera, fino alle 22:00) è consigliata su prenotazione. L’aperitivo Sunset Cup del mercoledì sera è aperto a tutti, prenotazione consigliata per gruppi. Il modo più rapido è WhatsApp al +39 334 677 4483.',
   },
   {
     question: 'Quali sono gli orari del ristorante?',
     answer:
-      'Pranzo tutti i giorni dalle 12:00 alle 15:00. Apericena il mercoledì e giovedì sera dalle 19:00 alle 21:00. Cena venerdì e sabato sera su prenotazione dalle 19:00 alle 22:30. Domenica, lunedì e martedì sera chiuso.',
+      'Lunedì e martedì 8:30–20:00. Mercoledì 8:30–21:30 con aperitivo Sunset Cup. Giovedì e venerdì 8:30–22:00, sabato 8:00–22:00 con bistrot serale. Domenica 8:00–20:30. Il bistrot è sempre aperto a pranzo (12:00–15:00) e nelle serate di giovedì, venerdì e sabato.',
   },
   {
     question: 'Avete opzioni per celiaci, vegetariani e vegani?',
@@ -128,16 +128,24 @@ export default function ChiSiamoPage() {
             {/* ── IL RISTORANTE: ORARI, APERICENA, APERITIVO ─ */}
             <Reveal delayMs={180}>
               <h2 id="ristorante" className="scroll-mt-24 text-2xl md:text-3xl font-serif font-semibold tracking-tight text-green-dark">
-                Il ristorante: orari, apericena, aperitivo
+                Il ristorante: orari, bistrot serale, Sunset Cup
               </h2>
             </Reveal>
             <Reveal delayMs={195}>
               <Card className="bg-warm-white/70">
                 <CardContent className="p-6">
                   <pre className="whitespace-pre-wrap text-sm leading-relaxed text-text-mid">
-{`Pranzo: tutti i giorni · 12:00–15:00
-Apericena: mercoledì e giovedì sera · 19:00–21:00
-Cena: venerdì e sabato (su prenotazione) · 19:00–22:30
+{`Lunedì:    8:30 – 20:00
+Martedì:   8:30 – 20:00
+Mercoledì: 8:30 – 21:30 · aperitivo Sunset Cup
+Giovedì:   8:30 – 22:00 · bistrot serale
+Venerdì:   8:30 – 22:00 · bistrot serale
+Sabato:    8:00 – 22:00 · bistrot serale
+Domenica:  8:00 – 20:30
+
+Il bistrot è sempre aperto a pranzo (12:00–15:00)
+oltre che nelle serate di giovedì, venerdì e sabato.
+
 Prenotazioni: +39 049 805 8464`}
                   </pre>
                 </CardContent>
@@ -145,16 +153,17 @@ Prenotazioni: +39 049 805 8464`}
             </Reveal>
             <Reveal delayMs={205}>
               <h3 className="text-xl md:text-2xl font-serif font-semibold tracking-tight text-green-dark">
-                Apericena e aperitivo: sul green, con vista
+                Sunset Cup e bistrot serale: sul green, con vista
               </h3>
             </Reveal>
             <Reveal delayMs={215}>
               <p className="text-base leading-relaxed text-text-mid">
                 Durante il giorno la terrazza panoramica affacciata sul campo da golf accoglie l&apos;aperitivo e lo
-                snack bar, con vista aperta sui Colli Euganei. Il mercoledì e il giovedì sera la formula apericena
-                entra in scena: menu ridotto, atmosfera informale a metà tra l&apos;aperitivo e la cena, vini della
-                Tenuta Emo Capodilista. Uno dei posti più suggestivi vicino a Padova: silenzio, natura, tramonto sul
-                green.
+                snack bar, con vista aperta sui Colli Euganei. Il mercoledì sera arriva la formula Sunset Cup: un
+                aperitivo rinforzato con cocktail signature, vini della Tenuta Emo Capodilista e taglieri, mentre il
+                tramonto scende sul green. Il giovedì, il venerdì e il sabato il bistrot resta aperto anche la sera
+                fino alle 22:00, con menu à la carte. Uno dei posti più suggestivi vicino a Padova: silenzio, natura,
+                tramonto sul green.
               </p>
             </Reveal>
 
