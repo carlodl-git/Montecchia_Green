@@ -57,14 +57,42 @@ type WaIntent = 'booking' | 'events' | 'generic' | 'info';
 export function whatsappUrl(intent: WaIntent = 'generic', locale: Locale = 'it') {
   const messages: Record<Locale, Record<WaIntent, string>> = {
     it: {
-      booking: 'Ciao La Montecchia Green, vorrei prenotare un tavolo.',
-      events: 'Ciao La Montecchia Green, vorrei parlare di un evento.',
+      booking:
+        'Ciao La Montecchia Green, vorrei prenotare un tavolo.\n\n' +
+        'Data: \n' +
+        'Orario: \n' +
+        'Persone: \n' +
+        'A nome di: \n' +
+        'Particolari richieste: \n\n' +
+        'Grazie!',
+      events:
+        'Ciao La Montecchia Green, vorrei parlare di un evento.\n\n' +
+        'Tipo di evento: \n' +
+        'Data: \n' +
+        'Persone: \n' +
+        'A nome di: \n' +
+        'Particolari richieste: \n\n' +
+        'Grazie!',
       info: 'Ciao La Montecchia Green, vorrei avere informazioni.',
       generic: 'Ciao La Montecchia Green, vorrei prenotare o chiedere info.',
     },
     en: {
-      booking: 'Hello La Montecchia Green, I would like to book a table.',
-      events: 'Hello La Montecchia Green, I would like to talk about an event.',
+      booking:
+        'Hello La Montecchia Green, I would like to book a table.\n\n' +
+        'Date: \n' +
+        'Time: \n' +
+        'Guests: \n' +
+        'Name: \n' +
+        'Special requests: \n\n' +
+        'Thanks!',
+      events:
+        'Hello La Montecchia Green, I would like to talk about an event.\n\n' +
+        'Event type: \n' +
+        'Date: \n' +
+        'Guests: \n' +
+        'Name: \n' +
+        'Special requests: \n\n' +
+        'Thanks!',
       info: 'Hello La Montecchia Green, I would like some information.',
       generic: 'Hello La Montecchia Green, I would like to book or ask for info.',
     },
