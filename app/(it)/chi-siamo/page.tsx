@@ -18,12 +18,12 @@ const ristoranteFaq = [
   {
     question: 'Serve prenotare per pranzo o cena?',
     answer:
-      'Il pranzo non richiede prenotazione ma è consigliata nei weekend e festivi. La cena al bistrot (giovedì, venerdì e sabato sera, fino alle 22:00) è consigliata su prenotazione. L’aperitivo Sunset Cup del mercoledì sera è aperto a tutti, prenotazione consigliata per gruppi. Il modo più rapido è WhatsApp al +39 334 677 4483.',
+      'Il pranzo non richiede prenotazione ma è consigliata nei weekend e festivi. La cena al bistrot (giovedì, venerdì e sabato sera, fino alle 22:00) è consigliata su prenotazione. L’aperitivo rinforzato del mercoledì sera è aperto a tutti, prenotazione consigliata per gruppi. Il modo più rapido è WhatsApp al +39 334 677 4483.',
   },
   {
     question: 'Quali sono gli orari del ristorante?',
     answer:
-      'Lunedì e martedì 8:30–20:00. Mercoledì 8:30–21:30 con aperitivo Sunset Cup. Giovedì e venerdì 8:30–22:00, sabato 8:00–22:00 con bistrot serale. Domenica 8:00–20:30. Il bistrot è sempre aperto a pranzo (12:00–15:00) e nelle serate di giovedì, venerdì e sabato.',
+      'Lunedì e martedì 8:30–20:00. Mercoledì 8:30–21:30 con aperitivo rinforzato. Giovedì e venerdì 8:30–22:00, sabato 8:00–22:00 con bistrot serale. Domenica 8:00–20:30. Il bistrot è sempre aperto a pranzo (12:00–15:00) e nelle serate di giovedì, venerdì e sabato.',
   },
   {
     question: 'Avete opzioni per celiaci, vegetariani e vegani?',
@@ -128,7 +128,7 @@ export default function ChiSiamoPage() {
             {/* ── IL RISTORANTE: ORARI, APERICENA, APERITIVO ─ */}
             <Reveal delayMs={180}>
               <h2 id="ristorante" className="scroll-mt-24 text-2xl md:text-3xl font-serif font-semibold tracking-tight text-green-dark">
-                Il ristorante: orari, bistrot serale, Sunset Cup
+                Il ristorante: orari, bistrot serale, aperitivo rinforzato
               </h2>
             </Reveal>
             <Reveal delayMs={195}>
@@ -137,7 +137,7 @@ export default function ChiSiamoPage() {
                   <pre className="whitespace-pre-wrap text-sm leading-relaxed text-text-mid">
 {`Lunedì:    8:30 – 20:00
 Martedì:   8:30 – 20:00
-Mercoledì: 8:30 – 21:30 · aperitivo Sunset Cup
+Mercoledì: 8:30 – 21:30 · aperitivo rinforzato
 Giovedì:   8:30 – 22:00 · bistrot serale
 Venerdì:   8:30 – 22:00 · bistrot serale
 Sabato:    8:00 – 22:00 · bistrot serale
@@ -153,15 +153,15 @@ Prenotazioni: +39 049 805 8464`}
             </Reveal>
             <Reveal delayMs={205}>
               <h3 className="text-xl md:text-2xl font-serif font-semibold tracking-tight text-green-dark">
-                Sunset Cup e bistrot serale: sul green, con vista
+                Aperitivo rinforzato e bistrot serale: sul green, con vista
               </h3>
             </Reveal>
             <Reveal delayMs={215}>
               <p className="text-base leading-relaxed text-text-mid">
                 Durante il giorno la terrazza panoramica affacciata sul campo da golf accoglie l&apos;aperitivo e lo
-                snack bar, con vista aperta sui Colli Euganei. Il mercoledì sera arriva la formula Sunset Cup: un
-                aperitivo rinforzato con cocktail signature, vini della Tenuta Emo Capodilista e taglieri, mentre il
-                tramonto scende sul green. Il giovedì, il venerdì e il sabato il bistrot resta aperto anche la sera
+                snack bar, con vista aperta sui Colli Euganei. Il mercoledì sera arriva l&apos;aperitivo rinforzato:
+                cocktail signature, vini della Tenuta Emo Capodilista e taglieri, mentre il tramonto scende sul
+                green. Il giovedì, il venerdì e il sabato il bistrot resta aperto anche la sera
                 fino alle 22:00, con menu à la carte. Uno dei posti più suggestivi vicino a Padova: silenzio, natura,
                 tramonto sul green.
               </p>

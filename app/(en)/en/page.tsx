@@ -18,7 +18,7 @@ const pillars = [
   {
     icon: UtensilsCrossed,
     title: 'Lunch & dinner',
-    text: 'Seasonal Italian cuisine for lunch every day, evening bistrot on Thursday, Friday and Saturday, Sunset Cup aperitivo on Wednesday evenings.',
+    text: 'Seasonal Italian cuisine for lunch every day, evening bistrot on Thursday, Friday and Saturday, reinforced aperitivo on Wednesday evenings.',
   },
   {
     icon: Sparkles,
@@ -167,7 +167,7 @@ export default function EnHomePage() {
                 <div className="text-xs font-semibold uppercase tracking-wider text-warm-white/85">Opening hours</div>
                 <div className="mt-1 text-sm font-medium text-warm-white">Open every day</div>
                 <div className="text-xs text-warm-white/60">Evening bistrot: Thu · Fri · Sat</div>
-                <div className="text-xs text-warm-white/60">Sunset Cup: Wednesday evening</div>
+                <div className="text-xs text-warm-white/60">Reinforced aperitivo: Wed evening</div>
               </div>
             </div>
 
@@ -204,7 +204,7 @@ export default function EnHomePage() {
           <p className="mt-4 max-w-3xl text-base leading-relaxed text-text-mid">
             La Montecchia Green is a lounge bar and restaurant open to everyone: golfers, families, friends, tourists
             and companies. We serve contemporary Italian cuisine with local seasonal ingredients, products from our
-            garden and homemade pasta. On Wednesday evenings the terrace hosts the Sunset Cup aperitivo, while on
+            garden and homemade pasta. On Wednesday evenings the terrace hosts the reinforced aperitivo, while on
             Thursday, Friday and Saturday the bistrot is also open in the evening for dinner, in a unique setting in
             the green of the Euganean Hills.
           </p>

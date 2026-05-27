@@ -25,7 +25,7 @@ const faqRistorante = [
   },
   {
     q: 'Quali sono gli orari di apertura de La Montecchia Green?',
-    a: 'Lunedì e martedì 8:30–20:00. Mercoledì 8:30–21:30 con aperitivo Sunset Cup. Giovedì e venerdì 8:30–22:00, sabato 8:00–22:00 con bistrot serale. Domenica 8:00–20:30. Il bistrot è sempre aperto a pranzo (12:00–15:00) e nelle serate di giovedì, venerdì e sabato.',
+    a: 'Lunedì e martedì 8:30–20:00. Mercoledì 8:30–21:30 con aperitivo rinforzato. Giovedì e venerdì 8:30–22:00, sabato 8:00–22:00 con bistrot serale. Domenica 8:00–20:30. Il bistrot è sempre aperto a pranzo (12:00–15:00) e nelle serate di giovedì, venerdì e sabato.',
   },
   {
     q: 'Come prenotare un tavolo al ristorante?',

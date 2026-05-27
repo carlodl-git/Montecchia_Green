@@ -18,12 +18,12 @@ const restaurantFaq = [
   {
     question: 'Do I need to book for lunch or dinner?',
     answer:
-      'Lunch does not require a reservation but is recommended on weekends and holidays. Evening bistrot dinner (Thursday, Friday and Saturday, until 22:00) is recommended by reservation. The Sunset Cup aperitivo on Wednesday evenings is open to everyone, reservation recommended for groups. The quickest way is WhatsApp at +39 334 677 4483.',
+      'Lunch does not require a reservation but is recommended on weekends and holidays. Evening bistrot dinner (Thursday, Friday and Saturday, until 22:00) is recommended by reservation. The reinforced aperitivo on Wednesday evenings is open to everyone, reservation recommended for groups. The quickest way is WhatsApp at +39 334 677 4483.',
   },
   {
     question: 'What are the restaurant opening hours?',
     answer:
-      'Monday and Tuesday 8:30–20:00. Wednesday 8:30–21:30 with Sunset Cup aperitivo. Thursday and Friday 8:30–22:00, Saturday 8:00–22:00 with evening bistrot service. Sunday 8:00–20:30. The bistrot is open daily for lunch (12:00–15:00) and on Thursday, Friday and Saturday evenings.',
+      'Monday and Tuesday 8:30–20:00. Wednesday 8:30–21:30 with reinforced aperitivo. Thursday and Friday 8:30–22:00, Saturday 8:00–22:00 with evening bistrot service. Sunday 8:00–20:30. The bistrot is open daily for lunch (12:00–15:00) and on Thursday, Friday and Saturday evenings.',
   },
   {
     question: 'Do you have options for celiacs, vegetarians and vegans?',
@@ -127,7 +127,7 @@ export default function EnChiSiamoPage() {
             {/* ── THE RESTAURANT: HOURS, APERICENA, APERITIVO ─ */}
             <Reveal delayMs={180}>
               <h2 id="restaurant" className="scroll-mt-24 text-2xl md:text-3xl font-serif font-semibold tracking-tight text-green-dark">
-                The restaurant: opening hours, evening bistrot, Sunset Cup
+                The restaurant: opening hours, evening bistrot, reinforced aperitivo
               </h2>
             </Reveal>
             <Reveal delayMs={195}>
@@ -136,7 +136,7 @@ export default function EnChiSiamoPage() {
                   <pre className="whitespace-pre-wrap text-sm leading-relaxed text-text-mid">
 {`Monday:    8:30 – 20:00
 Tuesday:   8:30 – 20:00
-Wednesday: 8:30 – 21:30 · Sunset Cup aperitivo
+Wednesday: 8:30 – 21:30 · reinforced aperitivo
 Thursday:  8:30 – 22:00 · evening bistrot
 Friday:    8:30 – 22:00 · evening bistrot
 Saturday:  8:00 – 22:00 · evening bistrot
@@ -152,15 +152,15 @@ Bookings: +39 049 805 8464`}
             </Reveal>
             <Reveal delayMs={205}>
               <h3 className="text-xl md:text-2xl font-serif font-semibold tracking-tight text-green-dark">
-                Sunset Cup and evening bistrot: on the green, with a view
+                Reinforced aperitivo and evening bistrot: on the green, with a view
               </h3>
             </Reveal>
             <Reveal delayMs={215}>
               <p className="text-base leading-relaxed text-text-mid">
                 During the day the panoramic terrace overlooking the golf course hosts the aperitivo and snack bar,
-                with open views of the Euganean Hills. On Wednesday evenings the Sunset Cup takes over: a reinforced
-                aperitivo with signature cocktails, wines from Tenuta Emo Capodilista and charcuterie boards as the
-                sunset falls over the green. On Thursday, Friday and Saturday the bistrot is also open in the evening
+                with open views of the Euganean Hills. On Wednesday evenings the reinforced aperitivo takes over:
+                signature cocktails, wines from Tenuta Emo Capodilista and charcuterie boards as the sunset falls
+                over the green. On Thursday, Friday and Saturday the bistrot is also open in the evening
                 until 22:00, with à la carte dinner service. One of the most scenic spots near Padua: quiet, nature,
                 sunset over the green.
               </p>

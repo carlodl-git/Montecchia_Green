@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: '%s | La Montecchia Green',
   },
   description:
-    'Lounge bar, restaurant & events at Golf della Montecchia, 10 min from Padua. Open every day, Sunset Cup on Wednesdays, evening bistrot Thu-Fri-Sat. Book on WhatsApp.',
+    'Lounge bar, restaurant & events at Golf della Montecchia, 10 min from Padua. Open every day, reinforced aperitivo on Wednesdays, evening bistrot Thu-Fri-Sat. Book on WhatsApp.',
   openGraph: {
     type: 'website',
     locale: 'en_GB',

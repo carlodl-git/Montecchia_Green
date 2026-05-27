@@ -11,7 +11,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 export const metadata = {
   title: 'Book a table | La Montecchia Green',
   description:
-    'Book a table at La Montecchia Green. Open to everyone inside the Golf della Montecchia in Selvazzano Dentro (PD). Lunch daily, evening bistrot Thu-Fri-Sat, Sunset Cup aperitivo on Wednesdays.',
+    'Book a table at La Montecchia Green. Open to everyone inside the Golf della Montecchia in Selvazzano Dentro (PD). Lunch daily, evening bistrot Thu-Fri-Sat, reinforced aperitivo on Wednesdays.',
   alternates: hreflangForEn('/en/book'),
 };
 
@@ -66,7 +66,7 @@ export default function EnPrenotaPage() {
             <Reveal>
               <p className="text-base leading-relaxed text-text-mid md:text-[1.05rem]">
                 La Montecchia Green is open to everyone. Book for daily lunch and for evening bistrot service on
-                Thursday, Friday and Saturday. On Wednesday evenings the Sunset Cup aperitivo is on. Contact us
+                Thursday, Friday and Saturday. On Wednesday evenings the reinforced aperitivo is on. Contact us
                 directly via WhatsApp or email.
               </p>
             </Reveal>
@@ -100,7 +100,7 @@ export default function EnPrenotaPage() {
                     <span className="font-semibold">Evening bistrot:</span> Thu · Fri · Sat · until 22:00
                   </div>
                   <div>
-                    <span className="font-semibold">Sunset Cup:</span> Wednesday evening
+                    <span className="font-semibold">Reinforced aperitivo:</span> Wednesday evening
                   </div>
                   <div className="text-xs text-text-mid/80">
                     Tel: +39 049 805 8464

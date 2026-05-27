@@ -22,7 +22,7 @@ const pillars = [
   {
     icon: UtensilsCrossed,
     title: 'Pranzo e cena',
-    text: 'Cucina italiana stagionale a pranzo tutti i giorni, bistrot serale il giovedì, venerdì e sabato, Sunset Cup il mercoledì sera.',
+    text: 'Cucina italiana stagionale a pranzo tutti i giorni, bistrot serale il giovedì, venerdì e sabato, aperitivo rinforzato il mercoledì sera.',
   },
   {
     icon: Sparkles,
@@ -175,7 +175,7 @@ export default function HomePage() {
                 <div className="text-xs font-semibold uppercase tracking-wider text-warm-white/85">Orari</div>
                 <div className="mt-1 text-sm font-medium text-warm-white">Aperti tutti i giorni</div>
                 <div className="text-xs text-warm-white/60">Bistrot cena: gio · ven · sab</div>
-                <div className="text-xs text-warm-white/60">Sunset Cup: mercoledì sera</div>
+                <div className="text-xs text-warm-white/60">Aperitivo rinforzato: mer sera</div>
               </div>
             </div>
 
@@ -212,7 +212,7 @@ export default function HomePage() {
           <p className="mt-4 max-w-3xl text-base leading-relaxed text-text-mid">
             La Montecchia Green è un lounge bar e ristorante aperto a tutti: golfisti, famiglie, amici, turisti e aziende.
             È una cucina italiana contemporanea, con ingredienti locali e stagionali, prodotti dell&apos;orto e pasta
-            fatta in casa. Il mercoledì sera la terrazza accoglie l&apos;aperitivo Sunset Cup, mentre il giovedì,
+            fatta in casa. Il mercoledì sera la terrazza accoglie l&apos;aperitivo rinforzato, mentre il giovedì,
             venerdì e sabato il bistrot resta aperto anche la sera per cena, in una location unica nel verde dei
             Colli Euganei.
           </p>

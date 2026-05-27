@@ -25,7 +25,7 @@ const faqRestaurant = [
   },
   {
     q: 'What are the opening hours of La Montecchia Green?',
-    a: 'Monday and Tuesday 8:30–20:00. Wednesday 8:30–21:30 with Sunset Cup aperitivo. Thursday and Friday 8:30–22:00, Saturday 8:00–22:00 with evening bistrot service. Sunday 8:00–20:30. The bistrot is open daily for lunch (12:00–15:00) and on Thursday, Friday and Saturday evenings.',
+    a: 'Monday and Tuesday 8:30–20:00. Wednesday 8:30–21:30 with reinforced aperitivo. Thursday and Friday 8:30–22:00, Saturday 8:00–22:00 with evening bistrot service. Sunday 8:00–20:30. The bistrot is open daily for lunch (12:00–15:00) and on Thursday, Friday and Saturday evenings.',
   },
   {
     q: 'How can I book a table at the restaurant?',
